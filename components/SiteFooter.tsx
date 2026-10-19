@@ -1,24 +1,16 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { contact, services } from "@/lib/data";
+import BrandLogo from "@/components/BrandLogo";
 
 const categories = ["Build", "Design", "Flooring", "Painting", "Pavers", "Plumbing", "Renovation", "Repairs", "Solar Systems", "Tiling"];
-
-function Brand() {
-  return (
-    <span className="alma-brand-lockup alma-footer-lockup">
-      <span className="alma-brand-symbol" aria-hidden="true"><i /><i /><i /></span>
-      <span className="alma-brand-copy"><strong>ALMA-STRA</strong><small>Travaux de Construction & Aménagement</small></span>
-    </span>
-  );
-}
 
 export default function SiteFooter() {
   return (
     <footer className="alma-footer">
       <div className="page-shell alma-footer-main">
         <div className="alma-footer-brand">
-          <Brand />
+          <BrandLogo className="alma-footer-logo" />
           <p>Société marocaine spécialisée dans les solutions de construction et d’aménagement.</p>
           <div className="alma-footer-contact">
             <a href={`tel:${contact.phoneHref}`}>{contact.phone}</a>
