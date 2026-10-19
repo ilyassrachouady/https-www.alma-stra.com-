@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { contact } from "@/lib/data";
@@ -14,8 +15,10 @@ const nav = [
 ];
 
 export default function SiteHeader() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const overlaysDarkHero = pathname === "/" || (pathname.startsWith("/expertise/") && pathname !== "/expertise");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -31,7 +34,7 @@ export default function SiteHeader() {
 
   return (
     <>
-      <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
+      <header className={`site-header ${scrolled || !overlaysDarkHero ? "scrolled" : ""}`}>
         <div className="header-inner">
           <Link href="/" className="brand" aria-label="ALMA-STRA — Accueil">
             <span className="brand-mark">A</span>
