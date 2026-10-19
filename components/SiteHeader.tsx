@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { ChevronDown, Clock3, Mail, Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { contact, services } from "@/lib/data";
+import BrandLogo from "@/components/BrandLogo";
 
 const nav = [
   ["Accueil", "/"],
@@ -12,18 +13,6 @@ const nav = [
   ["Projets", "/projects"],
   ["Contact", "/contact"],
 ];
-
-function Brand() {
-  return (
-    <span className="alma-brand-lockup" aria-label="ALMA-STRA">
-      <span className="alma-brand-symbol" aria-hidden="true"><i /><i /><i /></span>
-      <span className="alma-brand-copy">
-        <strong>ALMA-STRA</strong>
-        <small>Travaux de Construction & Aménagement</small>
-      </span>
-    </span>
-  );
-}
 
 export default function SiteHeader() {
   const pathname = usePathname();
@@ -54,7 +43,7 @@ export default function SiteHeader() {
         </div>
         <div className="alma-nav-wrap">
           <div className="page-shell alma-nav-inner">
-            <Link href="/" className="alma-logo"><Brand /></Link>
+            <Link href="/" className="alma-logo" aria-label="ALMA-STRA — Accueil"><BrandLogo /></Link>
             <nav className="alma-desktop-nav" aria-label="Navigation principale">
               <Link className={pathname === "/" ? "active" : ""} href="/">Accueil</Link>
               <Link className={pathname === "/about" ? "active" : ""} href="/about">À propos</Link>
@@ -76,7 +65,7 @@ export default function SiteHeader() {
 
       <div className={`alma-mobile-menu ${open ? "open" : ""}`} aria-hidden={!open}>
         <div className="alma-mobile-top">
-          <Link href="/" onClick={() => setOpen(false)}><Brand /></Link>
+          <Link href="/" onClick={() => setOpen(false)} aria-label="ALMA-STRA — Accueil"><BrandLogo /></Link>
           <button onClick={() => setOpen(false)} aria-label="Fermer le menu"><X size={25} /></button>
         </div>
         <div className="alma-mobile-links">
