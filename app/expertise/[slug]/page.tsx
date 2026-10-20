@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
 import ServiceDiagram from "@/components/ServiceDiagram";
 import { projects, services } from "@/lib/data";
+import { getServiceImage } from "@/lib/service-image";
 
 export function generateStaticParams() {
   return services.map(service => ({ slug: service.slug }));
@@ -18,6 +19,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const serviceIndex = services.findIndex(item => item.slug === service.slug);
   const nextService = services[(serviceIndex + 1) % services.length];
   const portfolioProof = projects.slice(0, 3);
+  const serviceImage = getServiceImage(service.slug, service.image);
 
   return (
     <main className={`service-detail-page service-detail-${service.diagram}`}>
@@ -36,7 +38,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <Reveal className="service-detail-hero-media-reveal" variant="fade" delay={80}>
             <div className="service-detail-hero-media">
               <Image
-                src={service.image}
+                src={serviceImage}
                 alt={`${service.title} — ALMA-STRA`}
                 fill
                 priority
