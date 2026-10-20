@@ -30,8 +30,8 @@ export default function ContactForm() {
       <div className="field-row"><label>Email<input name="email" type="email" required autoComplete="email" /></label><label>Téléphone<input name="phone" type="tel" autoComplete="tel" /></label></div>
       <label>Type de projet<select name="type" defaultValue=""><option value="" disabled>Sélectionner</option><option>Viabilisation</option><option>Aménagement BTP</option><option>Travaux tous corps d’état</option><option>Autre projet</option></select></label>
       <label>Message<textarea name="message" required rows={6} placeholder="Parlez-nous de votre projet, de son contexte et de vos besoins." /></label>
-      <button className="button dark" type="submit">Envoyer la demande <ArrowUpRight size={17} /></button>
-      <p className="form-note">{status === "ready" ? "Votre application e-mail va s’ouvrir avec la demande préremplie." : "Le formulaire prépare votre demande dans votre application e-mail."}</p>
+      <button className="alma-btn alma-btn-primary" type="submit">Envoyer la demande <ArrowUpRight size={17} /></button>
+      <p className="form-note" aria-live="polite">{status === "ready" ? "Votre application e-mail va s’ouvrir avec la demande préremplie." : "Le formulaire prépare votre demande dans votre application e-mail."}</p>
     </form>
   );
 }
