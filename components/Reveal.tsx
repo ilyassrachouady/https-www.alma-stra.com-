@@ -1,16 +1,35 @@
 "use client";
 
-import { PropsWithChildren, useEffect, useRef, useState } from "react";
+import { CSSProperties, PropsWithChildren, useEffect, useRef, useState } from "react";
 
-type RevealProps = PropsWithChildren<{ className?: string; delay?: number }>;
+type RevealVariant = "rise" | "fade" | "mask-up" | "mask-left" | "mask-right" | "soft-scale";
 
-export default function Reveal({ children, className = "", delay = 0 }: RevealProps) {
+type RevealProps = PropsWithChildren<{
+  className?: string;
+  delay?: number;
+  variant?: RevealVariant;
+  threshold?: number;
+}>;
+
+export default function Reveal({
+  children,
+  className = "",
+  delay = 0,
+  variant = "rise",
+  threshold = 0.08,
+}: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -18,14 +37,21 @@ export default function Reveal({ children, className = "", delay = 0 }: RevealPr
           observer.disconnect();
         }
       },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+      { rootMargin: "0px 0px -7% 0px", threshold }
     );
+
     observer.observe(node);
     return () => observer.disconnect();
-  }, []);
+  }, [threshold]);
+
+  const style = { "--reveal-delay": `${delay}ms` } as CSSProperties;
 
   return (
-    <div ref={ref} className={`reveal ${visible ? "is-visible" : ""} ${className}`} style={{ transitionDelay: `${delay}ms` }}>
+    <div
+      ref={ref}
+      className={`reveal reveal--${variant} ${visible ? "is-visible" : ""} ${className}`}
+      style={style}
+    >
       {children}
     </div>
   );
