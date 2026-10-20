@@ -1,0 +1,902 @@
+/* ALMA-STRA final responsive QA layer
+   Loaded last on purpose: resolves conflicts between the legacy, modern,
+   polish and expertise styles without changing the visual direction. */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+main,
+section,
+.page-shell,
+.alma-hero-copy,
+.alma-about-copy,
+.alma-section-intro > *,
+.alma-projects-head > *,
+.alma-service-story > *,
+.alma-service-story-layout > *,
+.service-detail-hero-grid > *,
+.service-section-heading-split > *,
+.service-value-grid > *,
+.contact-page > * {
+  min-width: 0;
+}
+
+img { max-width: 100%; }
+
+.alma-home h1,
+.alma-home h2,
+.alma-home h3,
+.inner-hero h1,
+.display-title,
+.contact-intro h1,
+.project-detail-intro h1,
+.expertise-overview-hero h1,
+.service-detail-page h1,
+.service-detail-page h2 {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  text-wrap: balance;
+}
+
+/* Keep institutional marks in their original colors everywhere. */
+.alma-logo-marquee-item img,
+.partner-logo img,
+.alma-partner-logo img {
+  filter: none !important;
+  opacity: .92 !important;
+}
+
+/* Avoid overly compressed display type even on desktop. */
+.alma-hero h1 {
+  line-height: .96;
+  letter-spacing: -.055em;
+}
+
+.inner-hero h1,
+.project-detail-intro h1,
+.contact-intro h1,
+.expertise-overview-hero h1,
+.service-detail-hero h1 {
+  line-height: .95;
+  letter-spacing: -.055em;
+}
+
+/* --------------------------------------------------------------------------
+   Compact desktop / landscape tablet
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .alma-hero h1 {
+    font-size: clamp(50px, 6.8vw, 70px);
+  }
+
+  .alma-section h2 {
+    font-size: clamp(40px, 5.8vw, 62px);
+  }
+
+  .alma-service-story-head h3 {
+    font-size: clamp(36px, 4.8vw, 54px);
+  }
+
+  .alma-final-cta h2 {
+    font-size: clamp(48px, 6vw, 72px);
+  }
+
+  .display-title {
+    font-size: clamp(50px, 6.8vw, 76px);
+  }
+
+  .display-title.medium {
+    font-size: clamp(44px, 5.5vw, 64px);
+  }
+
+  .inner-hero h1,
+  .project-detail-intro h1,
+  .contact-intro h1 {
+    font-size: clamp(54px, 7.3vw, 78px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablet / small laptop: this is the range that caused the screenshot bug.
+   The top utility bar is removed, content offsets match the actual nav height,
+   and headings get a true tablet scale instead of inheriting desktop minima.
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .alma-topbar {
+    display: none !important;
+    height: 0 !important;
+  }
+
+  .alma-nav-inner {
+    height: 72px !important;
+  }
+
+  .alma-site-header.is-scrolled .alma-nav-inner {
+    height: 64px !important;
+  }
+
+  .alma-home {
+    padding-top: 72px !important;
+  }
+
+  .expertise-overview-page,
+  .service-detail-page {
+    padding-top: 72px !important;
+  }
+
+  .alma-hero {
+    padding: 52px 0 64px;
+  }
+
+  .alma-hero-grid {
+    gap: 38px;
+  }
+
+  .alma-hero-copy {
+    max-width: 680px;
+  }
+
+  .alma-hero h1 {
+    max-width: 680px;
+    font-size: clamp(46px, 7.6vw, 60px);
+    line-height: .97;
+    letter-spacing: -.05em;
+  }
+
+  .alma-hero-copy > p {
+    max-width: 610px;
+    margin: 24px 0 26px;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .alma-hero-media {
+    aspect-ratio: 1.42;
+    min-height: 0;
+  }
+
+  .alma-kicker {
+    max-width: 100%;
+    line-height: 1.45;
+  }
+
+  .alma-section {
+    padding: 78px 0;
+  }
+
+  .alma-section h2 {
+    font-size: clamp(38px, 6.5vw, 54px);
+    line-height: 1.02;
+    letter-spacing: -.045em;
+  }
+
+  .alma-section-intro,
+  .alma-projects-head {
+    margin-bottom: 42px;
+  }
+
+  .alma-trust-heading h2 {
+    font-size: clamp(30px, 5.5vw, 44px);
+  }
+
+  .alma-service-story {
+    padding: 58px 0;
+  }
+
+  .alma-service-story-head {
+    grid-template-columns: 54px minmax(0, 1fr);
+    gap: 18px;
+    margin-bottom: 26px;
+  }
+
+  .alma-service-story-head h3 {
+    font-size: clamp(34px, 6vw, 48px);
+    line-height: 1.01;
+    letter-spacing: -.045em;
+  }
+
+  .alma-service-story-layout {
+    gap: 28px;
+  }
+
+  .alma-service-story-media {
+    aspect-ratio: 1.42 !important;
+  }
+
+  .alma-service-story-outcome {
+    font-size: clamp(17px, 2.6vw, 21px);
+  }
+
+  .alma-project-grid {
+    gap: 30px 18px;
+  }
+
+  .alma-about-grid {
+    gap: 42px !important;
+  }
+
+  .alma-about-media {
+    min-height: 0 !important;
+    aspect-ratio: 1.3;
+  }
+
+  .alma-about-copy h2 {
+    font-size: clamp(38px, 6.3vw, 52px);
+    line-height: 1.02;
+  }
+
+  .alma-offer-main h2,
+  .alma-offer-title {
+    font-size: clamp(40px, 6.5vw, 54px) !important;
+  }
+
+  .alma-why-heading h2 {
+    font-size: clamp(38px, 6vw, 52px);
+    line-height: 1.02;
+  }
+
+  .alma-final-cta h2 {
+    font-size: clamp(44px, 7vw, 60px);
+    line-height: .99;
+  }
+
+  /* Legacy inner pages */
+  .inner-hero {
+    min-height: auto;
+    padding-top: 128px;
+    padding-bottom: 78px;
+  }
+
+  .inner-hero h1 {
+    font-size: clamp(48px, 8vw, 64px);
+    line-height: .96;
+  }
+
+  .inner-hero p {
+    margin-top: 26px;
+    font-size: 16px;
+  }
+
+  .display-title,
+  .display-title.medium {
+    font-size: clamp(40px, 7vw, 56px);
+    line-height: 1;
+  }
+
+  .split-editorial {
+    grid-template-columns: 1fr !important;
+    gap: 34px;
+  }
+
+  .values-list {
+    margin-top: 50px;
+  }
+
+  .value-row {
+    grid-template-columns: 52px 1fr;
+    gap: 12px 18px;
+  }
+
+  .value-row p {
+    grid-column: 2;
+  }
+
+  .process-line {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+  }
+
+  .process-step {
+    min-height: 190px;
+  }
+
+  .partner-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .inline-cta {
+    padding: 78px 0;
+  }
+
+  .inline-cta h2 {
+    font-size: clamp(38px, 6.5vw, 54px);
+    line-height: 1;
+  }
+
+  .projects-archive {
+    gap: 44px 24px;
+  }
+
+  .archive-project.offset {
+    margin-top: 54px;
+  }
+
+  .archive-project-meta h2 {
+    font-size: 21px;
+  }
+
+  .project-detail-intro {
+    padding-top: 128px;
+    padding-bottom: 52px;
+  }
+
+  .project-kicker {
+    margin: 42px 0 22px;
+  }
+
+  .project-detail-intro h1 {
+    font-size: clamp(46px, 7.5vw, 62px);
+    line-height: .97;
+  }
+
+  .project-detail-image {
+    min-height: 420px;
+  }
+
+  .project-next h2 {
+    font-size: clamp(38px, 6vw, 52px);
+  }
+
+  .contact-page {
+    min-height: auto;
+    padding-top: 132px;
+    padding-bottom: 90px;
+    gap: 54px;
+  }
+
+  .contact-intro h1 {
+    font-size: clamp(48px, 8vw, 64px);
+    line-height: .96;
+  }
+
+  .contact-details {
+    margin-top: 44px;
+  }
+
+  /* Expertise index + detail */
+  .expertise-overview-hero {
+    min-height: auto;
+    padding: 74px 0;
+  }
+
+  .expertise-overview-hero h1 {
+    font-size: clamp(46px, 7.8vw, 64px);
+    line-height: .96;
+  }
+
+  .service-detail-hero-grid {
+    padding: 62px 0 76px;
+  }
+
+  .service-detail-hero h1 {
+    font-size: clamp(44px, 7.4vw, 60px);
+    line-height: .97;
+  }
+
+  .service-section-heading h2 {
+    font-size: clamp(38px, 6.4vw, 52px);
+    line-height: 1.02;
+  }
+
+  .service-capability-line {
+    grid-template-columns: 44px minmax(145px, .72fr) minmax(0, 1.28fr);
+  }
+
+  .service-value-heading h2,
+  .service-next-cta h2 {
+    font-size: clamp(40px, 6.5vw, 56px);
+    line-height: 1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Phones / portrait tablets
+   -------------------------------------------------------------------------- */
+@media (max-width: 760px) {
+  :root {
+    --shell: calc(100vw - 36px);
+  }
+
+  .alma-nav-inner {
+    height: 68px !important;
+  }
+
+  .alma-home,
+  .expertise-overview-page,
+  .service-detail-page {
+    padding-top: 68px !important;
+  }
+
+  .alma-hero {
+    padding: 42px 0 54px;
+  }
+
+  .alma-hero-grid {
+    gap: 32px;
+  }
+
+  .alma-hero h1 {
+    font-size: clamp(42px, 9vw, 54px);
+    line-height: .98;
+    letter-spacing: -.048em;
+  }
+
+  .alma-hero-line {
+    overflow: visible;
+    padding-bottom: .02em;
+  }
+
+  .alma-hero-line > span {
+    transform: none;
+  }
+
+  .alma-hero-kicker,
+  .alma-hero-intro,
+  .alma-hero-actions-enter {
+    opacity: 1;
+    transform: none;
+  }
+
+  .alma-hero-media {
+    aspect-ratio: 1.12;
+  }
+
+  .alma-hero-media-enter {
+    clip-path: none;
+  }
+
+  .alma-kicker {
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 8.5px;
+    letter-spacing: .12em;
+  }
+
+  .alma-kicker > span {
+    width: 18px;
+  }
+
+  .alma-section {
+    padding: 64px 0;
+  }
+
+  .alma-section h2 {
+    font-size: clamp(35px, 8.5vw, 46px);
+    line-height: 1.03;
+  }
+
+  .alma-btn {
+    min-height: 46px;
+  }
+
+  .alma-service-story {
+    padding: 46px 0;
+  }
+
+  .alma-service-story-head {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .alma-service-story-head h3 {
+    font-size: clamp(32px, 8vw, 42px);
+    line-height: 1.03;
+  }
+
+  .alma-service-story-media {
+    aspect-ratio: 1.18 !important;
+  }
+
+  .alma-service-story-media-tag {
+    left: 14px;
+    bottom: 14px;
+    min-width: 0;
+  }
+
+  .alma-service-keywords,
+  .service-detail-keywords {
+    gap: 6px;
+  }
+
+  .alma-service-keywords span,
+  .service-detail-keywords span {
+    padding: 7px 8px;
+    font-size: 8px;
+  }
+
+  .alma-project-info {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .alma-project-info h3 {
+    font-size: 18px;
+  }
+
+  .alma-about-copy h2,
+  .alma-why-heading h2 {
+    font-size: clamp(36px, 8.5vw, 46px);
+  }
+
+  .alma-lead {
+    font-size: 15px;
+  }
+
+  .alma-offer-tabs {
+    margin-bottom: 36px;
+  }
+
+  .alma-offer-title,
+  .alma-offer-main h2 {
+    font-size: clamp(38px, 9vw, 48px) !important;
+  }
+
+  .alma-final-cta {
+    padding: 68px 0;
+  }
+
+  .alma-final-cta h2 {
+    font-size: clamp(38px, 9.5vw, 50px);
+    line-height: 1;
+  }
+
+  .alma-contact-grid strong {
+    overflow-wrap: anywhere;
+  }
+
+  /* Legacy pages */
+  .section {
+    padding-block: 68px;
+  }
+
+  .inner-hero {
+    min-height: auto;
+    padding-top: 112px;
+    padding-bottom: 62px;
+  }
+
+  .inner-hero h1 {
+    font-size: clamp(42px, 10vw, 54px);
+    line-height: .98;
+  }
+
+  .display-title,
+  .display-title.medium {
+    font-size: clamp(36px, 8.8vw, 48px);
+    line-height: 1.02;
+  }
+
+  .section-label {
+    margin-bottom: 36px;
+  }
+
+  .full-image-section {
+    min-height: 360px;
+    height: 58vh;
+  }
+
+  .value-row {
+    grid-template-columns: 36px 1fr;
+    padding: 26px 0;
+  }
+
+  .value-row h3 {
+    font-size: 22px;
+  }
+
+  .process-line {
+    grid-template-columns: 1fr;
+    border-top: 0;
+  }
+
+  .process-step {
+    min-height: 0;
+    padding: 24px 0 28px 42px;
+    border-right: 0 !important;
+    border-top: 1px solid var(--line);
+  }
+
+  .partner-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .partner-logo {
+    height: 116px;
+  }
+
+  .inline-cta .page-shell {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inline-cta h2 {
+    font-size: clamp(36px, 9vw, 48px);
+  }
+
+  .projects-archive {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .archive-project.offset {
+    margin-top: 0;
+  }
+
+  .archive-project-image {
+    aspect-ratio: 1.25;
+  }
+
+  .archive-project-meta {
+    grid-template-columns: 36px minmax(0, 1fr) auto;
+    gap: 10px;
+    padding: 16px 0 30px;
+  }
+
+  .archive-project-meta h2 {
+    font-size: 19px;
+  }
+
+  .project-detail-intro {
+    padding-top: 108px;
+    padding-bottom: 44px;
+  }
+
+  .project-kicker {
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin: 34px 0 20px;
+  }
+
+  .project-detail-intro h1 {
+    font-size: clamp(40px, 9.5vw, 52px);
+    line-height: 1;
+  }
+
+  .project-detail-image {
+    min-height: 340px;
+    height: 56vh;
+  }
+
+  .project-next {
+    padding: 70px 0;
+  }
+
+  .project-next a {
+    gap: 18px;
+  }
+
+  .project-next h2 {
+    font-size: clamp(34px, 8vw, 44px);
+  }
+
+  .contact-page {
+    padding-top: 108px;
+    padding-bottom: 72px;
+    gap: 46px;
+  }
+
+  .contact-intro h1 {
+    font-size: clamp(42px, 10vw, 54px);
+    line-height: .98;
+  }
+
+  .contact-intro > p {
+    font-size: 15px;
+    margin: 24px 0;
+  }
+
+  .contact-details {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 34px;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-form {
+    gap: 24px;
+  }
+
+  .contact-form .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Expertise */
+  .expertise-overview-hero {
+    padding: 62px 0 56px;
+  }
+
+  .expertise-overview-hero h1 {
+    font-size: clamp(40px, 10vw, 54px);
+    line-height: .98;
+  }
+
+  .expertise-overview-hero p {
+    margin-top: 24px;
+    font-size: 15px;
+  }
+
+  .service-detail-hero-grid {
+    padding: 54px 0 62px;
+    gap: 30px;
+  }
+
+  .service-detail-hero h1 {
+    font-size: clamp(38px, 9.5vw, 50px);
+    line-height: 1;
+  }
+
+  .service-detail-hero-copy > p {
+    margin: 22px 0;
+  }
+
+  .service-detail-hero-media {
+    aspect-ratio: 1.12;
+  }
+
+  .service-section {
+    padding: 64px 0;
+  }
+
+  .service-section-heading {
+    margin-bottom: 36px;
+  }
+
+  .service-section-heading h2 {
+    font-size: clamp(34px, 8.4vw, 46px);
+    line-height: 1.03;
+  }
+
+  .service-capability-line {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 10px 14px;
+  }
+
+  .service-capability-line > div {
+    grid-column: 2;
+    grid-template-columns: 1fr;
+  }
+
+  .service-process-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service-value-heading h2,
+  .service-next-cta h2 {
+    font-size: clamp(36px, 9vw, 48px);
+  }
+
+  .service-proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-proof-grid > .reveal:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --shell: calc(100vw - 28px);
+  }
+
+  .alma-nav-inner {
+    height: 64px !important;
+  }
+
+  .alma-home,
+  .expertise-overview-page,
+  .service-detail-page {
+    padding-top: 64px !important;
+  }
+
+  .alma-logo-image {
+    width: 122px;
+    height: auto;
+  }
+
+  .alma-hero {
+    padding: 36px 0 48px;
+  }
+
+  .alma-hero h1 {
+    font-size: clamp(39px, 11.2vw, 48px);
+    letter-spacing: -.045em;
+  }
+
+  .alma-hero-copy > p {
+    font-size: 14px;
+  }
+
+  .alma-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .alma-btn {
+    width: 100%;
+  }
+
+  .alma-section h2,
+  .alma-about-copy h2,
+  .alma-why-heading h2 {
+    font-size: clamp(33px, 9.5vw, 42px);
+  }
+
+  .alma-service-story-head h3 {
+    font-size: clamp(30px, 9vw, 39px);
+  }
+
+  .alma-service-story-media {
+    aspect-ratio: 1.05 !important;
+  }
+
+  .alma-final-cta h2 {
+    font-size: clamp(36px, 10vw, 44px);
+  }
+
+  .inner-hero {
+    padding-top: 100px;
+    padding-bottom: 54px;
+  }
+
+  .inner-hero h1,
+  .contact-intro h1,
+  .project-detail-intro h1,
+  .expertise-overview-hero h1,
+  .service-detail-hero h1 {
+    font-size: clamp(36px, 10.5vw, 46px);
+  }
+
+  .display-title,
+  .display-title.medium {
+    font-size: clamp(34px, 9.8vw, 43px);
+  }
+
+  .partner-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .partner-logo {
+    height: 102px;
+    padding: 15px;
+  }
+
+  .service-diagram-space,
+  .service-diagram-space:not(.is-compact),
+  .service-process-list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-space-stage,
+  .service-diagram-space:not(.is-compact) .service-space-stage {
+    min-height: 92px;
+  }
+
+  .service-coordination-branches,
+  .service-diagram-coordination:not(.is-compact) .service-coordination-branches {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .alma-hero-line,
+  .alma-hero-line > span,
+  .alma-hero-kicker,
+  .alma-hero-intro,
+  .alma-hero-actions-enter,
+  .alma-hero-media-enter {
+    overflow: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}
