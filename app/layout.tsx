@@ -5,6 +5,7 @@ import "./modern.css";
 import "./polish.css";
 import "./qa-fixes.css";
 import "./expertise.css";
+import "./responsive-fixes.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ScrollProgress from "@/components/ScrollProgress";
