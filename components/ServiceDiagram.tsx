@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import type { Service } from "@/lib/data";
 
@@ -54,7 +55,7 @@ export default function ServiceDiagram({ service, compact = false }: { service: 
     <div className={`service-diagram service-diagram-coordination ${compact ? "is-compact" : ""}`} aria-label="Coordination de plusieurs corps de métier par ALMA-STRA">
       <div className="service-coordination-center"><small>Pilotage global</small><strong>ALMA-STRA</strong></div>
       <div className="service-coordination-branches">
-        {disciplines.map((discipline, index) => <span key={discipline} style={{ "--branch-index": index } as React.CSSProperties}>{discipline}</span>)}
+        {disciplines.map((discipline, index) => <span key={discipline} style={{ "--branch-index": index } as CSSProperties}>{discipline}</span>)}
       </div>
     </div>
   );
