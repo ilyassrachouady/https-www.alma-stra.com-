@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Building2, CheckCircle2, Leaf, Mail, MapPin, Phone, ShieldCheck, Sparkles } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import { contact, imagery, partners, projects, services } from "@/lib/data";
+import HeroMedia from "@/components/HeroMedia";
+import LogoMarquee from "@/components/LogoMarquee";
+import { contact, imagery, projects, services } from "@/lib/data";
 
 const testimonials = [
   {
@@ -40,34 +42,42 @@ const reasons = [
   },
 ];
 
+const projectReveal = ["mask-up", "mask-left", "rise", "mask-right", "rise"] as const;
+
 export default function HomePage() {
   return (
     <main className="alma-home">
       <section className="alma-hero">
         <div className="page-shell alma-hero-grid">
-          <Reveal>
-            <div className="alma-hero-copy">
-              <span className="alma-kicker"><span /> Construction · Aménagement · Viabilisation</span>
-              <h1>Construire avec rigueur.<br /><em>Aménager avec vision.</em></h1>
-              <p>ALMA‑STRA propose une offre complète de services dans le secteur du BTP, allant de la conception à la réalisation, avec un accompagnement clé en main.</p>
-              <div className="alma-hero-actions">
-                <Link className="alma-btn alma-btn-primary" href="/expertise">Découvrir nos services <ArrowRight size={17} /></Link>
-                <Link className="alma-btn alma-btn-ghost" href="/projects">Voir nos projets <ArrowUpRight size={17} /></Link>
-              </div>
+          <div className="alma-hero-copy">
+            <span className="alma-kicker alma-hero-kicker"><span /> Construction · Aménagement · Viabilisation</span>
+            <h1 aria-label="Construire avec rigueur. Aménager avec vision.">
+              <span className="alma-hero-line"><span>Construire avec rigueur.</span></span>
+              <span className="alma-hero-line"><span><em>Aménager avec vision.</em></span></span>
+            </h1>
+            <p className="alma-hero-intro">ALMA‑STRA propose une offre complète de services dans le secteur du BTP, allant de la conception à la réalisation, avec un accompagnement clé en main.</p>
+            <div className="alma-hero-actions alma-hero-actions-enter">
+              <Link className="alma-btn alma-btn-primary" href="/expertise">Découvrir nos services <ArrowRight size={17} /></Link>
+              <Link className="alma-btn alma-btn-ghost" href="/projects">Voir nos projets <ArrowUpRight size={17} /></Link>
             </div>
-          </Reveal>
-          <Reveal delay={100}>
-            <div className="alma-hero-media">
-              <Image src={imagery.amenagement} alt="Projet de construction ALMA-STRA" fill priority sizes="(max-width: 900px) 100vw, 52vw" />
-              <div className="alma-hero-media-badge"><strong>ALMA-STRA</strong><span>Laâyoune · Maroc</span></div>
-            </div>
-          </Reveal>
+          </div>
+          <HeroMedia src={imagery.amenagement} alt="Projet de construction ALMA-STRA" />
         </div>
+      </section>
+
+      <section className="alma-trust" aria-labelledby="trust-title">
+        <div className="page-shell alma-trust-heading">
+          <Reveal variant="fade"><span className="alma-kicker"><span /> Nos références</span></Reveal>
+          <Reveal variant="rise" delay={70}><h2 id="trust-title">Des partenaires institutionnels<br />qui connaissent notre exigence.</h2></Reveal>
+        </div>
+        <Reveal className="alma-trust-marquee-reveal" variant="fade" delay={120}>
+          <LogoMarquee />
+        </Reveal>
       </section>
 
       <section className="alma-section alma-services">
         <div className="page-shell">
-          <Reveal>
+          <Reveal variant="rise">
             <div className="alma-section-intro">
               <div><span className="alma-kicker"><span /> Nos services</span><h2>Une expertise complète<br />pour chaque chantier.</h2></div>
               <p>ALMA‑STRA propose une offre complète de services dans le secteur du BTP, allant de la conception à la réalisation, avec un accompagnement clé en main.</p>
@@ -75,9 +85,9 @@ export default function HomePage() {
           </Reveal>
           <div className="alma-service-grid">
             {services.map((service, index) => (
-              <Reveal key={service.slug} delay={index * 70}>
+              <Reveal key={service.slug} delay={index * 85} variant={index === 1 ? "mask-up" : "rise"}>
                 <Link className="alma-service-card" href={`/expertise/${service.slug}`}>
-                  <div className="alma-service-image"><Image src={service.image} alt={service.title} fill sizes="(max-width: 900px) 100vw, 33vw" /></div>
+                  <div className="alma-service-image"><Image src={service.image} alt={service.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw" /></div>
                   <div className="alma-service-body">
                     <span className="alma-service-number">0{index + 1}</span>
                     <h3>{service.title}</h3>
@@ -94,17 +104,17 @@ export default function HomePage() {
 
       <section className="alma-section alma-projects">
         <div className="page-shell">
-          <Reveal>
+          <Reveal variant="rise">
             <div className="alma-projects-head">
-              <div><span className="alma-kicker"><span /> Projects</span><h2>Des projets concrets.<br /><em>Des résultats durables.</em></h2></div>
+              <div><span className="alma-kicker"><span /> Nos réalisations</span><h2>Des projets concrets.<br /><em>Des résultats durables.</em></h2></div>
               <div className="alma-projects-copy"><p>Voici quelques-uns des nombreux projets que nous avons réalisés pour nos clients. Nous offrons un service professionnel comprenant la consultation, le devis gratuit, la conception, la fourniture des matériaux et l’installation.</p><Link href="/projects">Tous les projets <ArrowRight size={16} /></Link></div>
             </div>
           </Reveal>
           <div className="alma-project-grid">
             {projects.slice(0, 5).map((project, index) => (
-              <Reveal key={project.slug} delay={index * 50}>
+              <Reveal key={project.slug} delay={index * 70} variant={projectReveal[index]}>
                 <Link className={`alma-project-card alma-project-${index + 1}`} href={`/projects/${project.slug}`}>
-                  <div className="alma-project-image"><Image src={project.image} alt={project.title} fill sizes="(max-width: 900px) 100vw, 55vw" /></div>
+                  <div className="alma-project-image"><Image src={project.image} alt={project.title} fill sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 55vw" /></div>
                   <div className="alma-project-info"><div><span>{project.category}</span><h3>{project.title}</h3></div><ArrowUpRight size={22} /></div>
                 </Link>
               </Reveal>
@@ -116,10 +126,10 @@ export default function HomePage() {
 
       <section className="alma-section alma-about">
         <div className="page-shell alma-about-grid">
-          <Reveal>
+          <Reveal variant="mask-left">
             <div className="alma-about-media"><Image src={imagery.field} alt="Équipe et chantier ALMA-STRA" fill sizes="(max-width: 900px) 100vw, 44vw" /></div>
           </Reveal>
-          <Reveal delay={100}>
+          <Reveal delay={100} variant="rise">
             <div className="alma-about-copy">
               <span className="alma-kicker"><span /> À propos de nous</span>
               <h2>Un partenaire fiable,<br /><em>du premier plan à la livraison.</em></h2>
@@ -136,12 +146,13 @@ export default function HomePage() {
       </section>
 
       <section className="alma-offer">
+        <div className="alma-offer-grid" aria-hidden="true" />
         <div className="page-shell">
           <div className="alma-offer-tabs"><span>Nous offrons</span><span>Nous garantissons</span><span>Nous fournissons</span></div>
-          <Reveal>
+          <Reveal variant="rise">
             <div className="alma-offer-main">
               <span className="alma-kicker alma-kicker-light"><span /> Notre offre</span>
-              <h2>Une offre globale et intégrée.</h2>
+              <h2 className="alma-offer-title"><span>Une offre</span><span>globale et</span><span>intégrée.</span></h2>
               <p>Nous mettons à votre disposition une offre globale et intégrée dans le domaine du BTP, afin de répondre à tous vos besoins en matière de construction, d’aménagement et de préparation de terrain.</p>
             </div>
           </Reveal>
@@ -150,11 +161,11 @@ export default function HomePage() {
 
       <section className="alma-section alma-why">
         <div className="page-shell">
-          <Reveal><div className="alma-why-heading"><span className="alma-kicker"><span /> Pourquoi nous choisir</span><h2>Pourquoi choisir ALMA‑STRA ?</h2><p>Choisir ALMA‑STRA, c’est opter pour un partenaire de confiance qui place votre projet au centre de ses priorités.</p></div></Reveal>
+          <Reveal variant="rise"><div className="alma-why-heading"><span className="alma-kicker"><span /> Pourquoi nous choisir</span><h2>Pourquoi choisir ALMA‑STRA ?</h2><p>Choisir ALMA‑STRA, c’est opter pour un partenaire de confiance qui place votre projet au centre de ses priorités.</p></div></Reveal>
           <div className="alma-reasons-grid">
             {reasons.map((reason, index) => {
               const Icon = reason.icon;
-              return <Reveal key={reason.title} delay={index * 70}><article className="alma-reason"><div className="alma-reason-icon"><Icon size={24} /></div><span>0{index + 1}</span><h3>{reason.title}</h3><p>{reason.text}</p></article></Reveal>;
+              return <Reveal key={reason.title} delay={index * 85} variant="fade"><article className="alma-reason"><div className="alma-reason-icon"><Icon size={24} /></div><span>0{index + 1}</span><h3>{reason.title}</h3><p>{reason.text}</p></article></Reveal>;
             })}
           </div>
         </div>
@@ -162,17 +173,25 @@ export default function HomePage() {
 
       <section className="alma-section alma-testimonials">
         <div className="page-shell">
-          <Reveal><div className="alma-section-intro alma-testimonial-head"><div><span className="alma-kicker"><span /> Témoignages</span><h2>La confiance se construit<br />sur le terrain.</h2></div><Sparkles size={28} /></div></Reveal>
+          <Reveal variant="rise"><div className="alma-section-intro alma-testimonial-head"><div><span className="alma-kicker"><span /> Témoignages</span><h2>La confiance se construit<br />sur le terrain.</h2></div><Sparkles size={28} /></div></Reveal>
           <div className="alma-testimonial-grid">
-            {testimonials.map((item, index) => <Reveal key={item.name} delay={index * 70}><article className="alma-testimonial"><span className="alma-quote">“</span><p>{item.quote}</p><div><strong>{item.name}</strong><span>{item.role}</span></div></article></Reveal>)}
+            {testimonials.map((item, index) => <Reveal key={item.name} delay={index * 90} variant={index === 1 ? "rise" : "fade"}><article className={`alma-testimonial alma-testimonial-${index + 1}`}><span className="alma-quote">“</span><p>{item.quote}</p><div><strong>{item.name}</strong><span>{item.role}</span></div></article></Reveal>)}
           </div>
         </div>
       </section>
 
-      <section className="alma-section alma-partners">
-        <div className="page-shell">
-          <Reveal><div className="alma-partner-heading"><span className="alma-kicker"><span /> Nos références</span><h2>Nous travaillons avec</h2></div></Reveal>
-          <div className="alma-partner-grid">{partners.map((partner, index) => <Reveal key={partner.name} delay={index * 50}><div className="alma-partner-logo"><Image src={partner.src} alt={partner.name} width={210} height={110} /></div></Reveal>)}</div>
+      <section className="alma-final-cta">
+        <div className="page-shell alma-final-cta-inner">
+          <Reveal variant="rise">
+            <span className="alma-kicker alma-kicker-light"><span /> Votre projet</span>
+            <h2>Vous avez un projet ?<br /><em>Construisons-le ensemble.</em></h2>
+          </Reveal>
+          <Reveal delay={100} variant="fade">
+            <div className="alma-final-cta-action">
+              <p>Échangeons sur vos objectifs, vos contraintes et la meilleure manière de concrétiser votre projet.</p>
+              <Link className="alma-btn alma-btn-light" href="/contact">Parler de votre projet <ArrowUpRight size={17} /></Link>
+            </div>
+          </Reveal>
         </div>
       </section>
 
