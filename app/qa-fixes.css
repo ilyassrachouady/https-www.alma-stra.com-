@@ -1,0 +1,224 @@
+/* Final visual QA fixes.
+   Motion must enhance content, never be required for content to be visible. */
+
+/* --------------------------------------------------------------------------
+   Critical reveal reliability
+   -------------------------------------------------------------------------- */
+
+/* Card/media content remains visible even when IntersectionObserver has not
+   fired yet (full-page screenshots, slow devices, browser restore, etc.). */
+.alma-service-grid > .reveal,
+.alma-project-grid > .reveal,
+.alma-about-grid > .reveal:first-child {
+  opacity: 1 !important;
+  transform: none !important;
+  clip-path: none !important;
+}
+
+/* Replace hard clip-path hiding with a tiny progressive enhancement. */
+.alma-service-grid > .reveal .alma-service-card,
+.alma-project-grid > .reveal .alma-project-card,
+.alma-about-grid > .reveal:first-child .alma-about-media {
+  opacity: .96;
+  transform: translate3d(0, 7px, 0) scale(.995);
+  transition:
+    opacity 600ms var(--alma-ease-premium),
+    transform 760ms var(--alma-ease-premium);
+}
+
+.alma-service-grid > .reveal.is-visible .alma-service-card,
+.alma-project-grid > .reveal.is-visible .alma-project-card,
+.alma-about-grid > .reveal.is-visible:first-child .alma-about-media {
+  opacity: 1;
+  transform: none;
+}
+
+/* Mask variants are no longer allowed to completely hide real content. */
+.reveal--mask-up,
+.reveal--mask-left,
+.reveal--mask-right {
+  clip-path: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Partner marquee: preserve the real brand colors
+   -------------------------------------------------------------------------- */
+.alma-logo-marquee-item img {
+  filter: none !important;
+  opacity: .9 !important;
+  transform: translateZ(0) scale(1);
+}
+
+.alma-logo-marquee-item:hover img {
+  filter: none !important;
+  opacity: 1 !important;
+  transform: scale(1.025);
+}
+
+/* Make institutional marks readable without making the ticker loud. */
+.alma-logo-marquee-item {
+  width: clamp(150px, 13vw, 205px);
+  height: 96px;
+}
+
+.alma-logo-marquee-item img {
+  max-height: 80px;
+  max-width: 100%;
+}
+
+.alma-logo-marquee-group {
+  gap: clamp(52px, 6vw, 96px);
+  padding-right: clamp(52px, 6vw, 96px);
+}
+
+/* --------------------------------------------------------------------------
+   Services: balanced 3-up composition on wide desktop
+   -------------------------------------------------------------------------- */
+@media (min-width: 1101px) {
+  .alma-service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .alma-service-grid > .reveal {
+    min-width: 0;
+  }
+
+  .alma-service-card {
+    height: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Projects: prevent the large empty holes visible in full-page renders
+   -------------------------------------------------------------------------- */
+.alma-project-grid > .reveal {
+  min-width: 0;
+  align-self: start;
+}
+
+@media (min-width: 1101px) {
+  .alma-project-grid {
+    align-items: start;
+    row-gap: 42px;
+  }
+
+  .alma-project-grid > .reveal:nth-child(2) {
+    margin-top: 46px;
+  }
+
+  .alma-project-grid > .reveal:nth-child(3),
+  .alma-project-grid > .reveal:nth-child(4),
+  .alma-project-grid > .reveal:nth-child(5) {
+    margin-top: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   About: the photography is essential, never let it disappear
+   -------------------------------------------------------------------------- */
+.alma-about-media {
+  background: #eef2e9;
+}
+
+.alma-about-media img {
+  opacity: 1 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Small visual rhythm / interaction corrections
+   -------------------------------------------------------------------------- */
+.alma-service-card,
+.alma-project-card,
+.alma-reason,
+.alma-testimonial {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.alma-project-card:hover .alma-project-info h3 {
+  transform: translate3d(0, -2px, 0);
+}
+
+.alma-project-card:hover .alma-project-info > svg {
+  transform: translate3d(3px, -3px, 0);
+}
+
+.alma-project-card:hover .alma-project-image::after {
+  opacity: .055;
+}
+
+/* Keep project rows compact enough to maintain editorial rhythm. */
+.alma-project-cta {
+  margin-top: clamp(30px, 4vw, 52px);
+}
+
+/* Tablet: no arbitrary half-width orphan service card. */
+@media (min-width: 901px) and (max-width: 1100px) {
+  .alma-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .alma-service-grid > .reveal:last-child {
+    grid-column: 1 / -1;
+    max-width: none;
+  }
+
+  .alma-service-grid > .reveal:last-child .alma-service-card {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+  }
+
+  .alma-service-grid > .reveal:last-child .alma-service-image {
+    min-height: 310px;
+    aspect-ratio: auto;
+  }
+}
+
+/* Phones: every core image is visible immediately and crops predictably. */
+@media (max-width: 680px) {
+  .alma-logo-marquee {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  }
+
+  .alma-logo-marquee-item {
+    width: 132px;
+    height: 76px;
+  }
+
+  .alma-logo-marquee-item img {
+    max-height: 62px;
+  }
+
+  .alma-logo-marquee-group {
+    gap: 42px;
+    padding-right: 42px;
+  }
+
+  .alma-service-grid > .reveal .alma-service-card,
+  .alma-project-grid > .reveal .alma-project-card,
+  .alma-about-grid > .reveal:first-child .alma-about-media {
+    opacity: 1;
+    transform: none;
+  }
+
+  .alma-project-grid {
+    gap: 28px !important;
+  }
+}
+
+/* Motion accessibility stays deterministic. */
+@media (prefers-reduced-motion: reduce) {
+  .alma-service-grid > .reveal .alma-service-card,
+  .alma-project-grid > .reveal .alma-project-card,
+  .alma-about-grid > .reveal:first-child .alma-about-media {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .alma-logo-marquee-item img {
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}
