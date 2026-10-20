@@ -4,8 +4,11 @@ import { ArrowUpRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import ServiceDiagram from "@/components/ServiceDiagram";
 import type { Service } from "@/lib/data";
+import { getServiceImage } from "@/lib/service-image";
 
 export default function ServicePreview({ service, index }: { service: Service; index: number }) {
+  const serviceImage = getServiceImage(service.slug, service.image);
+
   return (
     <article className={`alma-service-story alma-service-story-${service.diagram}`}>
       <Reveal variant={index % 2 === 0 ? "rise" : "fade"}>
@@ -22,7 +25,7 @@ export default function ServicePreview({ service, index }: { service: Service; i
         <Reveal className="alma-service-story-media-wrap" variant="fade" delay={60}>
           <div className="alma-service-story-media">
             <Image
-              src={service.image}
+              src={serviceImage}
               alt={`${service.title} — ALMA-STRA`}
               fill
               sizes="(max-width: 760px) 100vw, (max-width: 1180px) 48vw, 52vw"
