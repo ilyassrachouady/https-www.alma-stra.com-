@@ -1,11 +1,38 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import ServicePreview from "@/components/ServicePreview";
 import { services } from "@/lib/data";
 
-export const metadata = { title: "Expertise", description: "Viabilisation, aménagement BTP et travaux tous corps d’état par ALMA-STRA." };
+export const metadata = {
+  title: "Expertise",
+  description: "Comprendre les expertises ALMA-STRA : viabilisation, aménagement BTP et travaux tous corps d’état, de l'enjeu au résultat.",
+};
 
 export default function ExpertisePage() {
- return <main><section className="inner-hero page-shell"><span className="eyebrow">Expertise</span><h1>Une maîtrise complète<br/><em>du chantier.</em></h1><p>Trois expertises complémentaires pour préparer, aménager et réaliser des projets de construction avec un pilotage cohérent.</p></section><section className="expertise-index section page-shell">{services.map((s,i)=><Reveal key={s.slug}><article className="service-index-row"><div className="service-index-number">{s.number}</div><div className="service-index-media"><Image src={s.image} alt={s.title} fill sizes="(max-width: 900px) 100vw, 46vw"/></div><div className="service-index-copy"><h2>{s.title}</h2><p>{s.intro}</p><ul>{s.capabilities.flatMap(g=>g.items).slice(0,5).map(x=><li key={x}>{x}</li>)}</ul><Link className="text-link" href={`/expertise/${s.slug}`}>Voir l’expertise <ArrowUpRight size={15}/></Link></div></article></Reveal>)}</section></main>
+  return (
+    <main className="expertise-overview-page">
+      <section className="expertise-overview-hero page-shell">
+        <Reveal variant="rise">
+          <span className="alma-kicker"><span /> Nos expertises</span>
+          <h1>Comprendre ce que nous prenons réellement en charge.</h1>
+          <p>Préparer un terrain, transformer un espace et piloter un chantier complet sont trois responsabilités différentes. Cette page montre ce qu’ALMA‑STRA gère, comment chaque expertise progresse et quel résultat le client obtient.</p>
+        </Reveal>
+      </section>
+
+      <section className="expertise-overview-stories page-shell">
+        {services.map((service, index) => <ServicePreview service={service} index={index} key={service.slug} />)}
+      </section>
+
+      <section className="expertise-overview-cta">
+        <div className="page-shell">
+          <Reveal variant="rise">
+            <span className="alma-kicker alma-kicker-light"><span /> Votre besoin</span>
+            <h2>Vous ne savez pas encore quelle expertise correspond à votre projet ?</h2>
+            <Link className="alma-btn alma-btn-light" href="/contact">Parler de votre projet <ArrowRight size={17} /></Link>
+          </Reveal>
+        </div>
+      </section>
+    </main>
+  );
 }
