@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import "./modern.css";
+import "./polish.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 
@@ -17,5 +19,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="fr"><body className={manrope.variable}><SiteHeader />{children}<SiteFooter /></body></html>;
+  return <html lang="fr"><body className={manrope.variable}><ScrollProgress /><SiteHeader />{children}<SiteFooter /></body></html>;
 }
