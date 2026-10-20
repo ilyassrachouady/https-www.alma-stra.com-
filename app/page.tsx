@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight, Building2, CheckCircle2, Leaf, Mail, MapPin, 
 import Reveal from "@/components/Reveal";
 import HeroMedia from "@/components/HeroMedia";
 import LogoMarquee from "@/components/LogoMarquee";
+import ServicePreview from "@/components/ServicePreview";
 import { contact, imagery, projects, services } from "@/lib/data";
 
 const testimonials = [
@@ -75,30 +76,18 @@ export default function HomePage() {
         </Reveal>
       </section>
 
-      <section className="alma-section alma-services">
+      <section className="alma-section alma-services alma-services-stories">
         <div className="page-shell">
           <Reveal variant="rise">
-            <div className="alma-section-intro">
-              <div><span className="alma-kicker"><span /> Nos services</span><h2>Une expertise complète<br />pour chaque chantier.</h2></div>
-              <p>ALMA‑STRA propose une offre complète de services dans le secteur du BTP, allant de la conception à la réalisation, avec un accompagnement clé en main.</p>
+            <div className="alma-section-intro alma-services-intro">
+              <div><span className="alma-kicker"><span /> Nos expertises</span><h2>Trois responsabilités.<br />Trois résultats différents.</h2></div>
+              <p>Chaque expertise répond à un enjeu distinct : préparer un terrain, transformer un espace ou piloter l’ensemble d’un chantier. L’objectif est de rendre immédiatement visible ce qu’ALMA‑STRA prend réellement en charge.</p>
             </div>
           </Reveal>
-          <div className="alma-service-grid">
-            {services.map((service, index) => (
-              <Reveal key={service.slug} delay={index * 85} variant={index === 1 ? "mask-up" : "rise"}>
-                <Link className="alma-service-card" href={`/expertise/${service.slug}`}>
-                  <div className="alma-service-image"><Image src={service.image} alt={service.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw" /></div>
-                  <div className="alma-service-body">
-                    <span className="alma-service-number">0{index + 1}</span>
-                    <h3>{service.title}</h3>
-                    <p>{service.intro}</p>
-                    <span className="alma-card-link">Découvrir <ArrowUpRight size={15} /></span>
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
+          <div className="alma-service-stories">
+            {services.map((service, index) => <ServicePreview service={service} index={index} key={service.slug} />)}
           </div>
-          <div className="alma-centered-action"><Link className="alma-btn alma-btn-primary" href="/expertise">Voir tous les services <ArrowRight size={16} /></Link></div>
+          <div className="alma-centered-action"><Link className="alma-btn alma-btn-primary" href="/expertise">Explorer toutes les expertises <ArrowRight size={16} /></Link></div>
         </div>
       </section>
 
