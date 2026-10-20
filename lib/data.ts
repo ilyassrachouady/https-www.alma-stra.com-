@@ -7,10 +7,20 @@ export const contact = {
 };
 
 export const imagery = {
-  viabilisation: "https://alma-stra.com/wp-content/uploads/2015/05/2-2.jpeg",
+  hero: "https://alma-stra.com/wp-content/uploads/2015/05/Design-sans-titre-2.png",
+  viabilisation: "https://images.unsplash.com/photo-1723369962534-34866660b716?auto=format&fit=crop&w=1800&q=86",
+  amenagement: "https://images.unsplash.com/photo-1774953037913-af0cf688491a?auto=format&fit=crop&w=1800&q=86",
+  tce: "https://images.unsplash.com/photo-1609867271967-a82f85c48531?auto=format&fit=crop&w=1800&q=86",
+  field: "https://alma-stra.com/wp-content/uploads/2025/07/Design-sans-titre-1.png",
+};
+
+// Project photography stays independent from the service storytelling images.
+// This prevents service visuals from being presented as photographs of ALMA-STRA projects.
+export const projectImagery = {
+  field: "https://alma-stra.com/wp-content/uploads/2025/07/Design-sans-titre-1.png",
   amenagement: "https://alma-stra.com/wp-content/uploads/2015/05/Design-sans-titre-2.png",
   tce: "https://alma-stra.com/wp-content/uploads/2015/05/1.jpg",
-  field: "https://alma-stra.com/wp-content/uploads/2025/07/Design-sans-titre-1.png",
+  viabilisation: "https://alma-stra.com/wp-content/uploads/2015/05/2-2.jpeg",
 };
 
 export type ServiceDiagram = "land" | "space" | "coordination";
@@ -107,7 +117,7 @@ export const services: Service[] = [
     statement: "Tous les corps de métier. Une seule coordination.",
     intro: "Prise en charge de l’ensemble des travaux techniques et architecturaux (maçonnerie, électricité, plomberie, revêtements, etc.).",
     outcome: "ALMA-STRA centralise le pilotage du chantier afin que les différents corps de métier avancent dans une même organisation, jusqu’à la livraison.",
-    image: imagery.field,
+    image: imagery.tce,
     imagePosition: "center",
     diagram: "coordination",
     keywords: ["Coordination", "Lots techniques", "Second œuvre", "Livraison"],
@@ -144,13 +154,13 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  { slug: "college-ibn-khaldoune-al-omrane", number: "01", title: "COLLEGE IBN KHALDOUNE AL OMRANE", category: "Équipement public", image: imagery.field },
-  { slug: "al-omrane-souss-massa", number: "02", title: "AL OMARANE SOUSS MASSA", category: "Aménagement", image: imagery.amenagement },
-  { slug: "province-laayoune", number: "03", title: "PROVINCE LAAYOUNE", category: "Travaux & aménagement", image: imagery.tce },
-  { slug: "terrain-de-sport-al-omrane", number: "04", title: "TERRAIN DE SPORT AL OMRANE", category: "Équipement sportif", image: imagery.viabilisation },
-  { slug: "atlas-sahara", number: "05", title: "ATLAS SAHARA", category: "Aménagement", image: imagery.field },
-  { slug: "caserne-des-sapeurs-pompiers", number: "06", title: "Caserne des sapeurs-pompiers", category: "Équipement public", image: imagery.tce },
-  { slug: "conseil-provincial-laayoune", number: "07", title: "Conseil Provincial Laâyoune", category: "Institutionnel", image: imagery.amenagement }
+  { slug: "college-ibn-khaldoune-al-omrane", number: "01", title: "COLLEGE IBN KHALDOUNE AL OMRANE", category: "Équipement public", image: projectImagery.field },
+  { slug: "al-omrane-souss-massa", number: "02", title: "AL OMARANE SOUSS MASSA", category: "Aménagement", image: projectImagery.amenagement },
+  { slug: "province-laayoune", number: "03", title: "PROVINCE LAAYOUNE", category: "Travaux & aménagement", image: projectImagery.tce },
+  { slug: "terrain-de-sport-al-omrane", number: "04", title: "TERRAIN DE SPORT AL OMRANE", category: "Équipement sportif", image: projectImagery.viabilisation },
+  { slug: "atlas-sahara", number: "05", title: "ATLAS SAHARA", category: "Aménagement", image: projectImagery.field },
+  { slug: "caserne-des-sapeurs-pompiers", number: "06", title: "Caserne des sapeurs-pompiers", category: "Équipement public", image: projectImagery.tce },
+  { slug: "conseil-provincial-laayoune", number: "07", title: "Conseil Provincial Laâyoune", category: "Institutionnel", image: projectImagery.amenagement }
 ];
 
 export const partners = [
