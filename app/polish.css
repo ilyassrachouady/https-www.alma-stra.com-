@@ -15,7 +15,7 @@
 
 /* Page continuity */
 .alma-page-transition {
-  animation: almaPageEnter 440ms var(--alma-ease-premium) both;
+  animation: none;
 }
 
 @keyframes almaPageEnter {
@@ -45,7 +45,6 @@
 .reveal {
   --reveal-delay: 0ms;
   transition-delay: var(--reveal-delay) !important;
-  will-change: opacity, transform, clip-path;
 }
 
 .reveal--rise {
@@ -223,7 +222,7 @@
 /* Hero entrance: staged, architectural, never theatrical. */
 .alma-hero-kicker {
   opacity: 0;
-  animation: almaHeroSoftIn 600ms var(--alma-ease-premium) 170ms forwards;
+  animation: almaHeroSoftIn 480ms var(--alma-ease-premium) 40ms forwards;
 }
 
 .alma-hero-kicker > span {
@@ -234,33 +233,33 @@
 .alma-hero-line {
   display: block;
   overflow: hidden;
-  padding-bottom: .04em;
+  padding-bottom: .16em;
+  margin-bottom: -.12em;
 }
 
 .alma-hero-line > span {
   display: block;
-  transform: translate3d(0, 112%, 0);
-  animation: almaHeroLineIn 860ms var(--alma-ease-premium) forwards;
+  transform: translate3d(0, 100%, 0);
+  animation: almaHeroLineIn 680ms var(--alma-ease-premium) forwards;
 }
 
-.alma-hero-line:nth-child(1) > span { animation-delay: 250ms; }
-.alma-hero-line:nth-child(2) > span { animation-delay: 390ms; }
+.alma-hero-line:nth-child(1) > span { animation-delay: 120ms; }
+.alma-hero-line:nth-child(2) > span { animation-delay: 200ms; }
 
 .alma-hero-line:nth-child(2) em {
   display: inline-block;
-  animation: almaGreenSettle 700ms var(--alma-ease-premium) 660ms both;
 }
 
 .alma-hero-intro {
   opacity: 0;
-  transform: translate3d(0, 12px, 0);
-  animation: almaHeroSoftIn 680ms var(--alma-ease-premium) 590ms forwards;
+  transform: translate3d(0, 8px, 0);
+  animation: almaHeroSoftIn 520ms var(--alma-ease-premium) 280ms forwards;
 }
 
 .alma-hero-actions-enter {
   opacity: 0;
-  transform: translate3d(0, 10px, 0);
-  animation: almaHeroSoftIn 650ms var(--alma-ease-premium) 720ms forwards;
+  transform: translate3d(0, 8px, 0);
+  animation: almaHeroSoftIn 520ms var(--alma-ease-premium) 360ms forwards;
 }
 
 .alma-hero-media-enter {
@@ -473,14 +472,9 @@
 .alma-offer-title { display: flex; flex-direction: column; }
 .alma-offer-title > span {
   display: block;
-  transform: translate3d(0, 105%, 0);
-  opacity: 0;
-  transition: transform 780ms var(--alma-ease-premium), opacity 520ms ease;
+  transform: none;
+  opacity: 1;
 }
-
-.reveal.is-visible .alma-offer-title > span { transform: none; opacity: 1; }
-.reveal.is-visible .alma-offer-title > span:nth-child(2) { transition-delay: 90ms; }
-.reveal.is-visible .alma-offer-title > span:nth-child(3) { transition-delay: 180ms; }
 
 /* Why ALMA-STRA: architectural divisions instead of floating cards. */
 .alma-reasons-grid {
@@ -505,8 +499,7 @@
 }
 
 /* Testimonial rhythm */
-.alma-testimonial-grid > .reveal:nth-child(2) { transform: translateY(24px); }
-.alma-testimonial-grid > .reveal:nth-child(2).is-visible { transform: translateY(24px); }
+.alma-testimonial-grid > .reveal:nth-child(2) { margin-top: 24px; }
 .alma-testimonial {
   transition: transform var(--alma-normal) var(--alma-ease-premium), border-color var(--alma-normal) ease, box-shadow var(--alma-normal) ease;
 }
@@ -515,7 +508,7 @@
   transform-origin: left bottom;
   transition: transform 650ms var(--alma-ease-premium), opacity 500ms ease;
 }
-.reveal:not(.is-visible) .alma-quote { transform: scale(.7); opacity: 0; }
+.reveal:not(.is-visible) .alma-quote { transform: none; opacity: 1; }
 
 /* Final CTA: an architectural ending, not a card. */
 .alma-final-cta {
@@ -583,9 +576,6 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .alma-service-grid:hover > .reveal { opacity: .7; }
-  .alma-service-grid:hover > .reveal:hover { opacity: 1; }
-
   .alma-project-card:hover .alma-project-image img { transform: scale(1.025); }
   .alma-project-card:hover .alma-project-image::after { opacity: .07; }
   .alma-project-card:hover .alma-project-info h3 { transform: translate3d(2px, 0, 0); }
@@ -650,8 +640,7 @@
   .alma-final-cta-inner { grid-template-columns: 1fr; gap: 38px; }
   .alma-final-cta-action { max-width: 560px; }
 
-  .alma-testimonial-grid > .reveal:nth-child(2),
-  .alma-testimonial-grid > .reveal:nth-child(2).is-visible { transform: none; }
+  .alma-testimonial-grid > .reveal:nth-child(2) { margin-top: 0; }
 }
 
 /* Mobile: intentionally re-composed. */

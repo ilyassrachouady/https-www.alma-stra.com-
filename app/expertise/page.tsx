@@ -15,8 +15,8 @@ export default function ExpertisePage() {
       <section className="expertise-overview-hero page-shell">
         <Reveal variant="rise">
           <span className="alma-kicker"><span /> Nos expertises</span>
-          <h1>Comprendre ce que nous prenons réellement en charge.</h1>
-          <p>Préparer un terrain, transformer un espace et piloter un chantier complet sont trois responsabilités différentes. Cette page montre ce qu’ALMA‑STRA gère, comment chaque expertise progresse et quel résultat le client obtient.</p>
+          <h1>Trois expertises. Un projet maîtrisé.</h1>
+          <p>Raccorder un terrain. Transformer un espace. Coordonner tous les corps de métier. Découvrez le périmètre, les étapes et le résultat de chaque accompagnement.</p>
         </Reveal>
       </section>
 

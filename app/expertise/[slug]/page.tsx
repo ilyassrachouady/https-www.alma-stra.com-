@@ -5,7 +5,8 @@ import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
 import ServiceDiagram from "@/components/ServiceDiagram";
 import { projects, services } from "@/lib/data";
-import { getServiceImage } from "@/lib/service-image";
+import { serviceMedia } from "@/lib/media";
+import ServiceSchematic from "@/components/ServiceSchematic";
 
 export function generateStaticParams() {
   return services.map(service => ({ slug: service.slug }));
@@ -18,8 +19,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   const serviceIndex = services.findIndex(item => item.slug === service.slug);
   const nextService = services[(serviceIndex + 1) % services.length];
-  const portfolioProof = projects.slice(0, 3);
-  const serviceImage = getServiceImage(service.slug, service.image);
+  const referenceIndexes = service.diagram === "land" ? [3, 6] : service.diagram === "space" ? [0, 4] : [1, 5];
+  const portfolioProof = referenceIndexes.map(index => projects[index]);
+  const visual = serviceMedia[service.diagram];
 
   return (
     <main className={`service-detail-page service-detail-${service.diagram}`}>
@@ -38,15 +40,16 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <Reveal className="service-detail-hero-media-reveal" variant="fade" delay={80}>
             <div className="service-detail-hero-media">
               <Image
-                src={serviceImage}
-                alt={`${service.title} — ALMA-STRA`}
+                src={visual.src}
+                alt={visual.alt}
                 fill
                 priority
                 sizes="(max-width: 900px) 100vw, 52vw"
                 style={{ objectPosition: service.imagePosition ?? "center" }}
               />
-              <div className="service-detail-image-caption"><span>ALMA-STRA</span><strong>{service.title}</strong></div>
+              <div className="service-detail-image-caption"><span>Illustration de l’expertise</span><strong>{visual.subject}</strong></div>
             </div>
+            <p className="expertise-visual-note">{visual.caption}</p>
           </Reveal>
         </div>
       </section>
@@ -105,11 +108,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <div>
                 <span className="service-section-index">03</span>
                 <span className="alma-kicker"><span /> Transformation</span>
-                <h2>Voir comment l’expertise progresse jusqu’au résultat.</h2>
+                <h2>Du contexte initial au projet livré.</h2>
               </div>
-              <p>Une lecture simple des étapes permet de comprendre la valeur du service au-delà d’une simple liste de travaux.</p>
+              <p>Les étapes et les interfaces sont coordonnées pour faire avancer le projet dans une même direction.</p>
             </div>
           </Reveal>
+          {service.diagram !== "coordination" && <ServiceSchematic kind={service.diagram} />}
           <Reveal variant="fade" delay={90}><ServiceDiagram service={service} /></Reveal>
           <div className="service-process-list" aria-label={`Processus — ${service.title}`}>
             {service.process.map((step, index) => (
@@ -147,10 +151,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <div>
                 <span className="service-section-index">05</span>
                 <span className="alma-kicker"><span /> Réalisations</span>
-                <h2>Le terrain comme preuve.</h2>
+                <h2>Des références concrètes.</h2>
               </div>
               <div className="service-proof-heading-action">
-                <p>Découvrez une sélection du portfolio ALMA‑STRA et les projets présentés par l’entreprise.</p>
+                <p>Références publiées par ALMA‑STRA. Le périmètre précis de chaque intervention est à confirmer avec notre équipe.</p>
                 <Link href="/projects">Toutes les réalisations <ArrowRight size={16} /></Link>
               </div>
             </div>

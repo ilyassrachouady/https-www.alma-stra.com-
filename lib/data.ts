@@ -6,22 +6,9 @@ export const contact = {
   hours: "Lundi - Vendredi: 08.00 - 17.00",
 };
 
-export const imagery = {
-  hero: "https://alma-stra.com/wp-content/uploads/2015/05/Design-sans-titre-2.png",
-  viabilisation: "https://images.unsplash.com/photo-1723369962534-34866660b716?auto=format&fit=crop&w=1800&q=86",
-  amenagement: "https://images.unsplash.com/photo-1774953037913-af0cf688491a?auto=format&fit=crop&w=1800&q=86",
-  tce: "https://images.unsplash.com/photo-1609867271967-a82f85c48531?auto=format&fit=crop&w=1800&q=86",
-  field: "https://alma-stra.com/wp-content/uploads/2025/07/Design-sans-titre-1.png",
-};
-
-// Project photography stays independent from the service storytelling images.
-// This prevents service visuals from being presented as photographs of ALMA-STRA projects.
-export const projectImagery = {
-  field: "https://alma-stra.com/wp-content/uploads/2025/07/Design-sans-titre-1.png",
-  amenagement: "https://alma-stra.com/wp-content/uploads/2015/05/Design-sans-titre-2.png",
-  tce: "https://alma-stra.com/wp-content/uploads/2015/05/1.jpg",
-  viabilisation: "https://alma-stra.com/wp-content/uploads/2015/05/2-2.jpeg",
-};
+// All photography is deliberately assigned by role in lib/media.ts.
+export { imagery } from "./media";
+import { serviceMedia } from "./media";
 
 export type ServiceDiagram = "land" | "space" | "coordination";
 
@@ -54,7 +41,7 @@ export const services: Service[] = [
     statement: "Du terrain brut au terrain prêt à bâtir.",
     intro: "Réalisation des réseaux (eau, électricité, voirie, assainissement…) pour rendre les terrains constructibles et prêts à bâtir.",
     outcome: "ALMA-STRA coordonne les infrastructures nécessaires pour rendre un terrain constructible, accessible et prêt à accueillir son futur projet.",
-    image: imagery.viabilisation,
+    image: serviceMedia.land.src,
     imagePosition: "center",
     diagram: "land",
     keywords: ["Voirie", "Eau", "Assainissement", "Électricité"],
@@ -86,7 +73,7 @@ export const services: Service[] = [
     statement: "Transformer les espaces. Optimiser chaque usage.",
     intro: "Optimisation et transformation d’espaces professionnels, commerciaux, industriels ou résidentiels selon les normes et les besoins fonctionnels.",
     outcome: "ALMA-STRA transforme un espace existant ou brut en environnement fonctionnel, durable et adapté à son usage réel.",
-    image: imagery.amenagement,
+    image: serviceMedia.space.src,
     imagePosition: "center",
     diagram: "space",
     keywords: ["Cloisons", "Revêtements", "Plafonds", "Équipements techniques"],
@@ -117,7 +104,7 @@ export const services: Service[] = [
     statement: "Tous les corps de métier. Une seule coordination.",
     intro: "Prise en charge de l’ensemble des travaux techniques et architecturaux (maçonnerie, électricité, plomberie, revêtements, etc.).",
     outcome: "ALMA-STRA centralise le pilotage du chantier afin que les différents corps de métier avancent dans une même organisation, jusqu’à la livraison.",
-    image: imagery.tce,
+    image: serviceMedia.coordination.src,
     imagePosition: "center",
     diagram: "coordination",
     keywords: ["Coordination", "Lots techniques", "Second œuvre", "Livraison"],
@@ -154,21 +141,21 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  { slug: "college-ibn-khaldoune-al-omrane", number: "01", title: "COLLEGE IBN KHALDOUNE AL OMRANE", category: "Équipement public", image: projectImagery.field },
-  { slug: "al-omrane-souss-massa", number: "02", title: "AL OMARANE SOUSS MASSA", category: "Aménagement", image: projectImagery.amenagement },
-  { slug: "province-laayoune", number: "03", title: "PROVINCE LAAYOUNE", category: "Travaux & aménagement", image: projectImagery.tce },
-  { slug: "terrain-de-sport-al-omrane", number: "04", title: "TERRAIN DE SPORT AL OMRANE", category: "Équipement sportif", image: projectImagery.viabilisation },
-  { slug: "atlas-sahara", number: "05", title: "ATLAS SAHARA", category: "Aménagement", image: projectImagery.field },
-  { slug: "caserne-des-sapeurs-pompiers", number: "06", title: "Caserne des sapeurs-pompiers", category: "Équipement public", image: projectImagery.tce },
-  { slug: "conseil-provincial-laayoune", number: "07", title: "Conseil Provincial Laâyoune", category: "Institutionnel", image: projectImagery.amenagement }
+  { slug: "college-ibn-khaldoune-al-omrane", number: "01", title: "COLLEGE IBN KHALDOUNE AL OMRANE", category: "Équipement public", image: "/images/projects/IMG_9036.jpeg" },
+  { slug: "al-omrane-souss-massa", number: "02", title: "AL OMRANE SOUSS MASSA", category: "Aménagement", image: "/images/projects/VUE-1-1.jpg" },
+  { slug: "province-laayoune", number: "03", title: "PROVINCE LAAYOUNE", category: "Travaux & aménagement", image: "/images/projects/IMG_7637.jpg" },
+  { slug: "terrain-de-sport-al-omrane", number: "04", title: "TERRAIN DE SPORT AL OMRANE", category: "Équipement sportif", image: "/images/projects/IMG_7387.jpg" },
+  { slug: "atlas-sahara", number: "05", title: "ATLAS SAHARA", category: "Aménagement", image: "/images/projects/IMG_6145.jpg" },
+  { slug: "caserne-des-sapeurs-pompiers", number: "06", title: "Caserne des sapeurs-pompiers", category: "Équipement public", image: "/images/projects/IMG_3834.jpg" },
+  { slug: "conseil-provincial-laayoune", number: "07", title: "Conseil Provincial Laâyoune", category: "Institutionnel", image: "/images/projects/MINJ8006.jpg" }
 ];
 
 export const partners = [
-  { name: "Groupe Al Omrane", src: "https://alma-stra.com/wp-content/uploads/2025/07/Design-sans-titre-20.png" },
-  { name: "Atlas Sahara", src: "https://alma-stra.com/wp-content/uploads/2025/07/Design-sans-titre-19.png" },
-  { name: "ANEP", src: "https://alma-stra.com/wp-content/uploads/2025/07/Design-sans-titre-18.png" },
-  { name: "Région Marrakech-Safi", src: "https://alma-stra.com/wp-content/uploads/2025/07/Design-sans-titre-16.png" },
-  { name: "Préfecture d’Inezgane-Aït Melloul", src: "https://alma-stra.com/wp-content/uploads/2025/07/Design-sans-titre-15.png" }
+  { name: "Groupe Al Omrane", src: "/images/partner-al-omrane.png" },
+  { name: "Atlas Sahara", src: "/images/partner-atlas-sahara.png" },
+  { name: "ANEP", src: "/images/partner-anep.png" },
+  { name: "Région Marrakech-Safi", src: "/images/partner-marrakech-safi.png" },
+  { name: "Préfecture d’Inezgane-Aït Melloul", src: "/images/partner-inezgane.png" }
 ];
 
 export const process = [

@@ -4,48 +4,51 @@ import { ArrowUpRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import ServiceDiagram from "@/components/ServiceDiagram";
 import type { Service } from "@/lib/data";
-import { getServiceImage } from "@/lib/service-image";
+import { serviceMedia } from "@/lib/media";
 
 export default function ServicePreview({ service, index }: { service: Service; index: number }) {
-  const serviceImage = getServiceImage(service.slug, service.image);
+  const visual = serviceMedia[service.diagram];
 
   return (
+    <Reveal variant="rise" delay={index * 40}>
     <article className={`alma-service-story alma-service-story-${service.diagram}`}>
-      <Reveal variant={index % 2 === 0 ? "rise" : "fade"}>
-        <div className="alma-service-story-head">
-          <span className="alma-service-story-number">{service.number}</span>
-          <div>
-            <span className="alma-service-story-label">{service.shortTitle}</span>
-            <h3>{service.statement}</h3>
-          </div>
+      <div className="alma-service-story-head">
+        <span className="alma-service-story-number">{service.number}</span>
+        <div>
+          <span className="alma-service-story-label">{service.shortTitle}</span>
+          <h3>{service.statement}</h3>
         </div>
-      </Reveal>
+      </div>
 
       <div className="alma-service-story-layout">
-        <Reveal className="alma-service-story-media-wrap" variant="fade" delay={60}>
+        <div className="alma-service-story-media-wrap">
           <div className="alma-service-story-media">
             <Image
-              src={serviceImage}
-              alt={`${service.title} — ALMA-STRA`}
+              src={visual.src}
+              alt={visual.alt}
               fill
               sizes="(max-width: 760px) 100vw, (max-width: 1180px) 48vw, 52vw"
               style={{ objectPosition: service.imagePosition ?? "center" }}
             />
-            <div className="alma-service-story-media-tag"><span>Expertise {service.number}</span><strong>{service.shortTitle}</strong></div>
+            <div className="alma-service-story-media-tag"><span>{visual.subject}</span><strong>{service.shortTitle}</strong></div>
           </div>
-        </Reveal>
+          <p className="expertise-visual-note">{visual.caption}</p>
+        </div>
 
-        <Reveal className="alma-service-story-content" variant="rise" delay={110}>
+        <div className="alma-service-story-content">
+          <div className="expertise-context"><span>Votre enjeu</span><p>{visual.context}</p></div>
           <p className="alma-service-story-outcome">{service.outcome}</p>
           <div className="alma-service-keywords" aria-label={`Compétences clés — ${service.title}`}>
             {service.keywords.map(keyword => <span key={keyword}>{keyword}</span>)}
           </div>
           <ServiceDiagram service={service} compact />
+          <div className="expertise-result"><span>Le résultat</span><strong>{visual.result}</strong></div>
           <Link className="alma-service-story-link" href={`/expertise/${service.slug}`}>
             Découvrir l’expertise <ArrowUpRight size={17} />
           </Link>
-        </Reveal>
+        </div>
       </div>
     </article>
+    </Reveal>
   );
 }

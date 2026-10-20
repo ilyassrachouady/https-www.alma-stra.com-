@@ -37,14 +37,14 @@ export default function Reveal({
           observer.disconnect();
         }
       },
-      { rootMargin: "0px 0px -7% 0px", threshold }
+      { rootMargin: "0px 0px 18% 0px", threshold: Math.min(threshold, 0.01) }
     );
 
     observer.observe(node);
     return () => observer.disconnect();
   }, [threshold]);
 
-  const style = { "--reveal-delay": `${delay}ms` } as CSSProperties;
+  const style = { "--reveal-delay": `${Math.min(Math.max(delay, 0), 100)}ms` } as CSSProperties;
 
   return (
     <div

@@ -5,30 +5,15 @@
    Critical reveal reliability
    -------------------------------------------------------------------------- */
 
-/* Card/media content remains visible even when IntersectionObserver has not
-   fired yet (full-page screenshots, slow devices, browser restore, etc.). */
 .alma-service-grid > .reveal,
 .alma-project-grid > .reveal,
 .alma-about-grid > .reveal:first-child {
-  opacity: 1 !important;
-  transform: none !important;
-  clip-path: none !important;
+  clip-path: none;
 }
 
-/* Replace hard clip-path hiding with a tiny progressive enhancement. */
 .alma-service-grid > .reveal .alma-service-card,
 .alma-project-grid > .reveal .alma-project-card,
 .alma-about-grid > .reveal:first-child .alma-about-media {
-  opacity: .96;
-  transform: translate3d(0, 7px, 0) scale(.995);
-  transition:
-    opacity 600ms var(--alma-ease-premium),
-    transform 760ms var(--alma-ease-premium);
-}
-
-.alma-service-grid > .reveal.is-visible .alma-service-card,
-.alma-project-grid > .reveal.is-visible .alma-project-card,
-.alma-about-grid > .reveal.is-visible:first-child .alma-about-media {
   opacity: 1;
   transform: none;
 }

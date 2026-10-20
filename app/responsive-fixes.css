@@ -900,3 +900,74 @@ img { max-width: 100%; }
     clip-path: none !important;
   }
 }
+
+/* One scroll motion for every section: a short rise, fully opaque at rest.
+   Nested reveals stay solid so a heading and its media never fade at different rates. */
+.reveal--rise,
+.reveal--fade,
+.reveal--soft-scale,
+.reveal--mask-up,
+.reveal--mask-left,
+.reveal--mask-right,
+.alma-service-grid .reveal,
+.alma-project-grid > .reveal,
+.alma-reasons-grid > .reveal,
+.alma-testimonial-grid > .reveal,
+.alma-about-grid > .reveal,
+.service-proof-grid > .reveal {
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+  clip-path: none !important;
+  filter: none;
+  transition: opacity 520ms var(--alma-ease-premium), transform 520ms var(--alma-ease-premium);
+}
+
+.reveal.is-visible,
+.alma-service-grid .reveal.is-visible,
+.alma-project-grid > .reveal.is-visible,
+.alma-reasons-grid > .reveal.is-visible,
+.alma-testimonial-grid > .reveal.is-visible,
+.alma-about-grid > .reveal.is-visible,
+.service-proof-grid > .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  clip-path: none !important;
+  filter: none;
+}
+
+.reveal .reveal,
+.reveal .reveal.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+  clip-path: none !important;
+  filter: none !important;
+  transition: none !important;
+}
+
+/* Keep secondary headings readable against the white page background. */
+.inner-hero h1 em,
+.display-title em,
+.contact-intro h1 em {
+  color: var(--alma-green-dark);
+}
+
+/* Keyboard users must be able to reach the services submenu. */
+.alma-nav-dropdown:focus-within .alma-nav-dropdown-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+/* The full navigation must remain reachable on short phone screens. */
+.alma-mobile-menu {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.alma-mobile-menu > * { flex-shrink: 0; }
+.alma-mobile-contact { margin-top: 24px; }
+.alma-footer-news p { margin: 0; line-height: 1.7; }
+
+@media (max-width: 760px) {
+  .projects-archive { padding-top: 24px; }
+  .alma-mobile-links { margin-top: 24px; margin-bottom: 24px; }
+}

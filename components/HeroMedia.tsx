@@ -86,7 +86,7 @@ export default function HeroMedia({ src, alt }: { src: string; alt: string }) {
       <div ref={layerRef} className="alma-hero-media-parallax">
         <Image src={src} alt={alt} fill priority sizes="(max-width: 900px) 100vw, 52vw" />
       </div>
-      <div className="alma-hero-media-badge"><strong>ALMA-STRA</strong><span>Laâyoune · Maroc</span></div>
+      <div className="alma-hero-media-badge"><strong>ALMA-STRA</strong><span>Al Omrane Souss Massa</span></div>
     </div>
   );
 }

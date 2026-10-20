@@ -62,7 +62,7 @@ export default function HomePage() {
               <Link className="alma-btn alma-btn-ghost" href="/projects">Voir nos projets <ArrowUpRight size={17} /></Link>
             </div>
           </div>
-          <HeroMedia src={imagery.amenagement} alt="Projet de construction ALMA-STRA" />
+          <HeroMedia src={imagery.hero} alt="Bâtiment Al Omrane Souss Massa — référence publiée par ALMA-STRA" />
         </div>
       </section>
 
@@ -116,7 +116,7 @@ export default function HomePage() {
       <section className="alma-section alma-about">
         <div className="page-shell alma-about-grid">
           <Reveal variant="mask-left">
-            <div className="alma-about-media"><Image src={imagery.field} alt="Équipe et chantier ALMA-STRA" fill sizes="(max-width: 900px) 100vw, 44vw" /></div>
+            <div className="alma-about-media"><Image src={imagery.field} alt="Travaux d’aménagement extérieur — Conseil Provincial Laâyoune" fill sizes="(max-width: 900px) 100vw, 44vw" /></div>
           </Reveal>
           <Reveal delay={100} variant="rise">
             <div className="alma-about-copy">
