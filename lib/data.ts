@@ -138,16 +138,17 @@ export type Project = {
   category: string;
   image: string;
   imagePosition?: string;
+  imageKind?: "photo" | "render";
 };
 
 export const projects: Project[] = [
-  { slug: "college-ibn-khaldoune-al-omrane", number: "01", title: "COLLEGE IBN KHALDOUNE AL OMRANE", category: "Équipement public", image: "/images/projects/IMG_9036.jpeg" },
-  { slug: "al-omrane-souss-massa", number: "02", title: "AL OMRANE SOUSS MASSA", category: "Aménagement", image: "/images/projects/VUE-1-1.jpg" },
-  { slug: "province-laayoune", number: "03", title: "PROVINCE LAAYOUNE", category: "Travaux & aménagement", image: "/images/projects/IMG_7637.jpg" },
-  { slug: "terrain-de-sport-al-omrane", number: "04", title: "TERRAIN DE SPORT AL OMRANE", category: "Équipement sportif", image: "/images/projects/IMG_7387.jpg" },
-  { slug: "atlas-sahara", number: "05", title: "ATLAS SAHARA", category: "Aménagement", image: "/images/projects/IMG_6145.jpg" },
-  { slug: "caserne-des-sapeurs-pompiers", number: "06", title: "Caserne des sapeurs-pompiers", category: "Équipement public", image: "/images/projects/IMG_3834.jpg" },
-  { slug: "conseil-provincial-laayoune", number: "07", title: "Conseil Provincial Laâyoune", category: "Institutionnel", image: "/images/projects/MINJ8006.jpg" }
+  { slug: "college-ibn-khaldoune-al-omrane", number: "01", title: "Collège Ibn Khaldoune Al Omrane", category: "Équipement public", image: "/images/portfolio/college/terrain-multisport.webp" },
+  { slug: "al-omrane-souss-massa", number: "02", title: "Al Omrane Souss Massa", category: "Construction TCE", image: "/images/portfolio/al-omrane/facade.webp", imageKind: "render" },
+  { slug: "province-laayoune", number: "03", title: "Province de Laâyoune", category: "Bâtiment administratif", image: "/images/portfolio/province/facade.webp" },
+  { slug: "terrain-de-sport-al-omrane", number: "04", title: "Terrain de sport Al Omrane", category: "Équipement sportif", image: "/images/portfolio/sport/terrain.webp" },
+  { slug: "atlas-sahara", number: "05", title: "Atlas Sahara", category: "Aménagement", image: "/images/portfolio/atlas/station-de-nuit.webp" },
+  { slug: "caserne-des-sapeurs-pompiers", number: "06", title: "Caserne des sapeurs-pompiers", category: "Équipement public", image: "/images/portfolio/caserne/facade.webp" },
+  { slug: "conseil-provincial-laayoune", number: "07", title: "Conseil provincial de Laâyoune", category: "Institutionnel", image: "/images/portfolio/conseil/cour-chantier.webp" }
 ];
 
 export const partners = [

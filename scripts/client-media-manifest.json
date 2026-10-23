@@ -1,0 +1,310 @@
+[
+  {
+    "group": "college",
+    "source": "COLLEGE IBN KHALDOUNE AL OMRANE/IMG_9036.JPEG",
+    "file": "/images/portfolio/college/terrain-multisport.webp",
+    "kind": "photo",
+    "caption": "Le terrain multisport et ses marquages."
+  },
+  {
+    "group": "college",
+    "source": "COLLEGE IBN KHALDOUNE AL OMRANE/IMG_9034.JPEG",
+    "file": "/images/portfolio/college/aire-de-jeu.webp",
+    "kind": "photo",
+    "caption": "Les équipements sportifs et la clôture périphérique."
+  },
+  {
+    "group": "college",
+    "source": "COLLEGE IBN KHALDOUNE AL OMRANE/IMG_9035.JPEG",
+    "file": "/images/portfolio/college/revetement.webp",
+    "kind": "photo",
+    "caption": "Le revêtement coloré et les lignes de jeu."
+  },
+  {
+    "group": "college",
+    "source": "COLLEGE IBN KHALDOUNE AL OMRANE/IMG_9071.JPEG",
+    "file": "/images/portfolio/college/circulations.webp",
+    "kind": "photo",
+    "caption": "Les circulations pavées autour de l’aire sportive."
+  },
+  {
+    "group": "college",
+    "source": "COLLEGE IBN KHALDOUNE AL OMRANE/IMG_9080.JPEG",
+    "file": "/images/portfolio/college/espaces-exterieurs.webp",
+    "kind": "photo",
+    "caption": "Les espaces extérieurs, les gradins et les abords."
+  },
+  {
+    "group": "al-omrane",
+    "source": "AL OMARANE SOUSS MASSA/VUE-1.jpg",
+    "file": "/images/portfolio/al-omrane/facade.webp",
+    "kind": "render",
+    "caption": "Photomontage architectural : insertion du complexe d’Amssernat dans son environnement."
+  },
+  {
+    "group": "al-omrane",
+    "source": "AL OMARANE SOUSS MASSA/VUE-3.jpg",
+    "file": "/images/portfolio/al-omrane/volume-angle.webp",
+    "kind": "render",
+    "caption": "Perspective d’étude : organisation des volumes."
+  },
+  {
+    "group": "al-omrane",
+    "source": "AL OMARANE SOUSS MASSA/VUE-4.jpg",
+    "file": "/images/portfolio/al-omrane/volume-arriere.webp",
+    "kind": "render",
+    "caption": "Perspective d’étude : façades et implantation."
+  },
+  {
+    "group": "al-omrane",
+    "source": "AL OMARANE SOUSS MASSA/VUE-7.jpg",
+    "file": "/images/portfolio/al-omrane/facade-etude.webp",
+    "kind": "render",
+    "caption": "Perspective d’étude : composition de la façade principale."
+  },
+  {
+    "group": "al-omrane",
+    "source": "AL OMARANE SOUSS MASSA/VUE-8-NO.jpg",
+    "file": "/images/portfolio/al-omrane/interieur-etude.webp",
+    "kind": "render",
+    "caption": "Perspective d’étude : hall et espace intérieur."
+  },
+  {
+    "group": "al-omrane",
+    "source": "AL OMARANE SOUSS MASSA/AMSERNAT.png",
+    "file": "/images/portfolio/al-omrane/panneau-projet.webp",
+    "kind": "document",
+    "caption": "Panneau du projet : construction TCE du complexe d’activités sociales d’Amssernat."
+  },
+  {
+    "group": "province",
+    "source": "PROVINCE LAAYOUNE/IMG_7637.JPG",
+    "file": "/images/portfolio/province/facade.webp",
+    "kind": "photo",
+    "caption": "Vue extérieure du bâtiment administratif."
+  },
+  {
+    "group": "province",
+    "source": "PROVINCE LAAYOUNE/IMG_6371.JPG",
+    "file": "/images/portfolio/province/structure.webp",
+    "kind": "photo",
+    "caption": "Vue de chantier : structure en béton et poteaux."
+  },
+  {
+    "group": "province",
+    "source": "PROVINCE LAAYOUNE/IMG_7280.JPG",
+    "file": "/images/portfolio/province/facade-en-cours.webp",
+    "kind": "photo",
+    "caption": "Vue de chantier : composition de la façade avant finitions."
+  },
+  {
+    "group": "province",
+    "source": "PROVINCE LAAYOUNE/PANNEAU.jpg",
+    "file": "/images/portfolio/province/panneau-projet.webp",
+    "kind": "document",
+    "caption": "Panneau du projet de construction du 6e arrondissement."
+  },
+  {
+    "group": "sport",
+    "source": "TERRAIN DE SPORT AL OMRANE/IMG_7387.JPG",
+    "file": "/images/portfolio/sport/terrain.webp",
+    "kind": "photo",
+    "caption": "Vue d’ensemble du terrain et de ses clôtures."
+  },
+  {
+    "group": "sport",
+    "source": "TERRAIN DE SPORT AL OMRANE/IMG_7371.JPG",
+    "file": "/images/portfolio/sport/basket.webp",
+    "kind": "photo",
+    "caption": "Panier de basket, marquage et éclairage périphérique."
+  },
+  {
+    "group": "sport",
+    "source": "TERRAIN DE SPORT AL OMRANE/IMG_7383.JPG",
+    "file": "/images/portfolio/sport/acces.webp",
+    "kind": "photo",
+    "caption": "Rampe et escalier d’accès au terrain."
+  },
+  {
+    "group": "sport",
+    "source": "TERRAIN DE SPORT AL OMRANE/IMG_7404.JPG",
+    "file": "/images/portfolio/sport/entree.webp",
+    "kind": "photo",
+    "caption": "L’entrée de l’équipement sportif et sa clôture."
+  },
+  {
+    "group": "atlas",
+    "source": "ATLAS SAHARA/IMG_6145.JPG",
+    "file": "/images/portfolio/atlas/station-de-nuit.webp",
+    "kind": "photo",
+    "caption": "La station et son aire de circulation éclairées de nuit."
+  },
+  {
+    "group": "atlas",
+    "source": "ATLAS SAHARA/IMG_3865.JPG",
+    "file": "/images/portfolio/atlas/structure.webp",
+    "kind": "photo",
+    "caption": "Vue de chantier : fondation et armatures d’un poteau."
+  },
+  {
+    "group": "atlas",
+    "source": "ATLAS SAHARA/IMG_5064.JPG",
+    "file": "/images/portfolio/atlas/plateforme.webp",
+    "kind": "photo",
+    "caption": "Vue de chantier : préparation de la plateforme et de ses abords."
+  },
+  {
+    "group": "atlas",
+    "source": "ATLAS SAHARA/IMG_5110.JPG",
+    "file": "/images/portfolio/atlas/preparation-sol.webp",
+    "kind": "photo",
+    "caption": "Détail de préparation du sol."
+  },
+  {
+    "group": "atlas",
+    "source": "ATLAS SAHARA/IMG_5620.JPG",
+    "file": "/images/portfolio/atlas/enrobes.webp",
+    "kind": "photo",
+    "caption": "Mise en œuvre des enrobés et compactage."
+  },
+  {
+    "group": "atlas",
+    "source": "ATLAS SAHARA/IMG_5699.JPG",
+    "file": "/images/portfolio/atlas/aire-circulation.webp",
+    "kind": "photo",
+    "caption": "L’aire de circulation et les bordures."
+  },
+  {
+    "group": "atlas",
+    "source": "ATLAS SAHARA/IMG_5713.JPG",
+    "file": "/images/portfolio/atlas/plantations.webp",
+    "kind": "photo",
+    "caption": "Les plantations et les cheminements extérieurs."
+  },
+  {
+    "group": "atlas",
+    "source": "ATLAS SAHARA/IMG_6146.JPG",
+    "file": "/images/portfolio/atlas/signaletique.webp",
+    "kind": "photo",
+    "caption": "Signalétique et aménagement paysager de la station."
+  },
+  {
+    "group": "atlas",
+    "source": "ATLAS SAHARA/IMG_6174.JPG",
+    "file": "/images/portfolio/atlas/entree.webp",
+    "kind": "photo",
+    "caption": "Vue de l’entrée du site Atlas Sahara."
+  },
+  {
+    "group": "atlas",
+    "source": "ATLAS SAHARA/IMG_6189.JPG",
+    "file": "/images/portfolio/atlas/eclairage.webp",
+    "kind": "photo",
+    "caption": "Vue nocturne de l’auvent et de son éclairage."
+  },
+  {
+    "group": "caserne",
+    "source": "CASERNE DES SAPEURS POMPIERS/IMG_3834.JPG",
+    "file": "/images/portfolio/caserne/facade.webp",
+    "kind": "photo",
+    "caption": "La façade de la caserne et ses accès."
+  },
+  {
+    "group": "caserne",
+    "source": "CASERNE DES SAPEURS POMPIERS/1 (194).jpeg",
+    "file": "/images/portfolio/caserne/pavage.webp",
+    "kind": "photo",
+    "caption": "Détail des revêtements et des abords du bâtiment."
+  },
+  {
+    "group": "caserne",
+    "source": "CASERNE DES SAPEURS POMPIERS/1 (136).JPG",
+    "file": "/images/portfolio/caserne/ouvrage-eau.webp",
+    "kind": "photo",
+    "caption": "Vue d’un ouvrage en eau figurant dans le dossier du projet."
+  },
+  {
+    "group": "conseil",
+    "source": "CONSEIL PROVINCIAL LAAYOUNE/MINJ8006.JPG",
+    "file": "/images/portfolio/conseil/cour-chantier.webp",
+    "kind": "photo",
+    "caption": "Préparation du sol dans la cour du bâtiment."
+  },
+  {
+    "group": "conseil",
+    "source": "CONSEIL PROVINCIAL LAAYOUNE/RCBS6548.JPG",
+    "file": "/images/portfolio/conseil/enrobes.webp",
+    "kind": "photo",
+    "caption": "Vue de chantier : réalisation des enrobés."
+  },
+  {
+    "group": "conseil",
+    "source": "CONSEIL PROVINCIAL LAAYOUNE/123 (5).jpeg",
+    "file": "/images/portfolio/conseil/entree.webp",
+    "kind": "photo",
+    "caption": "L’entrée du Conseil Provincial et ses finitions."
+  },
+  {
+    "group": "conseil",
+    "source": "CONSEIL PROVINCIAL LAAYOUNE/123 (2).jpeg",
+    "file": "/images/portfolio/conseil/eclairage.webp",
+    "kind": "photo",
+    "caption": "Les abords du bâtiment et leur éclairage nocturne."
+  },
+  {
+    "group": "viabilisation",
+    "source": "VIABILISATION LOTISSEMENT/3.jpeg",
+    "file": "/images/portfolio/viabilisation/reseaux-enterres.webp",
+    "kind": "photo",
+    "caption": "Conduites et ouvrages d’assainissement en tranchée."
+  },
+  {
+    "group": "viabilisation",
+    "source": "VIABILISATION LOTISSEMENT/1.JPG",
+    "file": "/images/portfolio/viabilisation/terrassement.webp",
+    "kind": "photo",
+    "caption": "Préparation de la voirie et des abords."
+  },
+  {
+    "group": "viabilisation",
+    "source": "VIABILISATION LOTISSEMENT/2 2.jpeg",
+    "file": "/images/portfolio/viabilisation/tranchee.webp",
+    "kind": "photo",
+    "caption": "Ouverture d’une tranchée pour les réseaux."
+  },
+  {
+    "group": "viabilisation",
+    "source": "VIABILISATION LOTISSEMENT/4.jpeg",
+    "file": "/images/portfolio/viabilisation/reseau-tranchee.webp",
+    "kind": "photo",
+    "caption": "Cheminement d’un réseau enterré."
+  },
+  {
+    "group": "viabilisation",
+    "source": "VIABILISATION LOTISSEMENT/5.jpeg",
+    "file": "/images/portfolio/viabilisation/regard.webp",
+    "kind": "photo",
+    "caption": "Détail d’un regard en béton."
+  },
+  {
+    "group": "viabilisation",
+    "source": "VIABILISATION LOTISSEMENT/6.jpeg",
+    "file": "/images/portfolio/viabilisation/ouvrages.webp",
+    "kind": "photo",
+    "caption": "Ouvrages de raccordement au niveau du terrain."
+  },
+  {
+    "group": "viabilisation",
+    "source": "VIABILISATION LOTISSEMENT/7.JPG",
+    "file": "/images/portfolio/viabilisation/tampon.webp",
+    "kind": "photo",
+    "caption": "Regard et tampon après remblaiement."
+  },
+  {
+    "group": "viabilisation",
+    "source": "VIABILISATION LOTISSEMENT/8.JPG",
+    "file": "/images/portfolio/viabilisation/eau.webp",
+    "kind": "photo",
+    "caption": "Équipement de réseau d’eau et robinetterie."
+  }
+]

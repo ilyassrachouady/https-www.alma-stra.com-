@@ -1,0 +1,64 @@
+/* Client identity alignment. Layout, content order and approved components stay intact.
+   Digital accent: guide p19; supporting swatches: guide p20; type hierarchy: p24. */
+:root {
+  --brand-chartreuse: #80ff00;
+  --brand-green: #93c83c;
+  --brand-green-mid: #59a032;
+  --brand-green-dark: #3d6a2a;
+  --brand-green-light: #bae37f;
+  --brand-off-white: #fffeed;
+  --brand-charcoal: #393536;
+  --accent: var(--brand-green-dark);
+  --accent-2: var(--brand-green-light);
+  --alma-green: var(--brand-green);
+  --alma-green-dark: var(--brand-green-dark);
+  --alma-green-light: var(--brand-green-light);
+  --alma-green-pale: #f3f8e9;
+  --alma-ink: var(--brand-charcoal);
+  --ink: var(--brand-charcoal);
+  --dark: var(--brand-charcoal);
+  --alma-muted: #656263;
+  --muted: #656263;
+}
+
+body { font-family: var(--font-sans), Arial, sans-serif; font-weight: 300; }
+button, input, select, textarea { font-family: inherit; }
+
+/* Restore the approved clean heading typography; body text stays in Avenir. */
+h1, h2,
+.alma-service-story-head h3,
+.alma-project-info h3,
+.service-capability-line h3,
+.service-proof-meta h3,
+.archive-project-meta h2 {
+  font-family: var(--font-display), var(--font-sans), Arial, sans-serif;
+}
+
+/* Use the bright digital brand accent with dark text rather than white. */
+.alma-btn-primary,
+.alma-nav-cta {
+  background: var(--brand-chartreuse);
+  color: var(--brand-charcoal);
+  border-color: var(--brand-chartreuse);
+}
+.alma-btn-primary:hover,
+.alma-nav-cta:hover { background: var(--brand-green); color: var(--brand-charcoal); border-color: var(--brand-green); }
+.alma-scroll-progress span { background: var(--brand-chartreuse); }
+.alma-hero h1 em,
+.alma-section h2 em,
+.inner-hero h1 em,
+.contact-intro h1 em { color: var(--brand-green-dark); }
+.alma-offer,
+.alma-final-cta,
+.service-value-section,
+.service-next-cta,
+.expertise-overview-cta { background-color: var(--brand-charcoal); }
+.alma-offer h2,
+.alma-final-cta h2,
+.service-value-heading h2,
+.service-next-cta h2,
+.expertise-overview-cta h2 { color: var(--brand-off-white); }
+.alma-offer h2 em,
+.alma-final-cta h2 em { color: var(--brand-green-light); }
+
+.alma-offer { background: linear-gradient(105deg, var(--brand-green-dark), var(--brand-green-mid)); }

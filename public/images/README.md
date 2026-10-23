@@ -1,37 +1,26 @@
-# Image assignments and provenance
+# Website imagery
 
-The active image map is `lib/media.ts`; project assignments are in `lib/data.ts`.
-Images are bundled locally and optimized by Next/Image.
+## Active client originals
 
-## Service visuals
+`portfolio/` contains 44 WebP images prepared from the client-supplied WEB SITE
+folder, organized into seven project collections plus viabilisation. Source
+mapping, captions and photo/study/document classifications are recorded in
+`scripts/client-media-manifest.json`. The import script honors orientation,
+retains the full frame, avoids enlargement and leaves originals untouched.
 
-`expertise/land.webp`, `expertise/space.webp` and `expertise/coordination.webp`
-are AI-generated illustrative visuals, commissioned for three different subjects:
-serviced land, a finished workspace and construction coordination. They are
-captioned as generated illustrations and are never used as portfolio photographs.
+Project gallery metadata and blur placeholders are in `lib/client-media.ts`;
+editorial details are in `lib/project-details.ts`. Service and homepage image
+assignments are centralized in `lib/media.ts`.
 
-Service diagrams are pedagogical concepts, not measured plans or photographic
-before/after evidence. No before/after project photography has been invented.
+Amssernat's facade image is a photomontage and is labeled as an architectural
+study. Construction photographs, renderings and project boards are distinguished.
+No new generated image is used as evidence of a completed project.
 
-## Published project references
+Partner marks remain unchanged. Older root-level photographs and the generated
+`expertise/` visuals are retained as previous assets but no longer rendered.
 
-The following exact assignments were recovered from the public project index at
-https://alma-stra.com/projects/ on 2026-10-20:
+See `docs/client-assets-audit.md` for the complete review and exclusions.
 
-| Reference | Local file |
-| --- | --- |
-| Collège Ibn Khaldoune Al Omrane | projects/IMG_9036.jpeg |
-| Al Omrane Souss Massa | projects/VUE-1-1.jpg |
-| Province Laâyoune | projects/IMG_7637.jpg |
-| Terrain de sport Al Omrane | projects/IMG_7387.jpg |
-| Atlas Sahara | projects/IMG_6145.jpg |
-| Caserne des sapeurs-pompiers | projects/IMG_3834.jpg |
-| Conseil Provincial Laâyoune | projects/MINJ8006.jpg |
+## Retour client — 22 octobre 2026
 
-Source files: https://alma-stra.com/wp-content/uploads/2015/05/{filename}
-The home hero uses VUE-1-1.jpg; the company section uses MINJ8006.jpg. This is
-intentional reuse of an identified company reference, not reuse between services.
-Service-page reference selections do not assert an undocumented scope of work.
-
-Partner marks are unchanged local copies of the company's published marks.
-Earlier root-level generic photos are retained for history but no longer rendered.
+L’accueil utilise désormais la photographie réelle `portfolio/province/facade.webp` et l’aménagement utilise `portfolio/caserne/pavage.webp`. Leurs légendes correspondent aux scènes photographiées. Les perspectives Amssernat sont conservées dans la référence concernée et restent identifiées comme études. Le visuel `social-share.jpg` est composé à partir de la photographie de la Province ; aucun chantier n’a été généré ou retouché par IA. Les variantes Next/Image sont plafonnées à 1920 px.

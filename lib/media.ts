@@ -1,34 +1,37 @@
 /** A single image map separates illustrative service visuals from published references. */
 export const serviceMedia = {
   land: {
-    src: "/images/expertise/land.webp",
-    alt: "Vue aérienne illustrative de lots desservis, de voirie et de réseaux en cours de réalisation",
+    src: "/images/portfolio/viabilisation/reseaux-enterres.webp",
+    alt: "Conduites et ouvrages d’assainissement en tranchée — chantier de viabilisation",
     subject: "Terrain · Voirie · Réseaux",
-    caption: "Illustration générée — terrain et infrastructures",
+    label: "Chantier ALMA-STRA",
+    caption: "Photographie ALMA-STRA — travaux de viabilisation",
     context: "Un terrain à raccorder et à rendre accessible.",
     result: "Un site desservi, organisé et prêt à bâtir.",
   },
   space: {
-    src: "/images/expertise/space.webp",
-    alt: "Visualisation d’un espace professionnel fini : cloisons vitrées, revêtements et éclairage intégré",
+    src: "/images/portfolio/caserne/pavage.webp",
+    alt: "Pavage et aménagement des abords de la caserne des sapeurs-pompiers",
     subject: "Distribution · Matières · Finitions",
-    caption: "Illustration générée — espace aménagé",
+    label: "Chantier ALMA-STRA",
+    caption: "Photographie ALMA-STRA — aménagement des espaces extérieurs",
     context: "Un espace brut ou inadapté à son usage.",
     result: "Un environnement fonctionnel, équipé et livré.",
   },
   coordination: {
-    src: "/images/expertise/coordination.webp",
-    alt: "Visualisation de responsables de chantier coordonnant les plans et les lots techniques",
+    src: "/images/portfolio/province/structure.webp",
+    alt: "Structure en béton du bâtiment du 6e arrondissement — vue de chantier",
     subject: "Plans · Métiers · Pilotage",
-    caption: "Illustration générée — coordination du chantier",
+    label: "Chantier ALMA-STRA",
+    caption: "Photographie ALMA-STRA — chantier du 6e arrondissement",
     context: "Plusieurs métiers et des interfaces à maîtriser.",
     result: "Un interlocuteur unique, de l’étude à la livraison.",
   },
 } as const;
 
 export const imagery = {
-  hero: "/images/projects/VUE-1-1.jpg",
-  field: "/images/projects/MINJ8006.jpg",
+  hero: "/images/portfolio/province/facade.webp",
+  field: "/images/portfolio/conseil/cour-chantier.webp",
 };
 
 /** These names and photo associations come from the original public projects index. */

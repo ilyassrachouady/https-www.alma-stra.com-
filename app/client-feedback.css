@@ -1,0 +1,77 @@
+/* Client feedback: bilingual navigation, contact, company and legal content. */
+.skip-link { position: fixed; inset-block-start: -100px; inset-inline-start: 16px; z-index: 1000; background: #80ff00; color: #252525; padding: 12px 20px; }
+.skip-link:focus { inset-block-start: 12px; }
+.language-switch { white-space: nowrap; font-family: var(--font-arabic), sans-serif; font-size: 13px; font-weight: 600; border: 1px solid #dce1d5; border-radius: 4px; padding: 8px 11px; margin-inline-start: 12px; }
+.whatsapp-button { position: fixed; inset-inline-end: 22px; inset-block-end: 22px; z-index: 70; display: inline-flex; align-items: center; gap: 8px; padding: 13px 17px; border-radius: 30px; background: #234d29; color: #fff; box-shadow: 0 4px 24px #0002; font-size: 13px; font-weight: 600; }
+.whatsapp-button:hover { background: #326a38; }
+.contact-honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.contact-form .contact-consent { display: flex; align-items: flex-start; gap: 11px; font-size: 13px; line-height: 1.7; font-weight: 400; }
+.contact-form .contact-consent input { width: 18px; height: 18px; margin-block-start: 4px; flex: 0 0 18px; accent-color: #3d6a2a; }
+.contact-consent a, .contact-alternatives a { text-decoration: underline; text-underline-offset: 3px; }
+.contact-alternatives { font-size: 13px; }
+.form-status { display: flex; gap: 12px; font-size: 14px; line-height: 1.7; }
+.form-status-sent { color: #31592b; padding: 15px; background: #edf6e6; border-radius: 5px; }
+.form-status-error { color: #8b2929; padding: 15px; background: #fff1ef; border-radius: 5px; }
+.form-status p { margin: 0; }
+.form-status svg { flex-shrink: 0; margin-block-start: 2px; }
+.contact-form button:disabled { opacity: .65; cursor: progress; }
+.company-identity { display: grid; grid-template-columns: 1fr 1.1fr; gap: 70px; border-block-end: 1px solid #dfe3da; }
+.company-identity p, .company-consultation p, .company-references p { color: #65665f; line-height: 1.85; }
+.company-identity dl { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin: 0; }
+.company-identity dt { color: #72766a; font-size: 12px; margin-block-end: 8px; }
+.company-identity dd { margin: 0; font-size: 16px; overflow-wrap: anywhere; }
+.company-reference-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-block-start: 35px; }
+.company-reference-image { position: relative; aspect-ratio: 1.55; overflow: hidden; }
+.company-reference-image img { object-fit: cover; }
+.company-reference-grid h3 { display: flex; align-items: center; justify-content: space-between; gap: 15px; font-size: 23px; margin-block: 20px 12px; }
+.company-consultation { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; border-block-start: 1px solid #dfe3da; }
+.company-consultation .alma-btn { margin-block-start: 20px; }
+.legal-page { padding-block: 75px 100px; max-width: 1040px; }
+.legal-page header { border-block-end: 1px solid #dfe3da; padding-block-end: 35px; margin-block-end: 45px; }
+.legal-page h1 { font-size: clamp(32px, 5vw, 65px); line-height: 1.2; margin-block: 18px; overflow-wrap: anywhere; }
+.legal-page p { color: #62675c; line-height: 1.9; max-width: 800px; }
+.legal-content section { margin-block-end: 32px; }
+.legal-content h2 { font-size: 22px; line-height: 1.5; margin-block-end: 10px; }
+.legal-nav { display: flex; flex-wrap: wrap; gap: 20px; border-block-start: 1px solid #dfe3da; padding-block-start: 25px; font-size: 13px; }
+.legal-nav [aria-current] { text-decoration: underline; text-underline-offset: 4px; }
+html[dir="rtl"] body, html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] h4, html[dir="rtl"] button, html[dir="rtl"] input, html[dir="rtl"] textarea, html[dir="rtl"] select { font-family: var(--font-arabic), Tahoma, sans-serif; letter-spacing: 0; }
+html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3 { font-weight: 600; line-height: 1.5; text-transform: none; }
+html[dir="rtl"] .alma-hero h1 { font-size: clamp(34px, 4.3vw, 66px); line-height: 1.65; }
+html[dir="rtl"] .alma-hero-line { padding-bottom: .12em; }
+html[dir="rtl"] em { font-style: normal; }
+html[dir="rtl"] .alma-desktop-nav { gap: 18px; }
+html[dir="rtl"] .alma-topbar a, html[dir="rtl"] a[href^="tel:"], html[dir="rtl"] a[href^="mailto:"], html[dir="rtl"] .alma-footer-contact { direction: ltr; unicode-bidi: isolate; }
+html[dir="rtl"] .alma-nav-dropdown-panel { left: auto; right: -18px; text-align: right; }
+html[dir="rtl"] .service-back-link svg, html[dir="rtl"] .back-link svg, html[dir="rtl"] .alma-text-link svg, html[dir="rtl"] .alma-btn svg, html[dir="rtl"] .service-next-link > svg, html[dir="rtl"] .project-next svg, html[dir="rtl"] .service-flow-arrow.desktop-arrow { transform: scaleX(-1); }
+html[dir="rtl"] .project-lightbox-controls { direction: ltr; }
+html[dir="rtl"] .alma-project-info, html[dir="rtl"] .project-case-facts, html[dir="rtl"] .contact-form label { text-align: right; }
+html[dir="rtl"] .alma-logo-marquee { direction: ltr; }
+html[dir="rtl"] .alma-offer-title { line-height: 1.4; }
+@media(min-width: 1101px) { .alma-desktop-nav { gap: 20px; } .alma-nav-inner { gap: 18px; } .alma-nav-cta { margin-inline-start: 0; } }
+@media(max-width: 1100px) { .language-switch { margin-inline-start: auto; } .alma-nav-cta { margin-inline-start: 0; } }
+@media(max-width: 760px) {
+ .company-identity, .company-consultation { grid-template-columns: 1fr; gap: 30px; }
+ .company-identity dl { gap: 25px 16px; }
+ .company-reference-grid { grid-template-columns: 1fr; }
+ .whatsapp-button { inset-inline-end: 16px; inset-block-end: 16px; padding: 13px; }
+ .whatsapp-button span { display: none; }
+ .language-switch { padding: 7px 9px; font-size: 12px; }
+ html[dir="rtl"] .alma-hero h1 { font-size: clamp(29px, 7.4vw, 46px); }
+ html[dir="rtl"] .display-title { font-size: clamp(29px, 8vw, 45px); }
+}
+@media(prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
+@media(prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; clip-path: none !important; } }
+@media(min-width: 1101px) {
+ .alma-nav-inner { grid-template-columns: minmax(160px, 1fr) auto auto auto; }
+ .language-switch { justify-self: end; margin-inline-start: 0; }
+}
+@media(max-width: 1100px) {
+ .alma-nav-inner { display: flex; justify-content: space-between; gap: 16px; }
+ .alma-logo { margin-inline-end: auto; }
+ .language-switch { margin-inline-start: 0; }
+}
+html[dir="rtl"] .alma-mobile-subnav { padding-inline-start: 18px; padding-inline-end: 0; border-inline-start: 2px solid var(--alma-green); border-inline-end: 0; }
+.contact-form .contact-consent { text-transform: none; letter-spacing: normal; }
+/* Native modal semantics keep the mobile navigation above and separate from the page. */
+dialog.alma-mobile-menu { width: 100%; height: 100dvh; max-width: none; max-height: none; margin: 0; border: 0; color: var(--alma-ink); }
+dialog.alma-mobile-menu:not([open]) { display: none; }
