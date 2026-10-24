@@ -1,6 +1,6 @@
 # Retour client du 21 octobre 2026 — suivi de mise en œuvre
 
-Mise à jour : 22 octobre 2026. Changements locaux, non déployés.
+Mise à jour : 24 octobre 2026. La version 45e373f est déployée sur Vercel ; le domaine officiel et la remise des comptes restent à finaliser.
 
 ## Fonctionnement
 
@@ -66,3 +66,14 @@ Voir `launch-and-handover.md`. Aucun compte, domaine, hébergement, tarif ou eng
 - Lint : aucune erreur ; avertissement existant sur le `<img>` du logo conservé, conformément à la demande de ne pas modifier les logos.
 
 L’envoi réel et la réception dans les deux boîtes restent à vérifier après configuration de Resend. Les contenus arabes et légaux restent soumis à validation du client. Aucun déploiement, transfert de compte ou envoi de devis au client effectué.
+
+
+## Vérification de la version hébergée — 24 octobre 2026
+
+Le push GitHub a déclenché le déploiement Vercel `dpl_6kp7iKeCE1s9tq6DvcjbCAM3Ex8c`, prêt sur la branche main et correspondant exactement au commit `45e373ff1b08b26b8dd020ab7ba22c489213b06a`. URL de recette : https://https-wwwalma-stracom.vercel.app/. Le nom de domaine alma-stra.com ne figure pas parmi les domaines attachés au projet ; le basculement du site officiel reste donc à organiser. L’hébergement est encore dans l’espace personnel d’Ilyass.
+
+Les 38 pages hébergées ont répondu 200, avec un H1, la langue et la direction attendues, une description distincte, un canonical propre, les alternates français/arabe, une image sociale et le lien WhatsApp. Résultats détaillés dans `artifacts/hosted-verification-2026-10-24.json`. Navigation bilingue, menu mobile, focus, fermeture Échap, galerie arabe Atlas Sahara, changement d’image au clavier et chargement d’une image en plein écran vérifiés dans le navigateur sur le site hébergé.
+
+Une légende arabe a été corrigée : « armatures d’un poteau » devient « تسليح أحد الأعمدة », sans assimilation à du béton déjà coulé. Il s’agit d’une correction éditoriale, pas d’une validation de toute la traduction par le client.
+
+Un dossier de validation et une proposition de chiffrage sont préparés séparément pour Ilyass. Ces documents ne valent ni accord client ni devis envoyé. Les montants ne sont pas publiés dans le dépôt. Les années, les cinq maîtres d’ouvrage non documentés, les certificats et moyens humains/matériels restent à confirmer par ALMA-STRA. Resend reste expressément en attente à la demande d’Ilyass ; aucun réglage de production ou DNS n’est modifié dans cette étape.
