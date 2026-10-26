@@ -29,7 +29,15 @@ const arabic = Tajawal({ subsets: ["arabic"], variable: "--font-arabic", display
 export const metadata: Metadata = {
  metadataBase: new URL("https://alma-stra.com"),
  title: { default: "ALMA-STRA", template: "%s | ALMA-STRA" },
- icons: { icon: "/favicon.svg" },
+ icons: {
+   icon: [
+     { url: "/favicon.svg?v=2", type: "image/svg+xml" },
+     { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+     { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+   ],
+   shortcut: "/favicon.ico",
+   apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+ },
 };
 export function generateStaticParams() { return [{ locale: "fr" }, { locale: "ar" }]; }
 export default async function RootLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
