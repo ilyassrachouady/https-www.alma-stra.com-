@@ -52,7 +52,7 @@ export default function ProjectGallery({ images, title, locale = "fr" }: {
         {images.map((image, index) => (filter === "all" || filter === image.kind) && (<figure key={image.src} className={image.width < image.height ? "project-gallery-portrait" : ""}>
             <button type="button" className="project-gallery-open" aria-label={`Agrandir : ${image.caption}`} onClick={event => { openerRef.current = event.currentTarget; setActive(index); }}>
               <Image src={image.src} alt={image.alt} width={image.width} height={image.height} placeholder="blur" blurDataURL={image.blurDataURL} sizes="(max-width: 760px) 100vw, 50vw"/>
-              <span className="project-gallery-type">{labels[image.kind]}</span>
+              <span className="project-gallery-type">{image.retouched ? "Photographie retouchée" : labels[image.kind]}</span>
               <span className="project-gallery-expand" aria-hidden="true"><Expand size={19}/></span>
             </button>
             <figcaption><span>{String(index + 1).padStart(2, "0")}</span>{image.caption}</figcaption>
@@ -85,7 +85,7 @@ export default function ProjectGallery({ images, title, locale = "fr" }: {
         {current && <>
           <div className="project-lightbox-bar"><span id={headingId}>{title}</span><button type="button" autoFocus onClick={() => setActive(null)} aria-label="Fermer la galerie"><X size={24}/></button></div>
           <div className="project-lightbox-image"><Image key={current.src} src={current.src} alt={current.alt} fill placeholder="blur" blurDataURL={current.blurDataURL} loading="eager" sizes="100vw" style={{ objectFit: "contain" }}/></div>
-          <div className="project-lightbox-caption" aria-live="polite"><div><small>{labels[current.kind]} · {(active ?? 0) + 1} / {images.length}</small><p>{current.caption}</p></div><div className="project-lightbox-controls"><a href={current.src} target="_blank" rel="noreferrer">Ouvrir l’image</a><button type="button" onClick={() => move(-1)} aria-label="Image précédente"><ArrowLeft size={22}/></button><button type="button" onClick={() => move(1)} aria-label="Image suivante"><ArrowRight size={22}/></button></div></div>
+          <div className="project-lightbox-caption" aria-live="polite"><div><small>{current.retouched ? "Photographie retouchée" : labels[current.kind]} · {(active ?? 0) + 1} / {images.length}</small><p>{current.caption}</p></div><div className="project-lightbox-controls"><a href={current.src} target="_blank" rel="noreferrer">Ouvrir l’image</a><button type="button" onClick={() => move(-1)} aria-label="Image précédente"><ArrowLeft size={22}/></button><button type="button" onClick={() => move(1)} aria-label="Image suivante"><ArrowRight size={22}/></button></div></div>
         </>}
       </dialog>
     </div>), locale);

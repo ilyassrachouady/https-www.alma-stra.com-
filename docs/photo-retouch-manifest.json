@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-24",
+  "method": "Built-in image_gen, separate non-destructive derivatives",
+  "assets": {
+    "province/facade": "exec-cbd36978-f26a-47e3-aff7-82e0f57aeb9f.png",
+    "college/terrain-multisport": "exec-1daaebf5-ddb1-4d00-b34c-53748573cef4.png",
+    "sport/terrain": "exec-2a838e55-9044-4edc-988f-50561ae6124c.png",
+    "atlas/station-de-nuit": "exec-02dc1fce-b78f-4f74-aff4-12dd1287aa64.png",
+    "caserne/facade": "exec-340bc93a-b7f8-4cc4-955b-4f9233380633.png",
+    "conseil/cour-chantier": "exec-1ee7a2bb-53a9-471b-83c9-b42137a4f976.png"
+  },
+  "prompt": "Faithful architectural retouch of exact input photograph: straighten camera roll, restrained perspective correction, balance exposure and white balance, mild dehaze, realistic detail. Preserve actual structures, equipment, material surfaces and construction stage; no added architecture, planting, paving or implied completion. Per image: administrative facade tame glare and lift shadows; college court level sea horizon; black court straighten fencing; Atlas preserve night and wrapped pumps; caserne remove lens flare; conseil retain grader and bare ground. Landscape 4:3. AI outputs may reinterpret fine detail; label as retouched and retain originals."
+}

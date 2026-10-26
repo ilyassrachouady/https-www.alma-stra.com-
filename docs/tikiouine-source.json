@@ -1,0 +1,59 @@
+{
+  "source": "PLAQUETTE Centre Culturel Tikiouine 14022023.pdf",
+  "architect": "Ateliers Elmeknassi",
+  "media": [
+    {
+      "page": 13,
+      "asset": "facade.webp"
+    },
+    {
+      "page": 14,
+      "asset": "rue.webp"
+    },
+    {
+      "page": 16,
+      "asset": "ensemble.webp"
+    },
+    {
+      "page": 17,
+      "asset": "jardins.webp"
+    },
+    {
+      "page": 18,
+      "asset": "cour.webp"
+    },
+    {
+      "page": 24,
+      "asset": "hall.webp"
+    },
+    {
+      "page": 26,
+      "asset": "auditorium.webp"
+    },
+    {
+      "page": 27,
+      "asset": "scene.webp"
+    },
+    {
+      "page": 28,
+      "asset": "bibliotheque.webp"
+    },
+    {
+      "page": 31,
+      "asset": "activites.webp"
+    },
+    {
+      "page": 35,
+      "asset": "administration.webp"
+    },
+    {
+      "page": 3,
+      "asset": "plan-rdc.webp"
+    },
+    {
+      "page": 5,
+      "asset": "plan-etage.webp"
+    }
+  ],
+  "notes": "Architectural study images extracted without AI changes. Project role and completion date are not established by the brochure."
+}

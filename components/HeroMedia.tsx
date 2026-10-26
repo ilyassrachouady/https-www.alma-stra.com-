@@ -2,6 +2,8 @@
 import { localize } from "@/lib/localize";
 import { type Locale } from "@/lib/i18n";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 export default function HeroMedia({ src, alt, locale = "fr" }: {
     locale?: Locale;
@@ -83,6 +85,6 @@ export default function HeroMedia({ src, alt, locale = "fr" }: {
       <div ref={layerRef} className="alma-hero-media-parallax">
         <Image src={src} alt={alt} fill priority sizes="(max-width: 900px) 100vw, 52vw"/>
       </div>
-      <div className="alma-hero-media-badge"><strong>ALMA-STRA</strong><span>Laâyoune · Bâtiment administratif</span></div>
+      <Link href="/projects/province-laayoune" className="alma-hero-media-badge"><div><strong>ALMA-STRA</strong><span>Laâyoune · Bâtiment administratif</span></div><ArrowUpRight size={20} aria-hidden="true"/></Link>
     </div>), locale);
 }

@@ -1,0 +1,308 @@
+/* Final visual rhythm shared by the French and Arabic editions. */
+.alma-home .alma-section { padding-block: clamp(72px, 7.5vw, 108px); }
+.alma-section-intro, .alma-projects-head { column-gap: clamp(32px, 5vw, 76px); }
+.alma-home h2, .inner-hero h1, .project-detail-intro h1 { text-wrap: balance; }
+.alma-home p, .project-case-page p { text-wrap: pretty; }
+.alma-trust { padding-block: clamp(48px, 5vw, 72px); }
+.alma-trust-heading h2 { font-size: clamp(28px, 3vw, 46px); }
+.alma-hero-media, .alma-about-media, .alma-service-story-media { border-radius: 8px; }
+.alma-hero-media { box-shadow: 0 18px 55px #26332114; }
+.alma-hero-media-badge { border-radius: 4px; }
+.alma-btn, .alma-nav-cta { border-radius: 5px; min-height: 46px; }
+.alma-btn { gap: 18px; }
+.alma-btn-primary { box-shadow: inset 0 1px 0 #ffffff50; }
+.alma-btn-ghost { background: #ffffff80; }
+.alma-nav-dropdown-panel { border-radius: 10px; box-shadow: 0 16px 48px #26332112; }
+.alma-service-story { padding-block: clamp(38px, 4.5vw, 64px); }
+.alma-projects { background: #f4f5f1; }
+.alma-project-grid { gap: 38px 26px; }
+.alma-project-grid > .reveal:nth-child(2) { margin-top: 0; }
+.alma-project-image, .archive-project-image, .project-case-related-image {
+  border-radius: 7px;
+  isolation: isolate;
+}
+.alma-project-image img, .archive-project-image img, .project-case-related-image img {
+  filter: saturate(.88);
+  transition: transform 650ms var(--alma-ease), filter 400ms ease;
+}
+.alma-project-info { padding-block: 20px 22px; border-bottom: 1px solid var(--alma-border); gap: 18px; }
+.alma-project-info h3 { font-size: clamp(19px, 1.9vw, 27px); line-height: 1.2; margin-top: 8px; }
+.alma-project-info > svg, .archive-project-meta > svg {
+  flex-shrink: 0; box-sizing: content-box; padding: 10px;
+  border: 1px solid #39353626; border-radius: 50%;
+  transition: background 220ms ease, border-color 220ms ease;
+}
+.portfolio-image-label { inset-inline-start: 16px; left: auto; bottom: 16px; border-radius: 4px; backdrop-filter: blur(12px); }
+.alma-project-cta { padding-top: 32px; margin-top: 16px; }
+.projects-archive { gap: 52px 36px; }
+.archive-project.offset { margin-top: 60px; }
+.archive-project-meta { grid-template-columns: 34px minmax(0,1fr) auto; gap: 14px; padding-block: 22px 28px; }
+.archive-project-meta h2 { font-size: clamp(22px, 2.2vw, 31px); line-height: 1.2; }
+.archive-project-meta p { line-height: 1.7; }
+.project-case-cover .project-detail-image { border-radius: 8px; overflow: hidden; }
+.project-case-facts { gap: 0 30px; }
+.project-case-facts > div { padding-block: 22px 26px; }
+.project-case-facts dd { text-wrap: pretty; }
+.project-case-chapters article { border-top: 2px solid #93c83c66; }
+.project-gallery-filters { gap: 8px; }
+.project-gallery-filters button { border-radius: 5px; min-height: 44px; transition: background 180ms ease, border-color 180ms ease; }
+.project-gallery-open { border-radius: 7px; }
+.project-gallery-type, .project-gallery-expand { border-radius: 4px; }
+.project-gallery-type { left: auto; inset-inline-start: 14px; }
+.project-gallery-expand { right: auto; inset-inline-end: 14px; }
+.alma-reason { padding-block: 30px; }
+.alma-reason-icon { border-radius: 12px; }
+.alma-testimonial { border-radius: 8px; border: 1px solid var(--alma-border); box-shadow: 0 6px 20px #39353604; }
+.alma-testimonial > p { line-height: 1.85; }
+.alma-final-cta { position: relative; overflow: hidden; }
+.alma-final-cta::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse at 95% 100%, #93c83c18, transparent 60%);
+}
+.alma-final-cta-inner { position: relative; }
+.alma-footer-main { padding-block: 64px 48px; }
+.alma-footer-label { display: block; margin-bottom: 22px; }
+.alma-footer-col a { line-height: 1.65; }
+.alma-footer-bottom { padding-block: 22px; font-size: 11px; line-height: 1.7; }
+html[dir='rtl'] .alma-kicker, html[dir='rtl'] .archive-project-meta p,
+html[dir='rtl'] .project-case-facts dt, html[dir='rtl'] .alma-project-info span { letter-spacing: 0; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .alma-project-card:hover img, .archive-project:hover img, .project-case-related-grid a:hover img { transform: scale(1.035); filter: saturate(1); }
+  .alma-project-card:hover .alma-project-info > svg, .archive-project:hover .archive-project-meta > svg { background: var(--brand-chartreuse); border-color: var(--brand-chartreuse); }
+  .project-gallery-filters button:hover { border-color: var(--alma-green-dark); }
+}
+@media (max-width: 760px) {
+  .alma-home .alma-section { padding-block: 64px; }
+  .alma-trust { padding-block: 42px; }
+  .alma-trust-heading h2 { font-size: 30px; }
+  .alma-service-story { padding-block: 34px; }
+  .alma-project-grid { gap: 30px !important; }
+  .alma-project-info { padding-block: 16px 20px; }
+  .alma-project-info h3 { font-size: 22px; }
+  .alma-project-image { aspect-ratio: 1.22 !important; }
+  .archive-project.offset { margin-top: 0; }
+  .projects-archive { gap: 34px; }
+  .archive-project-meta { gap: 10px; }
+  .archive-project-meta h2 { font-size: 24px; }
+  .alma-project-info > svg, .archive-project-meta > svg { padding: 8px; width: 18px; height: 18px; }
+  .project-detail-image { min-height: 300px; height: 56svh; }
+  .project-case-deck p { line-height: 1.65; }
+  .alma-final-cta { padding-block: 64px; }
+  .alma-footer-main { padding-block: 46px 32px; gap: 30px !important; }
+  .alma-footer-label { margin-bottom: 14px; }
+  html[dir='rtl'] .alma-section h2 { line-height: 1.35; }
+}
+
+/* Content hierarchy: the portfolio follows references, ahead of service stories. */
+.alma-home .alma-projects-copy { max-width: 440px; }
+.alma-project-info h3 { font-family: var(--font-display), sans-serif; font-weight: 650; }
+.project-case-overview { padding-block: 44px 0; }
+.project-case-overview .project-case-facts { margin: 0 0 56px; grid-template-columns: repeat(4,minmax(0,1fr)); }
+.project-case-overview-grid { grid-template-columns: .7fr 1.3fr; align-items: start; gap: 5vw; }
+.project-case-overview-grid h2 { font-size: clamp(32px,4vw,56px); }
+.project-case-introduction { font-size: clamp(17px,1.5vw,21px); max-width: 720px; }
+.project-case-cover > figcaption { display: flex; align-items: baseline; gap: 16px; }
+.project-cover-kind { flex-shrink: 0; color: var(--alma-green-dark); font-weight: 700; }
+.project-case-gallery { padding-block: 64px; }
+.project-case-reading { margin-bottom: 72px; }
+.alma-footer-main { grid-template-columns: 1.25fr .7fr 1fr !important; }
+.alma-footer-contact { display: flex; flex-direction: column; gap: 10px; font-size: 15px; }
+.alma-footer-legal { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+html[dir='rtl'] .alma-project-info h3 { font-family: var(--font-arabic),sans-serif; font-weight: 700; }
+html[dir='rtl'] .alma-mobile-links > a { font-size: clamp(26px,6.5vw,38px); letter-spacing: 0; line-height: 1.5; }
+@media(max-width: 900px) {
+  .project-case-overview .project-case-facts { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .project-case-overview-grid { grid-template-columns: 1fr; gap: 20px; }
+}
+@media(max-width: 760px) {
+  .page-shell { width: calc(100% - 40px); }
+  .alma-home .alma-projects-head { gap: 24px; }
+  .alma-projects-copy p { margin-bottom: 14px; }
+  .project-case-overview { padding-top: 30px; }
+  .project-case-overview .project-case-facts { margin-bottom: 36px; gap: 0 20px; }
+  .project-case-facts dt { font-size: 10px; line-height: 1.6; }
+  .project-case-facts dd { font-size: 15px; line-height: 1.65; overflow-wrap: anywhere; }
+  .project-case-cover > figcaption { flex-direction: column; gap: 5px; }
+  .project-case-gallery { padding-block: 48px; }
+  .project-case-reading { margin-bottom: 48px; }
+  .alma-footer-main { grid-template-columns: 1fr 1fr !important; gap: 32px 24px !important; }
+  .alma-footer-brand { grid-column: 1/-1; }
+  .alma-footer-col:last-child { grid-column: auto; }
+  .alma-footer-col { font-size: 12px; }
+  .alma-footer-legal { gap: 10px 18px; font-size: 11px; }
+  .alma-mobile-links { margin-top: 20px; }
+  .alma-mobile-links > a { font-size: clamp(26px,7vw,36px); padding-block: 7px; }
+  html[dir='rtl'] .alma-hero h1 { font-size: clamp(30px,8vw,44px); line-height: 1.35; }
+}
+@media(max-width: 380px) {
+  .project-case-overview .project-case-facts { grid-template-columns: 1fr; }
+  .alma-footer-main { grid-template-columns: 1fr !important; }
+}
+
+.photo-retouch-note { font-size: 12px !important; color: var(--alma-muted); line-height: 1.7; }
+
+/* The company introduction explains its approach rather than repeating a project photo. */
+.company-approach { position: relative; overflow: hidden; background: var(--brand-charcoal); border-radius: 8px; padding: clamp(28px,3.2vw,48px); color: #fffeed; }
+.company-approach::before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .035; background-image: linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px); background-size: 40px 40px; }
+.company-approach > * { position: relative; }
+.company-approach-heading { display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; border-bottom: 1px solid #ffffff28; padding-bottom: 24px; }
+.company-approach-heading > span:first-child { font-family: var(--font-display),sans-serif; font-size: 12px; letter-spacing: .08em; font-weight: 700; }
+.company-approach-heading > span:last-child { max-width: 190px; font-size: 10px; line-height: 1.7; color: #c7cfbd; }
+.company-approach > h3 { font-family: var(--font-display),sans-serif; font-size: clamp(30px,3.3vw,46px); line-height: 1.12; letter-spacing: -.04em; margin-block: 32px; font-weight: 650; }
+.company-approach > h3 em { color: var(--brand-green-light); }
+.company-approach-steps { list-style: none; margin: 0; padding: 0; }
+.company-approach-steps li { position: relative; display: grid; grid-template-columns: 48px 1fr; gap: 20px; padding-block: 18px 25px; border-top: 1px solid #ffffff20; }
+.company-approach-step-icon { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid #bce37f50; border-radius: 50%; color: var(--brand-green-light); }
+.company-approach-number { font-size: 10px; color: var(--brand-green-light); float: inline-end; }
+.company-approach-steps h4 { margin: 0 0 7px; font-family: var(--font-display),sans-serif; font-size: 17px; font-weight: 600; }
+.company-approach-steps p { margin: 0; color: #d0d4c9; font-size: 13px; line-height: 1.7; max-width: 280px; }
+.company-approach-connector { position: absolute; inset-inline-start: 15px; bottom: 2px; color: #bce37f80; }
+.company-approach-link { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 8px; padding-top: 24px; border-top: 1px solid #ffffff28; font-size: 12px; color: var(--brand-green-light); }
+.about-approach-band { max-width: 1040px; margin-block: 0 60px; }
+html[dir='rtl'] .company-approach h3, html[dir='rtl'] .company-approach h4 { font-family: var(--font-arabic),sans-serif; letter-spacing: 0; }
+html[dir='rtl'] .company-approach > h3 { line-height: 1.4; }
+@media(max-width:760px) {
+ .company-approach { padding: 28px 24px; }
+ .company-approach > h3 { font-size: 34px; margin-block: 28px; }
+ .company-approach-heading > span:last-child { max-width: 165px; }
+ .company-approach-steps li { gap: 16px; }
+}
+
+/* The client's five architectural perspectives form one continuous hero sequence. */
+.alma-hero--slideshow { isolation: isolate; background: #29332d; color: #fff; min-height: clamp(640px,calc(100svh - 116px),900px); padding-block: 68px 88px; }
+.alma-hero--slideshow::before { display: none; }
+.alma-hero--slideshow .alma-hero-grid { display: block; position: relative; z-index: 2; pointer-events: none; }
+.alma-hero--slideshow .alma-hero-copy { max-width: 700px; pointer-events: auto; }
+.alma-hero--slideshow h1 { font-size: clamp(48px,5.4vw,84px); line-height: 1.05; letter-spacing: -.045em; text-shadow: 0 2px 24px #0002; }
+.alma-hero--slideshow h1 em { color: #d0f5aa; }
+.alma-hero--slideshow .alma-kicker { color: #fff; line-height: 1.8; }
+.alma-hero--slideshow .alma-hero-copy > p { color: #f3f4ef; max-width: 480px; font-size: 16px; line-height: 1.8; margin-block: 26px 30px; }
+.alma-hero--slideshow .alma-btn-ghost { color: white; background: #ffffff0d; border-color: #ffffff80; backdrop-filter: blur(8px); }
+.hero-slideshow, .hero-slideshow-images, .hero-slide, .hero-slideshow-shade { position: absolute; inset: 0; }
+.hero-slideshow { z-index: 0; }
+.hero-slideshow-images { overflow: hidden; }
+.hero-slide { opacity: 0; transition: opacity 1600ms cubic-bezier(.4,0,.2,1); }
+.hero-slide.is-active { opacity: 1; }
+.hero-slide img { object-fit: cover; }
+.hero-slideshow-shade { pointer-events: none; background: linear-gradient(90deg,#18231de0 0%,#18231db8 32%,#18231d45 65%,#18231d10 100%),linear-gradient(0deg,#101d18ad,transparent 30%); }
+html[dir='rtl'] .alma-hero--slideshow h1 { font-size: clamp(38px,4.8vw,72px); line-height: 1.35; }
+html[dir='rtl'] .hero-slideshow-shade { background: linear-gradient(270deg,#18231de0 0%,#18231db8 32%,#18231d45 65%,#18231d10 100%),linear-gradient(0deg,#101d18ad,transparent 30%); }
+@media(max-width:760px) {
+ .alma-hero--slideshow { min-height: 690px; padding-block: 58px 80px; }
+ .alma-hero--slideshow h1 { font-size: clamp(40px,10.5vw,62px); line-height: 1.08; }
+ .alma-hero--slideshow .alma-hero-copy > p { font-size: 15px; max-width: 410px; margin-block: 22px 26px; }
+ .alma-hero--slideshow .alma-hero-actions { flex-direction: row; gap: 10px; }
+ .alma-hero--slideshow .alma-btn { width: auto; flex: 1 1 140px; padding-inline: 12px; gap: 8px; font-size: 11px; }
+ .hero-slideshow-shade, html[dir='rtl'] .hero-slideshow-shade { background: linear-gradient(0deg,#142019d9,#14201970 55%,#14201970); }
+ html[dir='rtl'] .alma-hero--slideshow h1 { font-size: clamp(34px,9vw,48px); line-height: 1.35; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .hero-slide { transition: none; }
+}
+
+/* Selected suppliers: a quiet, consistent logo wall. */
+.alma-suppliers { border-top: 1px solid #e3e7df; background: #fafbf8; }
+.alma-suppliers-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 36px; margin-bottom: 38px; }
+.alma-suppliers-heading h2 { font-size: clamp(30px, 3.3vw, 48px); line-height: 1.12; letter-spacing: -.035em; margin: 16px 0 0; }
+.alma-suppliers-heading > p { max-width: 330px; margin: 0; color: #687064; line-height: 1.7; }
+.alma-supplier-grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1px; background: #e3e7df; border: 1px solid #e3e7df; border-radius: 8px; overflow: hidden; }
+.alma-supplier-grid li { min-width: 0; min-height: 112px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 22px 15px; }
+.alma-supplier-grid img { display: block; width: 100%; max-width: 140px; height: 62px; object-fit: contain; filter: none; opacity: 1; }
+.alma-supplier-name { font-family: Manrope, Arial, sans-serif; color: #363d34; font-size: clamp(20px, 2vw, 27px); font-weight: 700; letter-spacing: -.05em; }
+@media (max-width: 1100px) { .alma-supplier-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .alma-suppliers-heading { display: block; margin-bottom: 26px; }
+  .alma-suppliers-heading > p { margin-top: 20px; }
+  .alma-supplier-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .alma-supplier-grid li { min-height: 100px; padding: 18px 24px; }
+  .alma-suppliers-heading h2 { letter-spacing: -.025em; }
+}
+
+/* Editorial client feedback, with a clear draft status until approved. */
+.alma-reviews { background: #f1f3ed; }
+.alma-reviews-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 28px; }
+.alma-reviews-heading h2 { margin: 18px 0 0; font-size: clamp(32px, 4vw, 58px); line-height: 1.1; letter-spacing: -.045em; }
+.alma-reviews-heading h2 em { font-style: normal; color: #426c30; }
+.alma-reviews-heading > p { max-width: 270px; margin: 0 0 4px; line-height: 1.7; color: #65705e; }
+.alma-reviews-draft { display: inline-block; font-size: 11px; line-height: 1.6; color: #69715f; border-inline-start: 2px solid #a2bd85; padding-inline-start: 10px; margin: 0 0 28px; }
+.alma-reviews-grid { display: grid; grid-template-columns: 1.18fr 1fr 1fr; gap: 16px; }
+.alma-review-card { margin: 0; height: 100%; min-height: 380px; padding: clamp(26px, 2.6vw, 38px); border: 1px solid #dce2d6; border-radius: 10px; background: #fff; display: flex; flex-direction: column; }
+.alma-review-top { display: flex; align-items: center; justify-content: space-between; gap: 14px; color: #5b704d; }
+.alma-review-top > span { font-size: 10px; letter-spacing: .07em; text-transform: uppercase; }
+.alma-review-card h3 { font-size: clamp(22px, 2vw, 29px); line-height: 1.2; letter-spacing: -.035em; margin: 30px 0 18px; max-width: 14em; }
+.alma-review-card blockquote { margin: 0 0 32px; }
+.alma-review-card blockquote p { margin: 0; font-size: 15px; line-height: 1.85; color: #687160; }
+.alma-review-card figcaption { display: flex; gap: 12px; align-items: center; margin-top: auto; border-top: 1px solid #e3e8df; padding-top: 20px; font-size: 12px; }
+.alma-review-mark { width: 36px; height: 36px; border-radius: 50%; background: #f1f4ec; display: grid; place-items: center; color: #5c704e; font-size: 10px; flex-shrink: 0; }
+.alma-review-card figcaption small { display: block; margin-top: 5px; color: #7e8677; font-size: 10px; }
+.alma-review-featured { background: #253c2c; border-color: #253c2c; color: #fff; }
+.alma-review-featured .alma-review-top { color: #c3e79e; }
+.alma-review-featured blockquote p { color: #d7e0d1; }
+.alma-review-featured figcaption { border-color: #ffffff24; }
+.alma-review-featured figcaption small { color: #b1c0a8; }
+.alma-review-featured .alma-review-mark { background: #ffffff12; color: #c3e79e; }
+html[dir="rtl"] .alma-review-top > span { letter-spacing: 0; }
+@media (max-width: 900px) {
+  .alma-reviews-heading { display: block; }
+  .alma-reviews-heading > p { margin-top: 22px; max-width: 400px; }
+  .alma-reviews-grid { grid-template-columns: 1fr; }
+  .alma-review-card { min-height: 0; }
+  .alma-review-card h3 { max-width: none; }
+}
+
+/* Readable body copy and supporting UI across both language editions. */
+:root { --alma-muted: #51594e; --muted: #51594e; }
+body { font-size: 17px; color: #30362e; }
+.alma-home p, .project-case-page p, .about-page p, .service-detail-page p,
+.legal-page p, .company-page p, .contact-page p { font-size: 17px; line-height: 1.8; }
+.alma-kicker, .section-label, .project-kicker, .service-eyebrow { font-size: 12px; font-weight: 500; }
+.alma-desktop-nav > a, .alma-nav-dropdown > button { font-size: 14px; }
+.alma-topbar { font-size: 13px; color: #46513f; }
+.alma-btn, .alma-nav-cta { font-size: 14px; }
+.alma-footer { color: #35402f; }
+.alma-footer p, .alma-footer-col > a, .alma-footer-contact a,
+.alma-footer-bottom, .alma-footer-legal { font-family: var(--font-display), Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 1.8; color: #414b3b; }
+.alma-footer-brand > p, .alma-footer-col > p { font-size: 16px; color: #414b3b; }
+.alma-footer-label { font-family: var(--font-display), Arial, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .07em; color: #30362e; }
+.alma-footer-col > a { padding-block: 3px; }
+.alma-footer-legal a, .alma-footer-arrow { color: #315b22; }
+.alma-footer-legal { padding-inline-end: 130px; }
+.alma-footer-bottom { font-size: 13px; gap: 20px; }
+.alma-footer-col a:hover, .alma-footer-legal a:hover { color: #243e1c; text-decoration: underline; text-underline-offset: 4px; }
+.alma-projects-copy p, .alma-why-heading p, .alma-about-copy > p,
+.alma-reason > p, .alma-reviews-heading > p, .alma-suppliers-heading > p,
+.project-case-introduction, .project-case-chapters p { color: #4c5546; }
+.alma-review-card blockquote p { font-size: 17px; color: #4c5546; }
+.alma-review-featured blockquote p { color: #e0e8da; }
+.alma-review-card figcaption { font-size: 14px; }
+.alma-review-card figcaption small { font-size: 12px; color: #58624f; }
+.alma-review-featured figcaption small { color: #c6d5bc; }
+.alma-home .alma-reviews-draft { font-size: 13px; color: #4c5546; }
+.alma-review-top > span { font-size: 12px; }
+.project-case-facts dt { font-size: 12px; color: #505a48; }
+.project-case-facts dd { font-size: 17px; }
+.project-gallery figcaption, .project-case-cover figcaption,
+.project-gallery-toolbar, .project-gallery-filters button { font-size: 14px; }
+.portfolio-image-label, .project-gallery-type, .project-cover-kind { font-size: 12px; }
+.company-approach-steps p { font-size: 15px; color: #e1e7da; }
+.company-approach-heading > span:last-child, .company-approach-number { font-size: 12px; }
+.company-approach-link { font-size: 14px; }
+input, select, textarea { font-size: 16px; }
+html[dir='rtl'] .alma-footer p, html[dir='rtl'] .alma-footer a,
+html[dir='rtl'] .alma-footer-bottom, html[dir='rtl'] .alma-footer-label { font-family: var(--font-arabic), Arial, sans-serif; }
+@media (max-width: 760px) {
+  .alma-home p, .project-case-page p, .about-page p, .service-detail-page p,
+  .legal-page p, .company-page p, .contact-page p { font-size: 16px; }
+  .alma-hero--slideshow .alma-btn { font-size: 13px; }
+  .alma-footer-col { font-size: 15px; }
+  .alma-footer-legal { font-size: 14px; padding-inline-end: 0; gap: 14px 22px; }
+  .alma-footer-bottom { padding-bottom: 95px; }
+  .alma-footer-brand > p, .alma-footer-col > p { font-size: 16px; }
+  .alma-review-card blockquote p { font-size: 16px; }
+}
+.alma-contact-band, .alma-contact-band a, .alma-contact-band strong,
+.alma-contact-band small { color: #25361d; opacity: 1; }
+.alma-contact-band strong { font-family: var(--font-display), Arial, sans-serif; font-size: 15px; font-weight: 500; line-height: 1.6; }
+.alma-contact-band small { font-size: 12px; }
+.alma-contact-grid > a > span, .alma-contact-grid > div > span { color: #25361d; border-color: #354b2866; }
+html[dir='rtl'] .alma-contact-band strong { font-family: var(--font-arabic), Arial, sans-serif; }

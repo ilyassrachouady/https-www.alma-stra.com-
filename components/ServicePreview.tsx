@@ -29,7 +29,6 @@ export default function ServicePreview({ service, index, locale = "fr" }: {
             <Image src={visual.src} alt={visual.alt} fill sizes="(max-width: 760px) 100vw, (max-width: 1180px) 48vw, 52vw" style={{ objectPosition: service.imagePosition ?? "center" }}/>
             <div className="alma-service-story-media-tag"><span>{visual.subject}</span><strong>{service.shortTitle}</strong></div>
           </div>
-          <p className="expertise-visual-note">{visual.caption}</p>
         </div>
 
         <div className="alma-service-story-content">

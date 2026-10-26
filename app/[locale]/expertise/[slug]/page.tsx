@@ -11,7 +11,7 @@ import { projects, services } from "@/lib/data";
 import { serviceMedia } from "@/lib/media";
 import ServiceSchematic from "@/components/ServiceSchematic";
 import ProjectGallery from "@/components/ProjectGallery";
-import { clientMedia } from "@/lib/client-media";
+import { getCollectionImages } from "@/lib/project-details";
 export function generateStaticParams() {
     return services.map(service => ({ slug: service.slug }));
 }
@@ -45,9 +45,8 @@ export default async function ServicePage({ params }: {
           <Reveal className="service-detail-hero-media-reveal" variant="fade" delay={80}>
             <div className="service-detail-hero-media">
               <Image src={visual.src} alt={visual.alt} fill priority sizes="(max-width: 900px) 100vw, 52vw" style={{ objectPosition: service.imagePosition ?? "center" }}/>
-              <div className="service-detail-image-caption"><span>{visual.label}</span><strong>{visual.subject}</strong></div>
+              <div className="service-detail-image-caption"><strong>{visual.subject}</strong></div>
             </div>
-            <p className="expertise-visual-note">{visual.caption}</p>
           </Reveal>
         </div>
       </section>
@@ -121,7 +120,7 @@ export default async function ServicePage({ params }: {
 
       {service.diagram === "land" && <section className="service-section page-shell" aria-labelledby="service-field-gallery">
         <div className="service-section-heading"><span className="alma-kicker"><span /> Sur le terrain</span><h2 id="service-field-gallery">Les réseaux et les ouvrages, en détail.</h2><p>Tranchées, regards, raccordements et équipements d’eau : les photographies des travaux de viabilisation ALMA-STRA.</p></div>
-        <ProjectGallery locale={locale} images={clientMedia.viabilisation} title="Travaux de viabilisation"/>
+        <ProjectGallery locale={locale} images={getCollectionImages("viabilisation")} title="Travaux de viabilisation"/>
       </section>}
 
       <section className="service-value-section">

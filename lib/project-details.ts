@@ -1,4 +1,5 @@
 import { clientMedia, type ProjectImage } from "./client-media";
+import { retouchedPhotos } from "./retouched-photos";
 
 export type ProjectDetail = {
   collection: string;
@@ -10,6 +11,47 @@ export type ProjectDetail = {
 };
 
 export const projectDetails: Record<string, ProjectDetail> = {
+  "centre-culturel-tikiouine": {
+  "collection": "tikiouine",
+  "subtitle": "Un lieu pour la culture, la lecture et la vie associative.",
+  "introduction": "Le dossier architectural du Centre culturel de Tikiouine réunit une salle de spectacle, une bibliothèque, un hall d’exposition et des salles d’activités associatives. Les perspectives et les plans présentés sont extraits de la plaquette fournie, conçue par Ateliers Elmeknassi. Ils illustrent le projet d’étude.",
+  "facts": [
+    {
+      "label": "Localisation",
+      "value": "Tikiouine"
+    },
+    {
+      "label": "Programme",
+      "value": "Centre culturel"
+    },
+    {
+      "label": "Nature du dossier",
+      "value": "Étude architecturale"
+    },
+    {
+      "label": "Architecte",
+      "value": "Ateliers Elmeknassi"
+    }
+  ],
+  "chapters": [
+    {
+      "title": "Des espaces pour partager la culture",
+      "text": "La salle de spectacle s’organise autour d’une scène et de gradins. La bibliothèque et le hall d’exposition complètent ce programme, avec des espaces dédiés à la lecture et à la découverte."
+    },
+    {
+      "title": "La vie associative au cœur du programme",
+      "text": "Le premier étage accueille une salle d’activités principale et deux salles pour les activités associatives. Les plans montrent également les espaces administratifs et les rampes d’accès pour les personnes à mobilité réduite."
+    },
+    {
+      "title": "Une architecture ouverte sur ses abords",
+      "text": "Les perspectives présentent la façade à motifs géométriques, le parvis et les jardins. La galerie associe ces vues extérieures aux ambiances intérieures et aux plans des deux niveaux."
+    }
+  ],
+  "related": [
+    "al-omrane-souss-massa",
+    "province-laayoune"
+  ]
+},
   "college-ibn-khaldoune-al-omrane": {
     collection: "college", subtitle: "Un terrain de jeu, des espaces pour se retrouver.",
     introduction: "Un terrain multisport associé à des espaces extérieurs pavés. Le revêtement coloré, les lignes de jeu et les équipements sportifs organisent l’aire de pratique, tandis que les gradins et les cheminements accompagnent les usages autour du terrain.",
@@ -76,5 +118,9 @@ export const projectDetails: Record<string, ProjectDetail> = {
 };
 
 export function getProjectImages(slug: string): ProjectImage[] {
-  return clientMedia[projectDetails[slug]?.collection] ?? [];
+  return getCollectionImages(projectDetails[slug]?.collection);
+}
+
+export function getCollectionImages(collection: string): ProjectImage[] {
+  return (clientMedia[collection] ?? []).map(image => retouchedPhotos[image.src] ? { ...image, ...retouchedPhotos[image.src], retouched: true } : image);
 }

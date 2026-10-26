@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Manrope, Noto_Sans_Arabic } from "next/font/google";
+import { Manrope, Tajawal } from "next/font/google";
 import "../globals.css";
 import "../modern.css";
 import "../polish.css";
@@ -10,6 +10,7 @@ import "../responsive-fixes.css";
 import "../brand.css";
 import "../projects.css";
 import "../client-feedback.css";
+import "../refinement.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { notFound } from "next/navigation";
@@ -24,7 +25,7 @@ const headings = Manrope({
   subsets: ["latin"], variable: "--font-display", display: "swap",
 });
 
-const arabic = Noto_Sans_Arabic({ subsets: ["arabic"], variable: "--font-arabic", display: "swap", weight: ["400", "500", "600", "700"] });
+const arabic = Tajawal({ subsets: ["arabic"], variable: "--font-arabic", display: "swap", weight: ["400", "500", "700"] });
 export const metadata: Metadata = {
  metadataBase: new URL("https://alma-stra.com"),
  title: { default: "ALMA-STRA", template: "%s | ALMA-STRA" },

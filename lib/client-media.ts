@@ -1,5 +1,5 @@
 // Generated from the reviewed client-media-manifest.json.
-export type ProjectImage = { src: string; kind: "photo" | "render" | "document"; caption: string; alt: string; width: number; height: number; blurDataURL: string };
+export type ProjectImage = { src: string; retouched?: boolean; kind: "photo" | "render" | "document"; caption: string; alt: string; width: number; height: number; blurDataURL: string };
 export const clientMedia: Record<string, ProjectImage[]> = {
   "college": [
     {
@@ -411,6 +411,125 @@ export const clientMedia: Record<string, ProjectImage[]> = {
       "width": 1800,
       "height": 2400,
       "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAADQBACdASoSABgAPu1qq1EppaOiqAqpMB2JYgCsIL/A5TzXCBpkEumFuPlz9TRtAAD+mSB+dvTA0BPync3/nKF9PqWAzyfwLod36l8nZDdZm33PYgXFTdU+GtaKi+is+k9DcPDsLjPXHEF6cMgmEN3ZiaqpEx7dNsyXQ4oK4cjt8byfjHJ6zVpIJMv720UzGF/pgNvfwAA="
+    }
+  ],
+  "tikiouine": [
+    {
+      "src": "/images/portfolio/tikiouine/facade.webp",
+      "kind": "render",
+      "caption": "La façade principale et son parvis.",
+      "alt": "La façade principale et son parvis.",
+      "width": 2200,
+      "height": 1237,
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA8BgJZQC7AEPSTTf38AA8pHpJrdy3JRTA1i9YRThefXphHRXVFWMRL43RnRD8CjDfEEmPmGaG1JS0PO/10AAAA=="
+    },
+    {
+      "src": "/images/portfolio/tikiouine/rue.webp",
+      "kind": "render",
+      "caption": "Le centre culturel depuis la rue.",
+      "alt": "Le centre culturel depuis la rue.",
+      "width": 2200,
+      "height": 1237,
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAkAA8BgJYwCdADdbfyklagA+3UtLyO1y/m34wpRRK8yX9qDQnelap6YQtLwE7mZ1faxHW4ZnuEECk4UHpQA"
+    },
+    {
+      "src": "/images/portfolio/tikiouine/ensemble.webp",
+      "kind": "render",
+      "caption": "Vue aérienne des volumes et des accès.",
+      "alt": "Vue aérienne des volumes et des accès.",
+      "width": 2200,
+      "height": 1237,
+      "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAkAA8BgJaQAAfb06LS4AAD9nXmw6xG4E/bHBBeHJWQIVBaLa/MXeceZ9t8L/5jFfKvBDMHKbc49ABImWkAeHqpIg80ggAAAAA=="
+    },
+    {
+      "src": "/images/portfolio/tikiouine/jardins.webp",
+      "kind": "render",
+      "caption": "Les jardins et les espaces extérieurs.",
+      "alt": "Les jardins et les espaces extérieurs.",
+      "width": 2200,
+      "height": 1237,
+      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAkAA8BgJaQAAscK5HzXAAD+AW0iwUmPsdHooZq3jsmukhHdUeS9P1IfjHGTb/LuTfwKQ/Q0eWzVJRnaQNGq2OagtbgfMLG4HYAAAAA="
+    },
+    {
+      "src": "/images/portfolio/tikiouine/cour.webp",
+      "kind": "render",
+      "caption": "Les cheminements dans le jardin.",
+      "alt": "Les cheminements dans le jardin.",
+      "width": 2200,
+      "height": 1237,
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoQAAkAA8BgJYwCdAECsJFoAP7FHDL5Nc1mO5dIFdm7IVWZo4zPsNigSIM7TcSgraqV/QQbORjIn6G0eWBnFFwEsVjXCQQA"
+    },
+    {
+      "src": "/images/portfolio/tikiouine/hall.webp",
+      "kind": "render",
+      "caption": "Le hall et les espaces d’exposition.",
+      "alt": "Le hall et les espaces d’exposition.",
+      "width": 2200,
+      "height": 1237,
+      "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoQAAkAA8BgJaQAAq7GwJhwAMo1mHO5A/TomPIO7dxOPo6DmpEynmV9FUg3jTyMIAAAAA=="
+    },
+    {
+      "src": "/images/portfolio/tikiouine/auditorium.webp",
+      "kind": "render",
+      "caption": "La salle de spectacle et ses gradins.",
+      "alt": "La salle de spectacle et ses gradins.",
+      "width": 2200,
+      "height": 1237,
+      "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoQAAkAA8BgJZgCdAENpfVAAP6JiuuTfHQNiUuZgGIw8ufUGASbzxvVs+bbDrrrQW4Y5oD7YoUqG2SJUbBAAA=="
+    },
+    {
+      "src": "/images/portfolio/tikiouine/scene.webp",
+      "kind": "render",
+      "caption": "La scène et la salle de spectacle.",
+      "alt": "La scène et la salle de spectacle.",
+      "width": 2200,
+      "height": 1237,
+      "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAkAA8BgJZQAD4qO1Kt/skwAAP7CQNPM/wJQQqhQgNj1raQcEmqNnAKanyECb6ZIoVlZ93WToVYkditltGfCBqdhUP4gAAA="
+    },
+    {
+      "src": "/images/portfolio/tikiouine/bibliotheque.webp",
+      "kind": "render",
+      "caption": "La bibliothèque et les espaces de lecture.",
+      "alt": "La bibliothèque et les espaces de lecture.",
+      "width": 2200,
+      "height": 1237,
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAkAA8BgJZQAAqH4AfuIAADifeK87Hi+LCSkWcet8Hs1ymajNor1/pyun6u3mUrkgZ7cQ86JpjXBpgoXrTug496AAA=="
+    },
+    {
+      "src": "/images/portfolio/tikiouine/activites.webp",
+      "kind": "render",
+      "caption": "Une salle dédiée aux activités associatives.",
+      "alt": "Une salle dédiée aux activités associatives.",
+      "width": 2200,
+      "height": 1237,
+      "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoQAAkAA8BgJQBOgCB7CQwAAP6sKCS9WP7dpe4hOGGHpvEUFG46XMCvQ59M9SK8Fc62lHwAB0xGFupkjAAAAA=="
+    },
+    {
+      "src": "/images/portfolio/tikiouine/administration.webp",
+      "kind": "render",
+      "caption": "Les espaces administratifs.",
+      "alt": "Les espaces administratifs.",
+      "width": 2200,
+      "height": 1237,
+      "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoQAAkAA8BgJZQCdACdb9AAAP7MYhyvJW9qcjL2E5HjJkL9csX2k4QMAWKRi3fCQ3x8xsKLbd4uKFOAAAA="
+    },
+    {
+      "src": "/images/portfolio/tikiouine/plan-rdc.webp",
+      "kind": "document",
+      "caption": "Plan du rez-de-chaussée.",
+      "alt": "Plan du rez-de-chaussée.",
+      "width": 1400,
+      "height": 991,
+      "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAQCdASoQAAsAA8BgJaQAAudjZ1I+0gAA/vcIcqr6r073nzyElZ5GIvAAAA=="
+    },
+    {
+      "src": "/images/portfolio/tikiouine/plan-etage.webp",
+      "kind": "document",
+      "caption": "Plan du premier étage.",
+      "alt": "Plan du premier étage.",
+      "width": 1400,
+      "height": 991,
+      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAAAwAQCdASoQAAsAA8BgJaQAA3AA/vKdtHv49t3IJH9XaFtLH1mcLi2QAAA="
     }
   ]
 };

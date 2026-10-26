@@ -35,8 +35,8 @@
 .legal-nav { display: flex; flex-wrap: wrap; gap: 20px; border-block-start: 1px solid #dfe3da; padding-block-start: 25px; font-size: 13px; }
 .legal-nav [aria-current] { text-decoration: underline; text-underline-offset: 4px; }
 html[dir="rtl"] body, html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] h4, html[dir="rtl"] button, html[dir="rtl"] input, html[dir="rtl"] textarea, html[dir="rtl"] select { font-family: var(--font-arabic), Tahoma, sans-serif; letter-spacing: 0; }
-html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3 { font-weight: 600; line-height: 1.5; text-transform: none; }
-html[dir="rtl"] .alma-hero h1 { font-size: clamp(34px, 4.3vw, 66px); line-height: 1.65; }
+html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3 { font-weight: 700; line-height: 1.35; text-transform: none; }
+html[dir="rtl"] .alma-hero h1 { font-size: clamp(38px, 4.6vw, 72px); line-height: 1.35; }
 html[dir="rtl"] .alma-hero-line { padding-bottom: .12em; }
 html[dir="rtl"] em { font-style: normal; }
 html[dir="rtl"] .alma-desktop-nav { gap: 18px; }

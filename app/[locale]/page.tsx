@@ -3,28 +3,19 @@ import { localize } from "@/lib/localize";
 import { type Locale } from "@/lib/i18n";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Building2, CheckCircle2, Leaf, Mail, MapPin, Phone, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Building2, CheckCircle2, Leaf, Mail, MapPin, Phone, ShieldCheck, Quote } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import HeroMedia from "@/components/HeroMedia";
+import HeroSlideshow from "@/components/HeroSlideshow";
+import CompanyApproach from "@/components/CompanyApproach";
+import SupplierSection from "@/components/SupplierSection";
 import LogoMarquee from "@/components/LogoMarquee";
 import ServicePreview from "@/components/ServicePreview";
-import { contact, imagery, projects, services } from "@/lib/data";
+import { contact, projects, services } from "@/lib/data";
+// Draft copy only: replace with approved client feedback before publication.
 const testimonials = [
-    {
-        quote: "Nous avons confié à Alma-Stra la viabilisation et l’aménagement complet d’un lotissement résidentiel. Leur rigueur dans la gestion du chantier et le respect des délais nous ont permis de lancer la commercialisation sereinement. Une équipe très professionnelle.",
-        name: "Mohamed B.",
-        role: "Promoteur immobilier à Rabat",
-    },
-    {
-        quote: "Alma-Stra a réalisé l’aménagement de notre nouveau siège social. Ils ont su s’adapter à nos contraintes en termes de design et de fonctionnalité, tout en assurant une qualité irréprochable des finitions. Je recommande sans hésiter.",
-        name: "Fatima E.",
-        role: "Directrice générale à Casablanca",
-    },
-    {
-        quote: "Nous avons fait appel à Alma-Stra pour la rénovation et la mise aux normes de notre site industriel. Leur expertise technique et leur suivi de projet nous ont vraiment rassurés. Résultat impeccable et conforme aux normes.",
-        name: "Youssef A.",
-        role: "Chef d’entreprise à Marrakech",
-    },
+  { topic: "Viabilisation", quote: "On avait surtout besoin de savoir où en était le chantier. Les échanges étaient simples, on faisait le point régulièrement et on savait ce qu’il restait à faire.", takeaway: "Un suivi clair, du début à la fin.", context: "Projet résidentiel" },
+  { topic: "Aménagement", quote: "Il y avait plusieurs choses à reprendre dans les locaux. On a pu en discuter au fur et à mesure, sans devoir passer par plusieurs interlocuteurs.", takeaway: "Une équipe avec qui on peut échanger.", context: "Aménagement de bureaux" },
+  { topic: "Construction TCE", quote: "Ce qu’on a apprécié, c’est de pouvoir poser nos questions et avoir une réponse claire. Les derniers détails ont été revus ensemble avant la réception.", takeaway: "De l’attention jusqu’aux finitions.", context: "Projet de construction" },
 ];
 const reasons = [
     {
@@ -47,7 +38,8 @@ const projectReveal = ["mask-up", "mask-left", "rise", "mask-right", "rise"] as 
 export default async function HomePage({ params }: { params: Promise<{ locale: Locale }> }) {
  const { locale } = await params;
     return localize((<main className="alma-home">
-      <section className="alma-hero">
+      <section className="alma-hero alma-hero--slideshow">
+        <HeroSlideshow locale={locale}/>
         <div className="page-shell alma-hero-grid">
           <div className="alma-hero-copy">
             <span className="alma-kicker alma-hero-kicker"><span /> Construction · Aménagement · Viabilisation</span>
@@ -57,11 +49,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
             </h1>
             <p className="alma-hero-intro">ALMA‑STRA propose une offre complète de services dans le secteur du BTP, allant de la conception à la réalisation, avec un accompagnement clé en main.</p>
             <div className="alma-hero-actions alma-hero-actions-enter">
-              <Link className="alma-btn alma-btn-primary" href="/expertise">Découvrir nos services <ArrowRight size={17}/></Link>
-              <Link className="alma-btn alma-btn-ghost" href="/projects">Voir nos projets <ArrowUpRight size={17}/></Link>
+              <Link className="alma-btn alma-btn-primary" href="/projects">Voir nos projets <ArrowUpRight size={17}/></Link>
+              <Link className="alma-btn alma-btn-ghost" href="/expertise">Découvrir nos services <ArrowRight size={17}/></Link>
             </div>
           </div>
-          <HeroMedia locale={locale} src={imagery.hero} alt="Façade du bâtiment du 6e arrondissement à Laâyoune"/>
+
         </div>
       </section>
 
@@ -73,6 +65,26 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
         <Reveal className="alma-trust-marquee-reveal" variant="fade" delay={120}>
           <LogoMarquee locale={locale}/>
         </Reveal>
+      </section>
+
+      <section className="alma-section alma-projects">
+        <div className="page-shell">
+          <Reveal variant="rise">
+            <div className="alma-projects-head">
+              <div><span className="alma-kicker"><span /> Nos réalisations</span><h2>Des projets concrets.<br /><em>Des résultats durables.</em></h2></div>
+              <div className="alma-projects-copy"><p>Équipements publics, espaces sportifs et aménagements : découvrez notre travail en images.</p><Link href="/projects">Tous les projets <ArrowRight size={16}/></Link></div>
+            </div>
+          </Reveal>
+          <div className="alma-project-grid">
+            {projects.slice(0, 5).map((project, index) => (<Reveal key={project.slug} delay={index * 70} variant={projectReveal[index]}>
+                <Link className={`alma-project-card alma-project-${index + 1}`} href={`/projects/${project.slug}`}>
+                  <div className="alma-project-image"><Image src={project.image} alt={project.title} fill sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 55vw"/><span className="portfolio-image-label">{project.imageKind === "render" ? "Vue d’étude" : "Photographie retouchée"}</span></div>
+                  <div className="alma-project-info"><div><span>{project.category}</span><h3>{project.title}</h3></div><ArrowUpRight size={22}/></div>
+                </Link>
+              </Reveal>))}
+          </div>
+          <div className="alma-project-cta"><span>Explorez nos projets</span><Link className="alma-btn alma-btn-primary" href="/projects">Voir tous les projets <ArrowRight size={16}/></Link></div>
+        </div>
       </section>
 
       <section className="alma-section alma-services alma-services-stories">
@@ -90,30 +102,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
         </div>
       </section>
 
-      <section className="alma-section alma-projects">
-        <div className="page-shell">
-          <Reveal variant="rise">
-            <div className="alma-projects-head">
-              <div><span className="alma-kicker"><span /> Nos réalisations</span><h2>Des projets concrets.<br /><em>Des résultats durables.</em></h2></div>
-              <div className="alma-projects-copy"><p>Voici quelques-uns des nombreux projets que nous avons réalisés pour nos clients. Nous offrons un service professionnel comprenant la consultation, le devis gratuit, la conception, la fourniture des matériaux et l’installation.</p><Link href="/projects">Tous les projets <ArrowRight size={16}/></Link></div>
-            </div>
-          </Reveal>
-          <div className="alma-project-grid">
-            {projects.slice(0, 5).map((project, index) => (<Reveal key={project.slug} delay={index * 70} variant={projectReveal[index]}>
-                <Link className={`alma-project-card alma-project-${index + 1}`} href={`/projects/${project.slug}`}>
-                  <div className="alma-project-image"><Image src={project.image} alt={project.title} fill sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 55vw"/>{project.imageKind === "render" && <span className="portfolio-image-label">Vue d’étude</span>}</div>
-                  <div className="alma-project-info"><div><span>{project.category}</span><h3>{project.title}</h3></div><ArrowUpRight size={22}/></div>
-                </Link>
-              </Reveal>))}
-          </div>
-          <div className="alma-project-cta"><span>Explorez nos projets</span><Link className="alma-btn alma-btn-primary" href="/projects">Voir tous les projets <ArrowRight size={16}/></Link></div>
-        </div>
-      </section>
-
       <section className="alma-section alma-about">
         <div className="page-shell alma-about-grid">
           <Reveal variant="mask-left">
-            <div className="alma-about-media"><Image src={imagery.field} alt="Travaux d’aménagement extérieur — Conseil Provincial Laâyoune" fill sizes="(max-width: 900px) 100vw, 44vw"/></div>
+            <CompanyApproach locale={locale}/>
           </Reveal>
           <Reveal delay={100} variant="rise">
             <div className="alma-about-copy">
@@ -157,14 +149,27 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
         </div>
       </section>
 
-      <section className="alma-section alma-testimonials">
+      <section className="alma-section alma-reviews" aria-labelledby="reviews-title">
         <div className="page-shell">
-          <Reveal variant="rise"><div className="alma-section-intro alma-testimonial-head"><div><span className="alma-kicker"><span /> Témoignages</span><h2>La confiance se construit<br />sur le terrain.</h2></div><Sparkles size={28}/></div></Reveal>
-          <div className="alma-testimonial-grid">
-            {testimonials.map((item, index) => <Reveal key={item.name} delay={index * 90} variant={index === 1 ? "rise" : "fade"}><article className={`alma-testimonial alma-testimonial-${index + 1}`}><span className="alma-quote">“</span><p>{item.quote}</p><div><strong>{item.name}</strong><span>{item.role}</span></div></article></Reveal>)}
+          <Reveal variant="rise"><div className="alma-reviews-heading">
+            <div><span className="alma-kicker"><span /> La relation client</span><h2 id="reviews-title">Un chantier, c’est aussi<br /><em>une relation de confiance.</em></h2></div>
+            <p>Des échanges simples. Un suivi régulier. De l’attention aux détails.</p>
+          </div></Reveal>
+          <p className="alma-reviews-draft">Exemples de témoignages — textes à valider avec les clients avant publication.</p>
+          <div className="alma-reviews-grid">
+            {testimonials.map((item, index) => <Reveal key={item.topic} delay={index * 70} variant="rise">
+              <figure className={`alma-review-card${index === 0 ? " alma-review-featured" : ""}`}>
+                <div className="alma-review-top"><span>{item.topic}</span><Quote size={25} strokeWidth={1.4} aria-hidden="true"/></div>
+                <h3>{item.takeaway}</h3>
+                <blockquote><p>« {item.quote} »</p></blockquote>
+                <figcaption><span className="alma-review-mark" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><span>{item.context}<small>Exemple de retour client</small></span></figcaption>
+              </figure>
+            </Reveal>)}
           </div>
         </div>
       </section>
+
+      <SupplierSection locale={locale}/>
 
       <section className="alma-final-cta">
         <div className="page-shell alma-final-cta-inner">

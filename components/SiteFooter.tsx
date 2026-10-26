@@ -2,7 +2,7 @@ import { localize } from "@/lib/localize";
 import { type Locale } from "@/lib/i18n";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { contact, services } from "@/lib/data";
+import { contact } from "@/lib/data";
 import BrandLogo from "@/components/BrandLogo";
 export default function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
     return localize((<footer className="alma-footer">
@@ -22,14 +22,6 @@ export default function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
           <Link href="/expertise">Services</Link>
           <Link href="/projects">Projets</Link>
           <Link href="/contact">Nous contacter</Link>
-          <Link href="/conditions-generales">Conditions générales</Link>
-          <Link href="/politique-de-confidentialite">Politique de confidentialité</Link>
-          <Link href="/politique-de-cookies">Politique des cookies</Link>
-        </div>
-
-        <div className="alma-footer-col">
-          <span className="alma-footer-label">Services</span>
-          {services.map(service => <Link href={`/expertise/${service.slug}`} key={service.slug}>{service.title}</Link>)}
         </div>
 
         <div className="alma-footer-col alma-footer-news">
@@ -42,8 +34,7 @@ export default function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
       </div>
       <div className="page-shell alma-footer-bottom">
         <span>© Copyright {new Date().getFullYear()} Alma-stra.com – Tous droits réservés</span>
-        <span>{contact.address}</span>
-        <Link href="/politique-de-cookies">Cookies et confidentialité</Link>
+        <nav className="alma-footer-legal" aria-label="Informations légales"><Link href="/conditions-generales">Conditions générales</Link><Link href="/politique-de-confidentialite">Politique de confidentialité</Link><Link href="/politique-de-cookies">Politique des cookies</Link></nav>
       </div>
     </footer>), locale);
 }

@@ -1,0 +1,101 @@
+{
+  "updated": "2026-10-26",
+  "logos": [
+    {
+      "brand": "Sika",
+      "asset": "/images/suppliers/sika.svg",
+      "source": "https://sika.scene7.com/is/content/sika/Sika_ClaimU_pos_rgb",
+      "method": "Official vector linked by mar.sika.com; unchanged."
+    },
+    {
+      "brand": "Novoceram",
+      "asset": "/images/suppliers/novoceram.svg",
+      "source": "https://www.novoceram.fr/wp-content/themes/novoceram/dist/images/logo-novoceram_050ca174.svg",
+      "method": "Official website vector; unchanged."
+    },
+    {
+      "brand": "Sorexi",
+      "asset": "/images/suppliers/sorexi-clean.webp",
+      "source": "https://www.sorexi.ma/sites/default/files/logo.jpg",
+      "method": "Built-in image editing: isolate the existing SOREXI wordmark and blue/gold outline, remove grey background and surrounding slogans, preserve lettering and colors on alpha transparency."
+    },
+    {
+      "brand": "Colorado",
+      "asset": "/images/suppliers/colorado-official.webp",
+      "source": "https://colorado.ma/sites/all/themes/colorado_commercial/img/logo.png",
+      "method": "Official logo; transparent source, whitespace trimmed."
+    },
+    {
+      "brand": "Astral",
+      "asset": "/images/suppliers/astral-clean-hd.webp",
+      "source": "https://images.akzonobel.com/akzonobel-flourish/astral/ma/fr/homepage/logo_2x.png?impolicy=.auto",
+      "method": "Built-in image editing from the existing source: high-resolution restoration, preserve brand lettering, mark and colors, remove all background to actual alpha transparency. Original file retained."
+    },
+    {
+      "brand": "Nexans",
+      "asset": "/images/suppliers/nexans.svg",
+      "source": "https://www.nexans.ma/fr/",
+      "method": "Official inline SVG extracted unchanged, except fixed display dimensions removed."
+    },
+    {
+      "brand": "Atlas",
+      "asset": "/images/suppliers/atlas-clean-hd.webp",
+      "source": "NOTE DES MOYENS HUMAINS, MATERIELS ET TECHNIQUES copie.pdf, page 12, Im53.png",
+      "method": "Built-in image editing from the existing source: high-resolution restoration, preserve brand lettering, mark and colors, remove all background to actual alpha transparency. Original file retained."
+    },
+    {
+      "brand": "Super Cérame",
+      "asset": "/images/suppliers/super-cerame-clean-hd.webp",
+      "source": "Original supplied supplier-list logo crop",
+      "method": "Built-in image editing: restore sharp high-resolution logo from the supplied source, preserve lettering, layout and colors, remove background to alpha transparency. Original retained."
+    },
+    {
+      "brand": "Roca",
+      "asset": "/images/suppliers/roca-clean-hd.webp",
+      "source": "Original supplied supplier-list logo crop",
+      "method": "Built-in image editing: restore sharp high-resolution logo from the supplied source, preserve lettering, layout and colors, remove background to alpha transparency. Original retained."
+    },
+    {
+      "brand": "L.A.P.",
+      "asset": "/images/suppliers/lap-current-hd.webp",
+      "source": "https://lap-electric.ma/wp-content/uploads/2023/11/Nouveau-Logo-LAP.webp",
+      "method": "Built-in image editing from official current logo: remove red rectangular background, render existing white mark in brand red, preserve lettering and plug icon, restore clean high resolution with alpha transparency."
+    },
+    {
+      "brand": "elkron",
+      "asset": "/images/suppliers/elkron-clean-hd.webp",
+      "source": "Supplied supplier list logo",
+      "method": "Built-in image editing: restore same logo at high resolution, preserve lettering, layout and colors, remove white/grey background to true alpha transparency. Original source retained."
+    },
+    {
+      "brand": "agt",
+      "asset": "/images/suppliers/agt-clean-hd.webp",
+      "source": "Supplied supplier list logo",
+      "method": "Built-in image editing: restore same logo at high resolution, preserve lettering, layout and colors, remove white/grey background to true alpha transparency. Original source retained."
+    },
+    {
+      "brand": "gadimat",
+      "asset": "/images/suppliers/gadimat-clean-hd.webp",
+      "source": "Supplied supplier list logo",
+      "method": "Built-in image editing: restore same logo at high resolution, preserve lettering, layout and colors, remove white/grey background to true alpha transparency. Original source retained."
+    },
+    {
+      "brand": "Groupe Strapex Maroc",
+      "asset": "/images/suppliers/strapex-clean-hd.webp",
+      "source": "Client-supplied logo reference, codex-clipboard-802aeb93-2333-4484-85d9-1275e00b7738.png",
+      "method": "Built-in image editing. Prompt: restore same GROUPE strapex MAROC logo at high resolution; preserve exact typography, crescent arc, layout and bronze/gold gradient; remove white background to true alpha transparency. Replaces Novoceram in homepage grid."
+    },
+    {
+      "brand": "Ciments du Maroc",
+      "asset": "/images/suppliers/ciments-du-maroc.svg",
+      "source": "https://www.cimentsdumaroc.com/sites/default/files/logo/CIMAR_LOGO_Horizontal.svg",
+      "method": "Official transparent vector, unchanged."
+    },
+    {
+      "brand": "Vetcam",
+      "asset": "/images/suppliers/vetcam.webp",
+      "source": "https://www.vetcam.ma/wp-content/webp-express/webp-images/uploads/2023/01/logo-vetcam.png.webp",
+      "method": "Official transparent logo, whitespace trimmed and losslessly encoded."
+    }
+  ]
+}
