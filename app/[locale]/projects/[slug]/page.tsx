@@ -8,6 +8,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/data";
 import { getProjectImages, projectDetails } from "@/lib/project-details";
+import { projectDossiers } from "@/lib/project-dossiers";
 import ProjectGallery from "@/components/ProjectGallery";
 export function generateStaticParams() { return projects.map(project => ({ slug: project.slug })); }
 export async function generateMetadata({ params }: {
@@ -37,6 +38,14 @@ export default async function ProjectPage({ params }: {
     const images = getProjectImages(slug);
     const cover = images[0];
     const related = projects.filter(item => detail.related.includes(item.slug));
+    const dossier = projectDossiers[slug] ?? {};
+    const confirmedFields = [
+      { label: "Maître d’ouvrage", value: dossier.owner },
+      { label: "Lieu", value: dossier.place },
+      { label: "Année", value: dossier.year },
+      { label: "Nature des travaux", value: dossier.work },
+    ].filter((field): field is { label: string; value: string } => Boolean(field.value));
+    const facts = [...confirmedFields, ...detail.facts.filter(fact => !confirmedFields.some(field => field.value === fact.value))];
     return localize(<main className="project-case-page">
     <section className="project-detail-intro page-shell">
       <Link href="/projects" className="back-link"><ArrowLeft size={15}/> Toutes les réalisations</Link>
@@ -49,7 +58,7 @@ export default async function ProjectPage({ params }: {
       <figcaption className="page-shell"><span className="project-cover-kind">{project.imageKind === "render" ? "Vue d’étude" : "Photographie retouchée"}</span>{cover.caption}</figcaption>
     </figure>
     <section className="project-case-overview section page-shell" aria-labelledby="project-overview-title">
-      <dl className="project-case-facts">{detail.facts.map(fact => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl>
+      <dl className="project-case-facts">{facts.map(fact => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl>
       <div className="section-label"><span>01</span><span>Le projet</span></div>
       <div className="project-case-overview-grid"><h2 id="project-overview-title" className="display-title medium">Le projet</h2><p className="project-case-introduction">{detail.introduction}</p></div>
 

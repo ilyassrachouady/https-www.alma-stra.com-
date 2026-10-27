@@ -3,20 +3,12 @@ import { localize } from "@/lib/localize";
 import { type Locale } from "@/lib/i18n";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Building2, CheckCircle2, Leaf, Mail, MapPin, Phone, ShieldCheck, Quote } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Building2, CheckCircle2, Leaf, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import CompanyApproach from "@/components/CompanyApproach";
-import SupplierSection from "@/components/SupplierSection";
-import LogoMarquee from "@/components/LogoMarquee";
 import ServicePreview from "@/components/ServicePreview";
 import { contact, projects, services } from "@/lib/data";
-// Draft copy only: replace with approved client feedback before publication.
-const testimonials = [
-  { topic: "Viabilisation", quote: "On avait surtout besoin de savoir où en était le chantier. Les échanges étaient simples, on faisait le point régulièrement et on savait ce qu’il restait à faire.", takeaway: "Un suivi clair, du début à la fin.", context: "Projet résidentiel" },
-  { topic: "Aménagement", quote: "Il y avait plusieurs choses à reprendre dans les locaux. On a pu en discuter au fur et à mesure, sans devoir passer par plusieurs interlocuteurs.", takeaway: "Une équipe avec qui on peut échanger.", context: "Aménagement de bureaux" },
-  { topic: "Construction TCE", quote: "Ce qu’on a apprécié, c’est de pouvoir poser nos questions et avoir une réponse claire. Les derniers détails ont été revus ensemble avant la réception.", takeaway: "De l’attention jusqu’aux finitions.", context: "Projet de construction" },
-];
 const reasons = [
     {
         icon: Building2,
@@ -55,16 +47,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
           </div>
 
         </div>
-      </section>
-
-      <section className="alma-trust" aria-labelledby="trust-title">
-        <div className="page-shell alma-trust-heading">
-          <Reveal variant="fade"><span className="alma-kicker"><span /> Nos références</span></Reveal>
-          <Reveal variant="rise" delay={70}><h2 id="trust-title">Des partenaires institutionnels<br />qui connaissent notre exigence.</h2></Reveal>
-        </div>
-        <Reveal className="alma-trust-marquee-reveal" variant="fade" delay={120}>
-          <LogoMarquee locale={locale}/>
-        </Reveal>
       </section>
 
       <section className="alma-section alma-projects">
@@ -148,28 +130,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
           </div>
         </div>
       </section>
-
-      <section className="alma-section alma-reviews" aria-labelledby="reviews-title">
-        <div className="page-shell">
-          <Reveal variant="rise"><div className="alma-reviews-heading">
-            <div><span className="alma-kicker"><span /> La relation client</span><h2 id="reviews-title">Un chantier, c’est aussi<br /><em>une relation de confiance.</em></h2></div>
-            <p>Des échanges simples. Un suivi régulier. De l’attention aux détails.</p>
-          </div></Reveal>
-          <p className="alma-reviews-draft">Exemples de témoignages — textes à valider avec les clients avant publication.</p>
-          <div className="alma-reviews-grid">
-            {testimonials.map((item, index) => <Reveal key={item.topic} delay={index * 70} variant="rise">
-              <figure className={`alma-review-card${index === 0 ? " alma-review-featured" : ""}`}>
-                <div className="alma-review-top"><span>{item.topic}</span><Quote size={25} strokeWidth={1.4} aria-hidden="true"/></div>
-                <h3>{item.takeaway}</h3>
-                <blockquote><p>« {item.quote} »</p></blockquote>
-                <figcaption><span className="alma-review-mark" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><span>{item.context}<small>Exemple de retour client</small></span></figcaption>
-              </figure>
-            </Reveal>)}
-          </div>
-        </div>
-      </section>
-
-      <SupplierSection locale={locale}/>
 
       <section className="alma-final-cta">
         <div className="page-shell alma-final-cta-inner">

@@ -26,8 +26,8 @@ export default async function ServicePage({ params }: {
         notFound();
     const serviceIndex = services.findIndex(item => item.slug === service.slug);
     const nextService = services[(serviceIndex + 1) % services.length];
-    const referenceIndexes = service.diagram === "land" ? [3, 6] : service.diagram === "space" ? [0, 4] : [1, 5];
-    const portfolioProof = referenceIndexes.map(index => projects[index]);
+    const referenceSlugs = service.diagram === "land" ? ["terrain-de-sport-al-omrane", "conseil-provincial-laayoune"] : service.diagram === "space" ? ["college-ibn-khaldoune-al-omrane", "atlas-sahara"] : ["al-omrane-souss-massa", "caserne-des-sapeurs-pompiers"];
+    const portfolioProof = referenceSlugs.flatMap(slug => projects.filter(project => project.slug === slug));
     const visual = serviceMedia[service.diagram];
     return localize((<main className={`service-detail-page service-detail-${service.diagram}`}>
       <section className="service-detail-hero">

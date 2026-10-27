@@ -142,14 +142,14 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  { slug: "centre-culturel-tikiouine", number: "08", title: "Centre culturel de Tikiouine", category: "Équipement culturel", image: "/images/portfolio/tikiouine/facade.webp", imageKind: "render" },
-  { slug: "college-ibn-khaldoune-al-omrane", number: "01", title: "Collège Ibn Khaldoune Al Omrane", category: "Équipement public", image: "/images/portfolio/retouched/college-terrain-multisport.webp" },
-  { slug: "al-omrane-souss-massa", number: "02", title: "Al Omrane Souss Massa", category: "Construction TCE", image: "/images/portfolio/al-omrane/facade.webp", imageKind: "render" },
-  { slug: "province-laayoune", number: "03", title: "Province de Laâyoune", category: "Bâtiment administratif", image: "/images/portfolio/retouched/province-facade.webp" },
-  { slug: "terrain-de-sport-al-omrane", number: "04", title: "Terrain de sport Al Omrane", category: "Équipement sportif", image: "/images/portfolio/retouched/sport-terrain.webp" },
-  { slug: "atlas-sahara", number: "05", title: "Atlas Sahara", category: "Aménagement", image: "/images/portfolio/retouched/atlas-station-de-nuit.webp" },
-  { slug: "caserne-des-sapeurs-pompiers", number: "06", title: "Caserne des sapeurs-pompiers", category: "Équipement public", image: "/images/portfolio/retouched/caserne-facade.webp" },
-  { slug: "conseil-provincial-laayoune", number: "07", title: "Conseil provincial de Laâyoune", category: "Institutionnel", image: "/images/portfolio/retouched/conseil-cour-chantier.webp" }
+  { slug: "centre-culturel-tikiouine", number: "01", title: "Centre culturel de Tikiouine", category: "Équipement culturel", image: "/images/portfolio/tikiouine/facade.webp", imageKind: "render" },
+  { slug: "college-ibn-khaldoune-al-omrane", number: "02", title: "Collège Ibn Khaldoune Al Omrane", category: "Équipement public", image: "/images/portfolio/retouched/college-terrain-multisport.webp" },
+  { slug: "al-omrane-souss-massa", number: "03", title: "Al Omrane Souss Massa", category: "Construction TCE", image: "/images/portfolio/al-omrane/facade.webp", imageKind: "render" },
+  { slug: "province-laayoune", number: "04", title: "Province de Laâyoune", category: "Bâtiment administratif", image: "/images/portfolio/retouched/province-facade.webp" },
+  { slug: "terrain-de-sport-al-omrane", number: "05", title: "Terrain de sport Al Omrane", category: "Équipement sportif", image: "/images/portfolio/retouched/sport-terrain.webp" },
+  { slug: "atlas-sahara", number: "06", title: "Atlas Sahara", category: "Aménagement", image: "/images/portfolio/retouched/atlas-station-de-nuit.webp" },
+  { slug: "caserne-des-sapeurs-pompiers", number: "07", title: "Caserne des sapeurs-pompiers", category: "Équipement public", image: "/images/portfolio/retouched/caserne-facade.webp" },
+  { slug: "conseil-provincial-laayoune", number: "08", title: "Conseil provincial de Laâyoune", category: "Institutionnel", image: "/images/portfolio/retouched/conseil-cour-chantier.webp" }
 ];
 
 export const partners = [

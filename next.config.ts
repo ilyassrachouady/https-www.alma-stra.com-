@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
  },
  async redirects() {
   return [
+   { source: '/:path*', has: [{ type: 'host' as const, value: 'www.alma-stra.com' }], destination: 'https://alma-stra.com/:path*', permanent: true },
    { source: '/a-propos', destination: '/about', permanent: true },
    { source: '/services', destination: '/expertise', permanent: true },
    { source: '/projets', destination: '/projects', permanent: true },
