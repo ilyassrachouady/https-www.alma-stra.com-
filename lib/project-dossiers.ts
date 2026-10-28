@@ -8,10 +8,12 @@ export type ProjectDossier = {
 
 export const projectDossiers: Record<string, ProjectDossier> = {
   "college-ibn-khaldoune-al-omrane": {
+    owner: "Al Omrane",
     work: "Terrain multisport et aménagements extérieurs",
   },
   "al-omrane-souss-massa": {
-    place: "Amssernat, Agadir",
+    owner: "Al Omrane Souss Massa",
+    place: "Amsernat, Agadir",
     work: "Travaux de construction tous corps d’état",
   },
   "province-laayoune": {
@@ -19,10 +21,10 @@ export const projectDossiers: Record<string, ProjectDossier> = {
     place: "Laâyoune",
     work: "Construction d’un bâtiment administratif",
   },
-  "terrain-de-sport-al-omrane": {},
-  "atlas-sahara": {},
-  "caserne-des-sapeurs-pompiers": {},
-  "conseil-provincial-laayoune": {
+  "terrain-de-sport-al-omrane": { place: "Agadir" },
+  "atlas-sahara": { place: "Laâyoune" },
+  "caserne-des-sapeurs-pompiers": { owner: "Conseil Provincial de Laâyoune", place: "Foum El Oued, Laâyoune" },
+  "parc-provincial-al-hizam": {
     place: "Laâyoune",
   },
 };

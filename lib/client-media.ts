@@ -52,8 +52,8 @@ export const clientMedia: Record<string, ProjectImage[]> = {
     {
       "src": "/images/portfolio/al-omrane/facade.webp",
       "kind": "render",
-      "caption": "Photomontage architectural : insertion du complexe d’Amssernat dans son environnement.",
-      "alt": "Photomontage architectural : insertion du complexe d’Amssernat dans son environnement.",
+      "caption": "Photomontage architectural : insertion du complexe d’Amsernat dans son environnement.",
+      "alt": "Photomontage architectural : insertion du complexe d’Amsernat dans son environnement.",
       "width": 2400,
       "height": 1757,
       "blurDataURL": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAAAwBQCdASoYABIAPu1mrE+ppSQwsBgIAhAdiWYAnTlBOWAGDpUaQK7jhRaFX3meC06MAAD9P1Dj7TKjrAb2h05XAOHfMTP9kqBIXh+rRhRcFTe2RvI/cRTdRXo4zLvyTQonGuO8yxsfLxlMSrZJIScRnTONpy9prUZTRTWImuu8d3Bfd/eJX7g0TqDsOywo2VaF8bzdjJ6l6an7faGfNeA5/Q4eb8aQAAA="
@@ -97,8 +97,8 @@ export const clientMedia: Record<string, ProjectImage[]> = {
     {
       "src": "/images/portfolio/al-omrane/panneau-projet.webp",
       "kind": "document",
-      "caption": "Panneau du projet : construction TCE du complexe d’activités sociales d’Amssernat.",
-      "alt": "Panneau du projet : construction TCE du complexe d’activités sociales d’Amssernat.",
+      "caption": "Panneau du projet : construction TCE du complexe d’activités sociales d’Amsernat.",
+      "alt": "Panneau du projet : construction TCE du complexe d’activités sociales d’Amsernat.",
       "width": 2400,
       "height": 1800,
       "blurDataURL": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACwBACdASoYABIAPu1oqk+ppaOiKA1RMB2JagC2+vIBs89vMpIoRV6QekPzqUcwAP7rc1hsI1hXbmyNIYAYk6IflCHSothsMdpCstvT1vDq27et1ui5P0AL8y/Tc+oZbM9n3n2xxus8XwX3aA+5jjBoaqnMcFWAy/Spgrj3oo/03kdbipJs0xauM2ODLHSYzL2//Bv44MsilzYX1/+DfkvLXzSO/TuGAAA="
@@ -256,8 +256,8 @@ export const clientMedia: Record<string, ProjectImage[]> = {
     {
       "src": "/images/portfolio/atlas/entree.webp",
       "kind": "photo",
-      "caption": "Vue de l’entrée du site Atlas Sahara.",
-      "alt": "Vue de l’entrée du site Atlas Sahara.",
+      "caption": "Vue de l’entrée de la station de service.",
+      "alt": "Vue de l’entrée de la station de service.",
       "width": 1800,
       "height": 2400,
       "blurDataURL": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAADwBACdASoSABgAPu1krE+ppSQiMBgIATAdiUAVgAFJG1iKbNVHXixnYY20h110ELAA9x8h/DH8zrKJ7Yc1Yxv8dhY5Ywyg7Jkro1LvIkb98jPCMGsUWrZD7WxDEzTN3rHFeDyMVukkGbUdO7+HtmlSFEmDpgVtvFYKCNT2nQRcfO5y49+zJhTokcrb61fwQa776O0SLBk21IbA85NsbQWIDSrmNwBRsWH5IeVNkNruAAAA"
@@ -274,39 +274,48 @@ export const clientMedia: Record<string, ProjectImage[]> = {
   ],
   "caserne": [
     {
-      "src": "/images/portfolio/caserne/facade.webp",
+      "src": "/images/portfolio/caserne/facade-front.webp",
       "kind": "photo",
-      "caption": "La façade de la caserne et ses accès.",
-      "alt": "La façade de la caserne et ses accès.",
+      "caption": "La façade principale et les portes de garage.",
+      "alt": "Façade principale de la caserne des sapeurs-pompiers à Foum El Oued.",
       "width": 2400,
       "height": 1800,
-      "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBQCdASoYABIAPu1kq1AppSOisBgIATAdiUATplhV68Gzdco3A7TZEcOW0BMG/TN0/elgAP7fPog1XmwGfxjjmC4HTVj0H/ePSuP129GPC37rC0/+MzPXfJ6byILXwOhcbCMofG6uzFyYfD5oqcewh17lYQCENXQSbGkeZV7KWqQAduNWxwCVMg87zVQcukvAe6lBVz2nqVPjJI5ik9R7NMEAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAADQBACdASoYABIAPzmKu1UvKSYjKA1R4CcJYizAAtfaCQcp1RpICIGe7UqRt9leAAD+0zAawdGPZskur0wDCJiiAqsoEN/rzOafG346TCfJJglHpTOiYvrKZhtEMtXP+MrCo5YrkNPz2FfnMfV/aK9ysKx4764sYPxP+sw3CBd/vnqNIcTSGzsmh7h6xE+48H89KdB1dC7DxCAAAAA="
     },
     {
-      "src": "/images/portfolio/caserne/pavage.webp",
+      "src": "/images/portfolio/caserne/facade-acces.webp",
       "kind": "photo",
-      "caption": "Détail des revêtements et des abords du bâtiment.",
-      "alt": "Détail des revêtements et des abords du bâtiment.",
+      "caption": "Les accès de la caserne, vus de biais.",
+      "alt": "Accès et portes de garage de la caserne des sapeurs-pompiers.",
+      "width": 1800,
+      "height": 2400,
+      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwBACdASoSABgAPzmOv1cvKaajqAqp4CcJaACl5cC8AAY9hwANqQX7oTVJm69LCAAA/nboZqKOPsg1tEEwxvS7UUDeWunUxBRt1OlKppP0w8WyZmJGtqSXsQVsRs9zYwRevLFzlGNoL0rabZmTOasergMch5qJgN1hUXa3PPuTTdyYkVlh4AAA"
+    },
+    {
+      "src": "/images/portfolio/caserne/facade-pignon.webp",
+      "kind": "photo",
+      "caption": "Le pignon, entre enduit blanc, pierre et bleu.",
+      "alt": "Pignon de la caserne, enduit blanc, parement de pierre et mur bleu.",
+      "width": 2400,
+      "height": 1800,
+      "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAQBQCdASoYABIAPzmOulWvKiWjMBgIAeAnCWIAtsgJlvHqlDrU+YtUdSy7frPOMM0AAP4dMFBOKWtMAtCYT9FunWYMLhOKYmA0I4A358RL397iMV8wnQq4r9v0CIG3WiHHsxwxMexL98pkYmvKGJXbB83JitR5K5lAAA=="
+    },
+    {
+      "src": "/images/portfolio/caserne/structure.webp",
+      "kind": "photo",
+      "caption": "La structure du bâtiment en cours de réalisation.",
+      "alt": "Structure en béton de la caserne pendant le chantier.",
       "width": 960,
       "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACwBACdASoSABgAPu1urlKppiQiqAgBMB2JQBZwAfvgNFOjdkFabMXpkrQpmXoAANyVb37zF3R6KoNy+XPcYTKIKZCDXzNNrRfXcZ+0neNAcc4gC1z498f072cGFJRtW1p9Xdb7YYJsDVmzVEVBgdh7aMlQIycuEpwkWkyk94230I558/0dB3oAAMhnk03+GDez3cU0OjrsAA=="
-    },
-    {
-      "src": "/images/portfolio/caserne/ouvrage-eau.webp",
-      "kind": "photo",
-      "caption": "Vue d’un ouvrage en eau figurant dans le dossier du projet.",
-      "alt": "Vue d’un ouvrage en eau figurant dans le dossier du projet.",
-      "width": 1032,
-      "height": 774,
-      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAwBQCdASoYABIAPu1iqE2ppaOiMAgBMB2JYwCsAB6Vjj1ZZLhEbn+zvgIDHcah/e7jgAD+AXNePfV/vfuPjWQEuNWQFW9iLmo1jBSeWXeM4cQE/5f0NHPrDMCCCNt03182fjOixwpEwu1v2qXRHdRMwhzJV8kD0/DcFN8ftcGAqEEqDEdtKOlU6QR5dMf/9JVeYbAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAwBQCdASoSABgAPzmEvlavJ6ajsBgIAeAnCWgAnTlAAHBX1KYkt2AHLQAwWpIFqEuyHAD+FJrhgsdJouHhaCOSA5oMx6Q+p1HTYT0lych8C933hXTJ9D2U/5g6wzJA3fkgGCMI57JIN7cWLXURCg9yQ9qFJSPqflRx0GdulL7WI3e9WniYv4S3MqdI5cAA"
     }
   ],
   "conseil": [
     {
       "src": "/images/portfolio/conseil/cour-chantier.webp",
       "kind": "photo",
-      "caption": "Préparation du sol dans la cour du bâtiment.",
-      "alt": "Préparation du sol dans la cour du bâtiment.",
+      "caption": "Préparation du sol dans les espaces extérieurs.",
+      "alt": "Préparation du sol dans les espaces extérieurs.",
       "width": 1280,
       "height": 960,
       "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABQBACdASoYABIAPu1grFAppSQisBgIATAdiWUAsswQ7ODLGxI5YyeOtIwAAP7W9y+u093JG6IhNW7gBFmgv+2MgC4Wg5TDJEOx6vUZfdaB5+BC/aKJFWbN5wKpkncmFwGkYFHu/rsHORK8c9DcETpSAIKuUjLOAAA="
@@ -323,8 +332,8 @@ export const clientMedia: Record<string, ProjectImage[]> = {
     {
       "src": "/images/portfolio/conseil/entree.webp",
       "kind": "photo",
-      "caption": "L’entrée du Conseil Provincial et ses finitions.",
-      "alt": "L’entrée du Conseil Provincial et ses finitions.",
+      "caption": "L’entrée du site et ses finitions.",
+      "alt": "L’entrée du site et ses finitions.",
       "width": 768,
       "height": 1024,
       "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAwBQCdASoSABgAPu1wsFIppiSiqAgBMB2JQBdkFTgub3rJm+OZLfSicZA4oEpJK9YAAAD+1GZq5Ueb5KZkPSF43F311CWMlLHbcbDj+fZuVS6LdnXoGktPHwI6UUSPlgtodU5UR79Tt36uT45+wY2HSbShw80359JTTJ75IL2wQ6aG5e1MYF9Q+cqnxlnWVNhaH1swAAA="
@@ -332,8 +341,8 @@ export const clientMedia: Record<string, ProjectImage[]> = {
     {
       "src": "/images/portfolio/conseil/eclairage.webp",
       "kind": "photo",
-      "caption": "Les abords du bâtiment et leur éclairage nocturne.",
-      "alt": "Les abords du bâtiment et leur éclairage nocturne.",
+      "caption": "Les abords et leur éclairage nocturne.",
+      "alt": "Les abords et leur éclairage nocturne.",
       "width": 768,
       "height": 1024,
       "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABQBACdASoSABgAPu1cqE6ppKOiMBgMATAdiWUAyJgQ4Xq0NlDruTe9l16AAP7jX8PprSmbOHz2qCMY/bm1pvXQoJ3/PaF9TgQSVIm0Nh++LZG9JjHpJ6ILUbpNSFqiE7p1Nuh4J+ZrfW5ngih9wm6sU+U2b0ZUiq6wIs/e+0hud0RN4z4jJqNdJwZtGAAA"

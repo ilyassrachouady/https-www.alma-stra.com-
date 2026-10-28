@@ -2,6 +2,17 @@
 .alma-home .alma-section { padding-block: clamp(72px, 7.5vw, 108px); }
 .alma-section-intro, .alma-projects-head { column-gap: clamp(32px, 5vw, 76px); }
 .alma-home h2, .inner-hero h1, .project-detail-intro h1 { text-wrap: balance; }
+.project-detail-intro h1,
+.project-next h2,
+.display-title,
+.inner-hero h1,
+.contact-intro h1,
+.expertise-overview-hero h1,
+.service-detail-hero h1,
+.service-detail-page h1,
+.service-detail-page h2 {
+  line-height: 1.48;
+}
 .alma-home p, .project-case-page p { text-wrap: pretty; }
 .alma-trust { padding-block: clamp(48px, 5vw, 72px); }
 .alma-trust-heading h2 { font-size: clamp(28px, 3vw, 46px); }
@@ -184,16 +195,16 @@ html[dir='rtl'] .company-approach > h3 { line-height: 1.4; }
 .hero-slide { opacity: 0; transition: opacity 1600ms cubic-bezier(.4,0,.2,1); }
 .hero-slide.is-active { opacity: 1; }
 .hero-slide img { object-fit: cover; }
-.hero-slideshow-shade { pointer-events: none; background: linear-gradient(90deg,#18231de0 0%,#18231db8 32%,#18231d45 65%,#18231d10 100%),linear-gradient(0deg,#101d18ad,transparent 30%); }
+.hero-slideshow-shade { pointer-events: none; background: linear-gradient(90deg,#18231db3 0%,#18231d66 22%,#18231d1f 40%,transparent 56%),linear-gradient(0deg,#101d1833,transparent 22%); }
 html[dir='rtl'] .alma-hero--slideshow h1 { font-size: clamp(38px,4.8vw,72px); line-height: 1.35; }
-html[dir='rtl'] .hero-slideshow-shade { background: linear-gradient(270deg,#18231de0 0%,#18231db8 32%,#18231d45 65%,#18231d10 100%),linear-gradient(0deg,#101d18ad,transparent 30%); }
+html[dir='rtl'] .hero-slideshow-shade { background: linear-gradient(270deg,#18231db3 0%,#18231d66 22%,#18231d1f 40%,transparent 56%),linear-gradient(0deg,#101d1833,transparent 22%); }
 @media(max-width:760px) {
  .alma-hero--slideshow { min-height: 690px; padding-block: 58px 80px; }
  .alma-hero--slideshow h1 { font-size: clamp(40px,10.5vw,62px); line-height: 1.08; }
  .alma-hero--slideshow .alma-hero-copy > p { font-size: 15px; max-width: 410px; margin-block: 22px 26px; }
  .alma-hero--slideshow .alma-hero-actions { flex-direction: row; gap: 10px; }
  .alma-hero--slideshow .alma-btn { width: auto; flex: 1 1 140px; padding-inline: 12px; gap: 8px; font-size: 11px; }
- .hero-slideshow-shade, html[dir='rtl'] .hero-slideshow-shade { background: linear-gradient(0deg,#142019d9,#14201970 55%,#14201970); }
+ .hero-slideshow-shade, html[dir='rtl'] .hero-slideshow-shade { background: linear-gradient(180deg,#142019a6 0%,#14201947 34%,transparent 62%); }
  html[dir='rtl'] .alma-hero--slideshow h1 { font-size: clamp(34px,9vw,48px); line-height: 1.35; }
 }
 @media(prefers-reduced-motion:reduce) {
@@ -274,7 +285,8 @@ body { font-size: 17px; color: #30362e; }
 @media (max-width: 700px) { .contact-map-heading { align-items: start; flex-direction: column; gap: 20px; } .contact-map-frame { height: 360px; } }
 @media (max-width: 700px) { .company-documents-grid { grid-template-columns: 1fr; } }
 .alma-kicker, .section-label, .project-kicker, .service-eyebrow { font-size: 12px; font-weight: 500; }
-.alma-desktop-nav > a, .alma-nav-dropdown > button { font-size: 14px; }
+.alma-desktop-nav > a, .alma-nav-dropdown > a, .alma-nav-dropdown > button { font-size: 14px; font-weight: 650; }
+.alma-nav-dropdown > a::after { width: calc(100% - 19px); }
 .alma-topbar { font-size: 13px; color: #46513f; }
 .alma-btn, .alma-nav-cta { font-size: 14px; }
 .alma-footer { color: #35402f; }

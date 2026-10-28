@@ -142,14 +142,14 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  { slug: "centre-culturel-tikiouine", number: "01", title: "Centre culturel de Tikiouine", category: "Équipement culturel", image: "/images/portfolio/tikiouine/facade.webp", imageKind: "render" },
-  { slug: "college-ibn-khaldoune-al-omrane", number: "02", title: "Collège Ibn Khaldoune Al Omrane", category: "Équipement public", image: "/images/portfolio/retouched/college-terrain-multisport.webp" },
-  { slug: "al-omrane-souss-massa", number: "03", title: "Al Omrane Souss Massa", category: "Construction TCE", image: "/images/portfolio/al-omrane/facade.webp", imageKind: "render" },
-  { slug: "province-laayoune", number: "04", title: "Province de Laâyoune", category: "Bâtiment administratif", image: "/images/portfolio/retouched/province-facade.webp" },
-  { slug: "terrain-de-sport-al-omrane", number: "05", title: "Terrain de sport Al Omrane", category: "Équipement sportif", image: "/images/portfolio/retouched/sport-terrain.webp" },
-  { slug: "atlas-sahara", number: "06", title: "Atlas Sahara", category: "Aménagement", image: "/images/portfolio/retouched/atlas-station-de-nuit.webp" },
-  { slug: "caserne-des-sapeurs-pompiers", number: "07", title: "Caserne des sapeurs-pompiers", category: "Équipement public", image: "/images/portfolio/retouched/caserne-facade.webp" },
-  { slug: "conseil-provincial-laayoune", number: "08", title: "Conseil provincial de Laâyoune", category: "Institutionnel", image: "/images/portfolio/retouched/conseil-cour-chantier.webp" }
+  { slug: "college-ibn-khaldoune-al-omrane", number: "01", title: "Terrain de sport, Collège Ibn Khaldoune", category: "Équipement sportif", image: "/images/portfolio/retouched/college-terrain-multisport.webp" },
+  { slug: "al-omrane-souss-massa", number: "02", title: "Complexe d’activités sociales", category: "Construction TCE", image: "/images/portfolio/al-omrane/facade.webp", imageKind: "render" },
+  { slug: "terrain-de-sport-al-omrane", number: "03", title: "Terrain de proximité Ighil Ouderdour", category: "Équipement sportif", image: "/images/portfolio/retouched/sport-terrain.webp" },
+  { slug: "atlas-sahara", number: "04", title: "Station de Service Gunidlef", category: "Station de service", image: "/images/portfolio/retouched/atlas-station-de-nuit.webp" },
+  { slug: "caserne-des-sapeurs-pompiers", number: "05", title: "Caserne des Sapeurs-Pompiers", category: "Équipement public", image: "/images/portfolio/caserne/facade-front.webp" },
+  { slug: "parc-provincial-al-hizam", number: "06", title: "Aménagement du Parc Provincial Al Hizam", category: "Aménagement extérieur", image: "/images/portfolio/retouched/conseil-cour-chantier.webp" },
+  { slug: "centre-culturel-tikiouine", number: "07", title: "Centre culturel de Tikiouine", category: "Équipement culturel", image: "/images/portfolio/tikiouine/facade.webp", imageKind: "render" },
+  { slug: "province-laayoune", number: "08", title: "Province de Laâyoune", category: "Bâtiment administratif", image: "/images/portfolio/retouched/province-facade.webp" }
 ];
 
 export const partners = [

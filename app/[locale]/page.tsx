@@ -60,7 +60,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
           <div className="alma-project-grid">
             {projects.slice(0, 5).map((project, index) => (<Reveal key={project.slug} delay={index * 70} variant={projectReveal[index]}>
                 <Link className={`alma-project-card alma-project-${index + 1}`} href={`/projects/${project.slug}`}>
-                  <div className="alma-project-image"><Image src={project.image} alt={project.title} fill sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 55vw"/><span className="portfolio-image-label">{project.imageKind === "render" ? "Vue d’étude" : "Photographie retouchée"}</span></div>
+                  <div className="alma-project-image"><Image src={project.image} alt={project.title} fill sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 55vw"/></div>
                   <div className="alma-project-info"><div><span>{project.category}</span><h3>{project.title}</h3></div><ArrowUpRight size={22}/></div>
                 </Link>
               </Reveal>))}

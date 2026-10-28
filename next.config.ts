@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
    { source: '/a-propos', destination: '/about', permanent: true },
    { source: '/services', destination: '/expertise', permanent: true },
    { source: '/projets', destination: '/projects', permanent: true },
+   { source: '/projects/conseil-provincial-laayoune', destination: '/projects/parc-provincial-al-hizam', permanent: true },
+   { source: '/ar/projects/conseil-provincial-laayoune', destination: '/ar/projects/parc-provincial-al-hizam', permanent: true },
    { source: '/politique-de-confidentialite-2', destination: '/politique-de-confidentialite', permanent: true },
    ...['viabilisation-des-lotissements', 'amenagement-btp', 'travaux-tous-corps-detat'].flatMap(slug => [ { source: `/${slug}`, destination: `/expertise/${slug}`, permanent: true }, { source: `/services/${slug}`, destination: `/expertise/${slug}`, permanent: true } ]),
   ];

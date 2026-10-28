@@ -55,7 +55,7 @@ export default async function ProjectPage({ params }: {
     </section>
     <figure className="project-case-cover">
       <div className="project-detail-image"><Image src={cover.src} alt={cover.alt} fill priority placeholder="blur" blurDataURL={cover.blurDataURL} sizes="100vw" style={{ objectFit: "cover", objectPosition: project.imagePosition ?? "center" }}/></div>
-      <figcaption className="page-shell"><span className="project-cover-kind">{project.imageKind === "render" ? "Vue d’étude" : "Photographie retouchée"}</span>{cover.caption}</figcaption>
+      <figcaption className="page-shell">{cover.caption}</figcaption>
     </figure>
     <section className="project-case-overview section page-shell" aria-labelledby="project-overview-title">
       <dl className="project-case-facts">{facts.map(fact => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl>
@@ -73,7 +73,7 @@ export default async function ProjectPage({ params }: {
     <section className="project-case-related section page-shell" aria-labelledby="project-related-title">
       <div className="section-label"><span>03</span><span>Autres réalisations</span></div>
       <h2 id="project-related-title" className="display-title medium">Poursuivre la découverte.</h2>
-      <div className="project-case-related-grid">{related.map(item => <Link href={`/projects/${item.slug}`} key={item.slug}><div className="project-case-related-image"><Image src={item.image} alt={item.title} fill sizes="(max-width: 760px) 100vw, 50vw"/><span className="portfolio-image-label">{item.imageKind === "render" ? "Vue d’étude" : "Photographie retouchée"}</span></div><div><span>{item.category}</span><h3>{item.title}</h3><ArrowUpRight size={22}/></div></Link>)}</div>
+      <div className="project-case-related-grid">{related.map(item => <Link href={`/projects/${item.slug}`} key={item.slug}><div className="project-case-related-image"><Image src={item.image} alt={item.title} fill sizes="(max-width: 760px) 100vw, 50vw"/></div><div><span>{item.category}</span><h3>{item.title}</h3><ArrowUpRight size={22}/></div></Link>)}</div>
     </section>
     <section className="project-next dark-section"><div className="page-shell"><span>Projet suivant</span><Link href={`/projects/${next.slug}`}><h2>{next.title}</h2><ArrowRight size={36}/></Link></div></section>
     <section className="inline-cta"><div className="page-shell"><h2>Vous avez un projet similaire ?</h2><Link className="button dark" href={`/contact?project=${encodeURIComponent(project.title)}`}>Échanger avec ALMA-STRA <ArrowUpRight size={16}/></Link></div></section>
