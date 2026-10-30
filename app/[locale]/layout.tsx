@@ -31,7 +31,7 @@ export const metadata: Metadata = {
  title: { default: "ALMA-STRA", template: "%s | ALMA-STRA" },
  icons: {
    icon: [
-     { url: "/favicon.svg?v=3", type: "image/svg+xml" },
+     { url: "/favicon.svg?v=4", type: "image/svg+xml" },
      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
    ],

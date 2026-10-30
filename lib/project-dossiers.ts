@@ -22,9 +22,10 @@ export const projectDossiers: Record<string, ProjectDossier> = {
     work: "Construction d’un bâtiment administratif",
   },
   "terrain-de-sport-al-omrane": { owner: "Al Omrane Souss Massa", place: "Agadir" },
-  "atlas-sahara": { place: "Laâyoune" },
+  "atlas-sahara": { owner: "Atlas Sahara", place: "Laâyoune" },
   "caserne-des-sapeurs-pompiers": { owner: "Conseil Provincial de Laâyoune", place: "Foum El Oued, Laâyoune" },
   "parc-provincial-al-hizam": {
+    owner: "Conseil Provincial de Laâyoune",
     place: "Laâyoune",
   },
 };
