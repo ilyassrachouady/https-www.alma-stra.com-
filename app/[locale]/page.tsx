@@ -8,6 +8,7 @@ import Reveal from "@/components/Reveal";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import CompanyApproach from "@/components/CompanyApproach";
 import ServicePreview from "@/components/ServicePreview";
+import SupplierSection from "@/components/SupplierSection";
 import { contact, projects, services } from "@/lib/data";
 const reasons = [
     {
@@ -130,6 +131,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
           </div>
         </div>
       </section>
+
+      <SupplierSection locale={locale}/>
 
       <section className="alma-final-cta">
         <div className="page-shell alma-final-cta-inner">
