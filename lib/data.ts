@@ -44,7 +44,7 @@ export const services: Service[] = [
     image: serviceMedia.land.src,
     imagePosition: "center",
     diagram: "land",
-    keywords: ["Voirie", "Eau", "Assainissement", "Électricité"],
+    keywords: ["Voirie", "AEP", "Assainissement", "Électricité", "Desserte téléphonique"],
     problemTitle: "Rendre un terrain réellement exploitable demande de coordonner plusieurs réseaux et contraintes techniques.",
     problemText: "La viabilisation ne se limite pas à un seul lot. Elle implique les réseaux humides et secs, les accès, les voiries, les aménagements extérieurs et les contrôles nécessaires avant l'accueil des futures constructions.",
     details: [
@@ -76,7 +76,7 @@ export const services: Service[] = [
     image: serviceMedia.space.src,
     imagePosition: "center",
     diagram: "space",
-    keywords: ["Cloisons", "Revêtements", "Plafonds", "Équipements techniques"],
+    keywords: ["Cloisons", "Revêtements", "Faux plafonds", "Lots techniques"],
     problemTitle: "Un espace peut être construit sans être réellement adapté à son usage.",
     problemText: "Circulation, distribution des zones, finitions, équipements techniques et sécurité doivent fonctionner ensemble. L'aménagement organise ces éléments pour rendre le lieu opérationnel et cohérent avec les besoins du projet.",
     details: [

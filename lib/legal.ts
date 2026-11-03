@@ -4,7 +4,7 @@ export const legalPages: Record<string, LegalPage> = {
  'conditions-generales': {
   title: 'Conditions générales', description: 'Informations sur l’éditeur et conditions d’utilisation du site ALMA-STRA.',
   sections: [
-   { title: 'Éditeur du site', text: 'Le site alma-stra.com est édité par ALMA-STRA SARL, Av. Sakia El Hamra N°28, Hay Chouhada, Laâyoune, Maroc. RC : 18271. ICE : 001718740000081. Contact : contact@alma-stra.com · +212 661 347 602.' },
+   { title: 'Éditeur du site', text: 'Le site alma-stra.com est édité par ALMA-STRA SARL, Av. Sakia El Hamra N°28, Hay Chouhada, Laâyoune, Maroc. Contact : contact@alma-stra.com · +212 661 347 602.' },
    { title: 'Objet du site', text: 'Le site présente l’entreprise, ses métiers et ses références. Les informations et photographies ont une vocation de présentation. Une demande par formulaire ne constitue ni une commande ni un engagement contractuel. Les prestations sont définies dans un devis et un contrat distincts.' },
    { title: 'Photographies et études', text: 'Les photographies illustrent les projets présentés. Les perspectives et documents d’étude sont identifiés comme tels et ne constituent pas des photographies d’ouvrages livrés. Le périmètre et les conditions de chaque intervention doivent être confirmés avec ALMA-STRA.' },
    { title: 'Propriété intellectuelle', text: 'Les textes, photographies, marques et créations restent soumis aux droits de leurs titulaires. Toute réutilisation au-delà des usages autorisés nécessite leur accord préalable.' },
