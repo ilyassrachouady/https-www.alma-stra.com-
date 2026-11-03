@@ -35,7 +35,7 @@ export default function PaintCalculator({ locale }: { locale: Locale }) {
         {input(ar ? "عدد الطبقات" : "Nombre de couches", coats, setCoats, "1")}
         {input(ar ? "مردودية الطلاء (م²/لتر/طبقة)" : "Rendement (m²/L/couche)", coverage, setCoverage, "0.1")}
         {input(ar ? "هامش احتياطي (%)" : "Marge de réserve (%)", reserve, setReserve, "1")}
-      </div><p>{ar ? "تحقق من مردودية الطلاء على عبوة المنتج؛ تختلف حسب السطح وطريقة التطبيق." : "Vérifiez le rendement indiqué sur le pot : il varie selon le support et la méthode d’application."}</p></section>
+      </div><p>{ar ? "القيمة الأولية 10 م²/لتر لكل طبقة مثال لطلاء Astral SATILAC. تحقق من مردودية منتجك؛ تختلف حسب السطح وطريقة التطبيق." : "Le repère initial de 10 m²/L par couche vient de la fiche Astral SATILAC. Vérifiez le rendement de votre produit : il varie selon le support et l’application."} <a href="https://www.astral.ma/fr/produits/satilac/cccId_1339531" target="_blank" rel="noopener noreferrer">{ar ? "المصدر" : "Source"}</a>.</p></section>
     </div>
     <aside className="tile-tool-result" aria-live="polite"><span>{ar ? "الكمية المقدّرة" : "Quantité estimée"}</span><strong>{format(liters)} <small>{ar ? "لتر" : "litres"}</small></strong><dl>
       <div><dt>{ar ? "مساحة الجدران" : "Surface des murs"}</dt><dd>{format(wallArea)} m²</dd></div>

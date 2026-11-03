@@ -11,7 +11,7 @@ export default function TileCalculator({ locale }: { locale: Locale }) {
   const [tileWidth, setTileWidth] = useState("60");
   const [waste, setWaste] = useState("10");
   const [perBox, setPerBox] = useState("");
-  const [adhesiveRate, setAdhesiveRate] = useState("");
+  const [adhesiveRate, setAdhesiveRate] = useState("4.5");
   const positive = (text: string) => { const n = Number(text); return text.trim() && Number.isFinite(n) && n > 0 ? n : 0; };
   const roomArea = positive(length) * positive(width);
   const tileArea = positive(tileLength) * positive(tileWidth) / 10000;
@@ -20,7 +20,7 @@ export default function TileCalculator({ locale }: { locale: Locale }) {
   const count = roomArea > 0 && tileArea > 0 ? Math.ceil(requiredArea / tileArea) : 0;
   const tilesPerBox = Math.floor(positive(perBox));
   const boxes = tilesPerBox > 0 ? Math.ceil(count / tilesPerBox) : null;
-  const adhesive = positive(adhesiveRate) ? requiredArea * positive(adhesiveRate) : null;
+  const adhesive = positive(adhesiveRate) ? roomArea * positive(adhesiveRate) : null;
   const format = (n: number) => new Intl.NumberFormat(ar ? "ar-MA" : "fr-MA", { maximumFractionDigits: 2 }).format(n);
 
   return <div className="tile-tool" dir={ar ? "rtl" : "ltr"}>
@@ -37,7 +37,7 @@ export default function TileCalculator({ locale }: { locale: Locale }) {
         <label>{ar ? "هامش القص والهدر (%)" : "Marge de coupe et perte (%)"}<input type="number" min="0" max="100" step="1" inputMode="numeric" value={waste} onChange={event => setWaste(event.target.value)}/></label>
         <label>{ar ? "بلاطات في العلبة (اختياري)" : "Carreaux par boîte (facultatif)"}<input type="number" min="1" step="1" inputMode="numeric" value={perBox} onChange={event => setPerBox(event.target.value)} placeholder="—"/></label>
         <label>{ar ? "استهلاك اللاصق (كغ/م²، اختياري)" : "Consommation de colle (kg/m², facultatif)"}<input type="number" min="0" step="0.1" inputMode="decimal" value={adhesiveRate} onChange={event => setAdhesiveRate(event.target.value)} placeholder="—"/></label>
-      </div><p>{ar ? "خذ معدل استهلاك اللاصق من عبوة المنتج؛ فهو يختلف حسب البلاطة والسطح وطريقة التركيب." : "Relevez la consommation de colle sur l’emballage du produit : elle varie selon le support, le carreau et la pose."}</p></section>
+      </div><p>{ar ? "القيمة الافتراضية 4.5 كغ/م² مأخوذة من مثال لدى Sika. تحقق من العبوة، لأن الاستهلاك يتغير حسب المنتج والسطح وطريقة التركيب." : "Le repère initial de 4,5 kg/m² correspond à un exemple Sika. Vérifiez l’emballage : la consommation varie selon le produit, le support et la pose."} <a href="https://mar.sika.com/fr/portail-prescripteurs/batiments-residentiels/pose-des-revetements-ceramiques/sikaceram-105-m.html" target="_blank" rel="noopener noreferrer">{ar ? "المصدر" : "Source"}</a>.</p></section>
     </div>
     <aside className="tile-tool-result" aria-live="polite"><span>{ar ? "تقدير المواد" : "Estimation des matériaux"}</span><strong>{format(count)} <small>{ar ? "بلاطة" : "carreaux"}</small></strong><dl>
       <div><dt>{ar ? "المساحة" : "Surface"}</dt><dd>{format(roomArea)} m²</dd></div>
