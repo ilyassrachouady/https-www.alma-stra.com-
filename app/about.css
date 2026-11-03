@@ -1,9 +1,9 @@
-.alma-about { overflow: clip; }
+.alma-about { overflow: clip; padding-top: 116px; }
 .about-hero { background: #f4f6f0; }
 .about-hero-grid { display: grid; grid-template-columns: minmax(0,1.04fr) minmax(0,.96fr); gap: clamp(32px,5vw,80px); align-items: center; padding-block: clamp(48px,6vw,92px); }
-.about-hero-copy { padding-block: 20px; }
+.about-hero-copy { min-width: 0; padding-block: 20px; }
 .about-hero-copy .eyebrow { display: block; margin-bottom: clamp(26px,4vw,56px); }
-.about-hero-copy h1 { max-width: 780px; margin: 0; font-family: var(--font-display),sans-serif; font-size: clamp(56px,6.3vw,106px); line-height: .98; letter-spacing: -.065em; font-weight: 650; text-wrap: balance; }
+.about-hero-copy h1 { max-width: 780px; margin: 0; font-family: var(--font-display),sans-serif; font-size: clamp(48px,5.2vw,88px); line-height: 1.02; letter-spacing: -.055em; font-weight: 650; text-wrap: balance; }
 .about-hero-copy h1 em { color: var(--brand-green-dark,#356a29); font-style: normal; }
 .about-hero-copy p { max-width: 550px; margin: 30px 0 0; font-size: clamp(17px,1.3vw,20px); line-height: 1.65; color: #505b50; }
 .about-hero-link { display: inline-flex; align-items: center; gap: 14px; margin-top: 34px; padding-bottom: 9px; border-bottom: 1px solid #78a85f; color: #315d2a; font-weight: 700; font-size: 15px; }
@@ -35,5 +35,5 @@
 .about-value h3 { margin: 36px 0 14px; font-family: var(--font-display),sans-serif; font-size: clamp(25px,2vw,32px); line-height: 1.15; letter-spacing: -.035em; }
 .about-value p { margin: 0; max-width: 400px; font-size: 16px; line-height: 1.65; color: #536052; }
 html[dir='rtl'] .alma-about h1,html[dir='rtl'] .alma-about h2,html[dir='rtl'] .alma-about h3,html[dir='rtl'] .about-graphic-list span,html[dir='rtl'] .about-approach-statement p { font-family: var(--font-arabic),sans-serif; letter-spacing: 0; line-height: 1.25; }
-@media (max-width: 900px) { .about-hero-grid,.about-story-grid,.about-approach-grid { grid-template-columns: 1fr; } .about-hero-graphic { min-height: 360px; } .about-story-grid { gap: 20px; } .about-approach-statement { min-height: 340px; } .about-values-grid { grid-template-columns: 1fr; } .about-value { min-height: 0; } .about-value h3 { margin-top: 26px; } }
-@media (max-width: 600px) { .about-hero-grid { padding-block: 44px; gap: 34px; } .about-hero-copy h1 { font-size: clamp(48px,12vw,70px); } .about-hero-copy p { margin-top: 22px; } .about-hero-graphic { min-height: 310px; padding: 26px; } .about-graphic-list span { padding: 15px 0; } .about-story,.about-values { padding-block: 64px; } .about-story-grid h2,.about-values h2 { font-size: clamp(39px,10vw,58px); } .about-approach-grid { gap: 14px; } .about-approach-statement { min-height: 280px; padding: 28px; } .about-values-grid { margin-top: 32px; gap: 12px; } }
+@media (max-width: 900px) { .alma-about { padding-top: 72px; } .about-hero-grid,.about-story-grid,.about-approach-grid { grid-template-columns: 1fr; } .about-hero-graphic { min-height: 360px; } .about-story-grid { gap: 20px; } .about-approach-statement { min-height: 340px; } .about-values-grid { grid-template-columns: 1fr; } .about-value { min-height: 0; } .about-value h3 { margin-top: 26px; } }
+@media (max-width: 600px) { .about-hero-grid { padding-block: 34px 44px; gap: 34px; } .about-hero-copy { padding-block: 0; } .about-hero-copy .eyebrow { margin-bottom: 26px; } .about-hero-copy h1 { font-size: clamp(36px,9.2vw,52px); line-height: 1.04; letter-spacing: -.05em; } .about-hero-copy p { margin-top: 22px; } .about-hero-graphic { min-height: 310px; padding: 26px; } .about-graphic-list span { padding: 15px 0; } .about-story,.about-values { padding-block: 64px; } .about-story-grid h2,.about-values h2 { font-size: clamp(39px,10vw,58px); } .about-approach-grid { gap: 14px; } .about-approach-statement { min-height: 280px; padding: 28px; } .about-values-grid { margin-top: 32px; gap: 12px; } }
