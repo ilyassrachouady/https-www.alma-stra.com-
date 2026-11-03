@@ -9,7 +9,18 @@
 .joinery-tool-list{display:grid;gap:16px}.joinery-tool-row .surface-tool-row-head{margin-bottom:20px}.joinery-tool-row .surface-tool-row-head h2{margin:0}.joinery-tool-row .surface-tool-row-head button{border:0;background:none;color:#4c6f3e;text-decoration:underline;text-underline-offset:4px;cursor:pointer}.joinery-tool-price{margin-top:10px}
 .tile-tool-fields select{width:100%;min-width:0;padding:13px 14px;border:1px solid #d2dacf;border-radius:6px;background:#fbfcfa;color:#202820;font:inherit;font-size:16px;outline:none}.tile-tool-fields select:focus{border-color:#4d793d;box-shadow:0 0 0 3px #dcebd5}.joinery-tool-price p{font-size:14px;color:#657060;line-height:1.6}.joinery-tool-price a,.tool-source a{color:inherit;text-decoration:underline;text-underline-offset:3px}.tool-source a{color:#fff}
 
-/* Keep the homepage tool directory compact and easy to scan. */
-.alma-section.alma-tool-feature{padding:clamp(64px,6vw,88px) 0}.alma-tool-feature-grid{display:block}.alma-tool-feature-heading{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:32px}.alma-tool-feature-heading h2{max-width:740px;margin:0;font-size:clamp(36px,4vw,58px);line-height:1.08}.alma-tool-feature-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.alma-tool-feature-card{display:flex;flex-direction:column;min-height:220px;padding:26px}.alma-tool-feature-card h3{font-size:clamp(23px,2vw,29px);line-height:1.18;margin:17px 0 10px}.alma-tool-feature-card p{font-size:15px;line-height:1.5;margin:0}.alma-tool-feature-card strong{align-self:flex-start;margin-top:auto;padding-top:16px}
-@media(max-width:950px){.alma-tool-feature-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.alma-tool-feature-heading{display:block}.alma-tool-feature-heading h2{margin-top:16px}}
-@media(max-width:620px){.alma-section.alma-tool-feature{padding:60px 0}.alma-tool-feature-cards{grid-template-columns:1fr}.alma-tool-feature-heading{margin-bottom:26px}.alma-tool-feature-card{min-height:0;padding:23px}.alma-tool-feature-card h3{font-size:25px}.alma-tool-feature-card strong{margin-top:4px}}
+/* Homepage tool directory */
+.alma-section.alma-tool-feature{padding:clamp(60px,6vw,84px) 0}
+.alma-tool-feature-grid{display:block}
+.alma-tool-feature-heading{display:flex;flex-direction:column;align-items:center;gap:17px;text-align:center;margin:0 auto 38px}
+.alma-tool-feature-heading .alma-kicker{justify-content:center}
+.alma-tool-feature-heading h2{max-width:760px;margin:0;font-size:clamp(36px,4vw,58px);line-height:1.08;text-wrap:balance}
+.alma-tool-feature-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.alma-tool-feature-card{display:flex;flex-direction:column;min-height:228px;padding:26px 28px;border-radius:10px;box-shadow:0 4px 18px rgba(32,52,33,.025);transition:transform .25s,border-color .25s,box-shadow .25s}
+.alma-tool-feature-card:hover{box-shadow:0 14px 32px rgba(32,52,33,.09)}
+.alma-tool-feature-card:focus-visible{outline:3px solid #83b948;outline-offset:3px}
+.alma-tool-feature-card h3{font-size:clamp(23px,2vw,29px);line-height:1.18;margin:17px 0 10px;max-width:19ch}
+.alma-tool-feature-card p{font-size:15px;line-height:1.5;margin:0}
+.alma-tool-feature-card strong{align-self:flex-start;margin-top:auto;padding-top:16px}
+@media(max-width:950px){.alma-tool-feature-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.alma-section.alma-tool-feature{padding:56px 0}.alma-tool-feature-heading{gap:14px;margin-bottom:28px}.alma-tool-feature-heading h2{font-size:clamp(34px,9vw,44px)}.alma-tool-feature-cards{grid-template-columns:1fr}.alma-tool-feature-card{min-height:0;padding:23px}.alma-tool-feature-card h3{font-size:25px}.alma-tool-feature-card strong{margin-top:4px}}
