@@ -136,13 +136,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
 
       <section className="alma-section alma-tool-feature">
         <div className="page-shell alma-tool-feature-grid">
-          <div><span className="alma-kicker"><span /> Outils pratiques</span><h2>Un premier repère<br /><em>pour votre projet.</em></h2></div>
+          <div className="alma-tool-feature-heading"><span className="alma-kicker"><span /> Outils pratiques</span><h2>Un premier repère <em>pour votre projet.</em></h2></div>
           <div className="alma-tool-feature-cards">
             <Link className="alma-tool-feature-card" href="/outils/calculateur-surface"><span>01 / Calculateur de surface</span><h3>Mesurez vos espaces en quelques instants.</h3><p>Saisissez les dimensions de vos pièces et obtenez une surface totale estimée.</p><strong>Utiliser l’outil <ArrowUpRight size={19}/></strong></Link>
             <Link className="alma-tool-feature-card" href="/outils/convertisseur-unites"><span>02 / Convertisseur d’unités BTP</span><h3>Les bonnes unités, sans détour.</h3><p>Convertissez longueurs, surfaces, volumes, masses et pressions.</p><strong>Utiliser l’outil <ArrowUpRight size={19}/></strong></Link>
             <Link className="alma-tool-feature-card" href="/outils/calculateur-carrelage"><span>03 / Calculateur de carrelage</span><h3>Anticipez vos quantités de carrelage.</h3><p>Estimez le nombre de carreaux, de boîtes et la colle selon votre projet.</p><strong>Utiliser l’outil <ArrowUpRight size={19}/></strong></Link>
             <Link className="alma-tool-feature-card" href="/outils/calculateur-peinture"><span>04 / Calculateur de peinture</span><h3>Estimez votre peinture avec précision.</h3><p>Calculez les litres nécessaires selon les surfaces, les couches et le produit.</p><strong>Utiliser l’outil <ArrowUpRight size={19}/></strong></Link>
-            <Link className="alma-tool-feature-card" href="/outils/calculateur-menuiserie-aluminium"><span>05 / Calculateur de menuiserie aluminium</span><h3>Dimensionnez vos ouvertures.</h3><p>Estimez surfaces, périmètres de cadres et budget selon votre prix.</p><strong>Utiliser l’outil <ArrowUpRight size={19}/></strong></Link>
+            <Link className="alma-tool-feature-card" href="/outils/calculateur-menuiserie-aluminium"><span>05 / Calculateur de menuiserie aluminium</span><h3>Dimensionnez vos ouvertures.</h3><p>Estimez les surfaces, les cadres et un budget selon la gamme choisie.</p><strong>Utiliser l’outil <ArrowUpRight size={19}/></strong></Link>
             <Link className="alma-tool-feature-card" href="/outils/simulateur-cout-construction"><span>06 / Simulateur de coût de construction</span><h3>Un premier budget pour construire.</h3><p>Estimez une maison selon sa surface, sa finition et sa ville.</p><strong>Utiliser l’outil <ArrowUpRight size={19}/></strong></Link>
           </div>
         </div>

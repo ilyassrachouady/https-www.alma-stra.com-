@@ -12,6 +12,7 @@ import "../projects.css";
 import "../client-feedback.css";
 import "../refinement.css";
 import "../tools.css";
+import "../about.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { notFound } from "next/navigation";

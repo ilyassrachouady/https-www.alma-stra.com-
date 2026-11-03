@@ -43,6 +43,6 @@ export default function ConstructionCostCalculator({ locale }: { locale: Locale 
       <div><dt>{ar ? "الأشغال التقنية (12٪)" : "Lots techniques (12 %)"}</dt><dd>{ready ? `${format(base * .12)} DH` : "—"}</dd></div>
       <div><dt>{ar ? "متفرقات (8٪)" : "Divers (8 %)"}</dt><dd>{ready ? `${format(base * .08)} DH` : "—"}</dd></div>
       <div><dt>{ar ? "احتياطي المصاريف غير المتوقعة" : "Marge pour imprévus"}</dt><dd>{ready ? `${format(total - base)} DH` : "—"}</dd></div>
-    </dl><p>{ar ? "تقدير أولي وليس عرض أسعار. لا يشمل الأرض أو الضرائب أو التوصيلات الخارجية. اطلب عرض أسعار مفصلاً." : "Ordre de grandeur, pas un devis. Terrain, taxes et raccordements extérieurs non compris. Demandez un devis détaillé."}</p><p className="tool-source">{ar ? "النسب المرجعية: " : "Ratios et coefficients : "}<a href="https://mab.nsynergy.ma/tools/estimer-cout-construction.php" target="_blank" rel="noopener noreferrer">MAB ERP</a></p></aside>
+    </dl><p>{ar ? "تقدير أولي وليس عرض أسعار. لا يشمل الأرض أو الضرائب أو التوصيلات الخارجية. اطلب عرض أسعار مفصلاً." : "Ordre de grandeur, pas un devis. Terrain, taxes et raccordements extérieurs non compris. Demandez un devis détaillé."}</p></aside>
   </div>;
 }
