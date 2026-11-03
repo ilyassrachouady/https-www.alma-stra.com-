@@ -12,6 +12,7 @@ const nav = [
     ["À propos", "/about"],
     ["Société", "/societe"],
     ["Projets", "/projects"],
+    ["Outils pratiques", "/#outils"],
     ["Contact", "/contact"],
 ];
 export default function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
@@ -91,6 +92,7 @@ export default function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
                 </div>
               </div>
               <Link className={pathname.startsWith("/projects") ? "active" : ""} href="/projects">Projets</Link>
+              <Link className={pathname.startsWith("/outils") ? "active" : ""} href="/#outils">Outils pratiques</Link>
               <Link className={pathname === "/contact" ? "active" : ""} href="/contact">Contact</Link>
             </nav>
             <a className="language-switch" onClick={event => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); window.location.assign(localePath(window.location.pathname, locale === "fr" ? "ar" : "fr") + window.location.search + window.location.hash); }} href={localePath(pathname, locale === "fr" ? "ar" : "fr")} lang={locale === "fr" ? "ar" : "fr"} hrefLang={locale === "fr" ? "ar" : "fr"} aria-label={locale === "fr" ? "عرض هذه الصفحة بالعربية" : "Voir cette page en français"}>{locale === "fr" ? "العربية" : "FR"}</a>
