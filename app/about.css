@@ -37,3 +37,15 @@
 html[dir='rtl'] .alma-about h1,html[dir='rtl'] .alma-about h2,html[dir='rtl'] .alma-about h3,html[dir='rtl'] .about-graphic-list span,html[dir='rtl'] .about-approach-statement p { font-family: var(--font-arabic),sans-serif; letter-spacing: 0; line-height: 1.25; }
 @media (max-width: 900px) { .alma-about { padding-top: 72px; } .about-hero-grid,.about-story-grid,.about-approach-grid { grid-template-columns: 1fr; } .about-hero-graphic { min-height: 360px; } .about-story-grid { gap: 20px; } .about-approach-statement { min-height: 340px; } .about-values-grid { grid-template-columns: 1fr; } .about-value { min-height: 0; } .about-value h3 { margin-top: 26px; } }
 @media (max-width: 600px) { .about-hero-grid { padding-block: 34px 44px; gap: 34px; } .about-hero-copy { padding-block: 0; } .about-hero-copy .eyebrow { margin-bottom: 26px; } .about-hero-copy h1 { font-size: clamp(36px,9.2vw,52px); line-height: 1.04; letter-spacing: -.05em; } .about-hero-copy p { margin-top: 22px; } .about-hero-graphic { min-height: 310px; padding: 26px; } .about-graphic-list span { padding: 15px 0; } .about-story,.about-values { padding-block: 64px; } .about-story-grid h2,.about-values h2 { font-size: clamp(39px,10vw,58px); } .about-approach-grid { gap: 14px; } .about-approach-statement { min-height: 280px; padding: 28px; } .about-values-grid { margin-top: 32px; gap: 12px; } }
+
+/* Company introduction follows the compact brand typography. */
+.company-page{padding-top:116px}
+.company-page .inner-hero{padding-top:48px;padding-bottom:48px;min-height:0;border-bottom:1px solid #dfe5da}
+.company-page .inner-hero .eyebrow{display:block;margin-bottom:24px;color:#4b6143}
+.company-page .inner-hero h1{font-size:clamp(42px,4.6vw,72px);line-height:1.06;letter-spacing:-.045em;max-width:1000px;margin:0;font-weight:650}
+.company-page .inner-hero h1 em{color:#356a29;font-style:normal}
+.company-page .inner-hero p{max-width:760px;margin:24px 0 0;font-size:18px;line-height:1.65;color:#505b50}
+.company-page .company-identity{padding-top:48px;padding-bottom:48px}
+@media(max-width:900px){.company-page{padding-top:72px}}
+@media(max-width:600px){.company-page .inner-hero{padding-top:34px;padding-bottom:34px}.company-page .inner-hero h1{font-size:clamp(34px,8.6vw,48px);letter-spacing:-.035em}.company-page .inner-hero p{font-size:16px;margin-top:20px}.company-page .company-identity{padding-block:34px}}
+html[dir='rtl'] .company-page .inner-hero h1{letter-spacing:0;line-height:1.25}
