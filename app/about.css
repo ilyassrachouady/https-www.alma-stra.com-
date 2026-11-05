@@ -49,3 +49,7 @@ html[dir='rtl'] .alma-about h1,html[dir='rtl'] .alma-about h2,html[dir='rtl'] .a
 @media(max-width:900px){.company-page{padding-top:72px}}
 @media(max-width:600px){.company-page .inner-hero{padding-top:34px;padding-bottom:34px}.company-page .inner-hero h1{font-size:clamp(34px,8.6vw,48px);letter-spacing:-.035em}.company-page .inner-hero p{font-size:16px;margin-top:20px}.company-page .company-identity{padding-block:34px}}
 html[dir='rtl'] .company-page .inner-hero h1{letter-spacing:0;line-height:1.25}
+
+.company-page .company-identity .display-title{font-size:clamp(28px,2.6vw,40px);line-height:1.15;letter-spacing:-.035em;margin:18px 0 16px;max-width:none}
+.company-page .company-identity dl{align-content:start;gap:24px 28px}
+@media(max-width:600px){.company-page .company-identity .display-title{font-size:28px}}
